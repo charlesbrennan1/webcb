@@ -1,0 +1,343 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Nucleus Research — Charlie Brennan</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="anonymous">
+</head>
+<body>
+  <header class="header">
+    <nav class="nav">
+      <a class="logo" href="index.html">Charlie Brennan</a>
+      <ul class="nav-links">
+        <li><a class="nav-link" href="about.html">About</a></li>
+        <li><a class="nav-link" href="nucleus.html">Nucleus Research</a></li>
+        <li><a class="nav-link" href="tlf.html">TLF Apparel</a></li>
+        <li><a class="nav-link" href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="work-container">
+    <div class="container">
+      <div class="reveal">
+        <!-- Nucleus Header with logo -->
+        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: var(--space-4xl);">
+          <h1 class="h1" style="margin: 0;">Nucleus Research</h1>
+          <a href="https://nucleusresearch.com/" target="_blank">
+            <img src="New Nucleus photo.png" alt="Nucleus Research" style="height: 120px; width: auto;" />
+          </a>
+        </div>
+
+        <div class="filter-pills">
+          <button class="filter-pill active" data-filter="all">All Work</button>
+          <button class="filter-pill" data-filter="research">Research</button>
+          <button class="filter-pill" data-filter="webinar">Webinar</button>
+          <button class="filter-pill" data-filter="podcast">Podcast</button>
+          <button class="filter-pill" data-filter="speaking">Speaking</button>
+        </div>
+
+        <div class="work-grid">
+        <!-- 1. Research Portfolio (stays first) -->
+        <article class="work-card" data-category="research">
+          <div class="work-card-image">
+            <img src="Replacement research portfolio photo.png" alt="Nucleus Research full portfolio screenshot showing Charlie Brennan's research reports" />
+          </div>
+          <div class="work-card-content">
+            <div class="tag">Research Portfolio</div>
+            <h3 class="work-card-title">Full Research Portfolio</h3>
+            <p class="work-card-description">Complete collection of 115+ published reports on supply chain management, AI tools, ERP modernization, and ROI analysis at Nucleus Research.</p>
+            <a class="work-card-link" href="https://nucleusresearch.com/?team=charles-brennan" target="_blank">View All Reports →</a>
+          </div>
+        </article>
+
+        <!-- 2. Analysts Gone Wild - Episode 31 (brand new) -->
+        <article class="work-card" data-category="podcast">
+          <div class="work-card-image">
+            <img src="Analysts Gone Wild episode 31 photo.png" alt="Analysts Gone Wild Episode 31 podcast screenshot" style="object-position: 70% center;" />
+          </div>
+          <div class="work-card-content">
+            <div class="tag">Analysts Gone Wild - Episode 31</div>
+            <h3 class="work-card-title">ElevatIQ Analysts Gone Wild - Episode 31</h3>
+            <p class="work-card-description">Latest episode covering Salesforce Marketing Cloud Next details, Cordial's price sensitivity feature, Agentforce 3 release, Accenture's SYSTEMA acquisition, and Campfire's $35M Series A funding.</p>
+            <a class="work-card-link" href="https://www.youtube.com/watch?v=Jj8yp0QFWSo&t=2288s" target="_blank">Watch Episode →</a>
+          </div>
+        </article>
+
+        <!-- 2. Epicor BisTrack -->
+        <article class="work-card" data-category="webinar">
+          <div class="work-card-image">
+            <img src="Epicor BisTrack Webinar - photo.png" alt="Epicor BisTrack webinar screenshot" />
+          </div>
+          <div class="work-card-content">
+            <div class="tag">Epicor BisTrack Webinar</div>
+            <h3 class="work-card-title">The Future of ERPs for Building Suppliers</h3>
+            <p class="work-card-description">Expert insights into browser-based ERP systems and digital transformation for building supply businesses, featuring Epicor BisTrack Web demonstration.</p>
+            <a class="work-card-link" href="https://event.on24.com/wcc/r/5035175/D54CE3D219B21C4610072243DC6B5C4F" target="_blank">Watch Now →</a>
+          </div>
+        </article>
+
+        <!-- 3. SYSPRO -->
+        <article class="work-card" data-category="webinar">
+          <div class="work-card-image">
+            <img src="SYSPRO screenshot.png" alt="SYSPRO webinar screenshot" />
+          </div>
+          <div class="work-card-content">
+            <div class="tag">SYSPRO Building the Business Case Webinar</div>
+            <h3 class="work-card-title">Building the Business Case with SYSPRO</h3>
+            <p class="work-card-description">ROI analysis and business case development for ERP implementations.</p>
+            <a class="work-card-link" href="https://www.youtube.com/watch?v=B2MtEcaXu9A&list=PLQoQkF24JhOugLYtCmDHniItvQEegKu6l&index=4" target="_blank">Watch Now →</a>
+          </div>
+        </article>
+
+        <!-- 3. GAINS Podcast -->
+        <article class="work-card" data-category="podcast">
+          <div class="work-card-image">
+            <img src="Composability for GAINS.png" alt="GAINS podcast composability discussion screenshot" />
+          </div>
+          <div class="work-card-content">
+            <div class="tag">GAINS Podcast</div>
+            <h3 class="work-card-title">The Real Meaning of Composability in Supply Chain</h3>
+            <p class="work-card-description">Podcast discussion with GAINS on composable architecture and its impact on supply chain operations.</p>
+            <a class="work-card-link" href="https://gainsystems.com/resources/gains-on-podcast-s2-ep8-the-real-meaning-of-composability-in-supply-chain-with-nucleus-research/" target="_blank">Listen Now →</a>
+          </div>
+        </article>
+
+        <!-- 4. Blue Yonder ICON -->
+        <article class="work-card" data-category="speaking">
+          <div class="work-card-image">
+            <img src="Blue Yonder ICON 2025 - Dallas presentation 1.png" alt="Blue Yonder ICON 2025 Nashville presentation screenshot" />
+          </div>
+          <div class="work-card-content">
+            <div class="tag">Blue Yonder ICON 2025</div>
+            <h3 class="work-card-title">Blue Yonder ICON 2025 - Nashville</h3>
+            <p class="work-card-description">Featured speaker at Blue Yonder ICON 2025 in Nashville, discussing logistics operations, supply chain transformation and technology trends.</p>
+            <a class="work-card-link" href="https://blueyonder.com/events/icon#pricing" target="_blank">Event Details →</a>
+          </div>
+        </article>
+
+        <!-- 5. Logility Webinar -->
+        <article class="work-card" data-category="webinar">
+          <div class="work-card-image">
+            <img src="Logility Webinar - photo.png" alt="Logility webinar screenshot" />
+          </div>
+          <div class="work-card-content">
+            <div class="tag">Logility Vision25 Executive Forum</div>
+            <h3 class="work-card-title">Advanced Supply Chain Optimization Strategies</h3>
+            <p class="work-card-description">Expert discussion on how businesses can optimize inventory, boost customer service, and reduce costs with advanced supply chain strategies.</p>
+            <a class="work-card-link" href="https://events.logility.com/vision25?utm_campaign=6307864-13Mar%20%7C%20WW%20%7C%20ALL%20%7C%20WBNR%20%7C%20VISION25%20Executive%20Forum&utm_source=linkedin&utm_medium=social&utm_term=Company" target="_blank">Watch Now →</a>
+          </div>
+        </article>
+
+        <!-- 6. Analysts Gone Wild Episode 5 -->
+        <article class="work-card" data-category="podcast">
+          <div class="work-card-image">
+            <img src="Analysts Gone Wild - episode 5.png" alt="Analysts Gone Wild Episode 5 podcast screenshot" />
+          </div>
+          <div class="work-card-content">
+            <div class="tag">Analysts Gone Wild - Episode 5</div>
+            <h3 class="work-card-title">ElevatIQ Analysts Gone Wild - Episode 5</h3>
+            <p class="work-card-description">Enterprise software analysis covering Microsoft Copilot criticism, HubSpot's Agent.ai launch, Salesforce AI agents for retailers, commercetools InStore launch, and Rootstock's Scion platform expansion.</p>
+            <a class="work-card-link" href="https://www.youtube.com/watch?v=yefuIdZjqeY" target="_blank">Watch Episode →</a>
+          </div>
+        </article>
+
+        <!-- 6. Analysts Gone Wild Episode 3 -->
+        <article class="work-card" data-category="podcast">
+          <div class="work-card-image">
+            <img src="Analysts Gone Wild - episode 3.png" alt="Analysts Gone Wild Episode 3 podcast screenshot" />
+          </div>
+          <div class="work-card-content">
+            <div class="tag">Analysts Gone Wild - Episode 3</div>
+            <h3 class="work-card-title">ElevatIQ Analysts Gone Wild - Episode 3</h3>
+            <p class="work-card-description">Group of analysts providing analysis on enterprise software stories including HubSpot's Frame AI acquisition, ZenaTech quantum computing initiatives, and Bamboo Rose's AI-fueled decision intelligence platform.</p>
+            <a class="work-card-link" href="https://www.youtube.com/watch?v=fq9Mz6FJ0Hk" target="_blank">Watch Episode →</a>
+          </div>
+        </article>
+
+        <!-- 7. Infor -->
+        <article class="work-card" data-category="webinar">
+          <div class="work-card-image">
+            <img src="Updated photo for Infor webinar.png" alt="Infor supply chain transformation webinar screenshot" />
+          </div>
+          <div class="work-card-content">
+            <div class="tag">Infor Supply Chain Planning webinar</div>
+            <h3 class="work-card-title">Transforming Your Supply Chain from Stress to Success</h3>
+            <p class="work-card-description">Deep dive into supply chain transformation strategies and best practices with Infor solutions.</p>
+            <a class="work-card-link" href="https://event.on24.com/wcc/r/4707570/1C10858AF2449B864DFE24F16F092DE2" target="_blank">Watch Now →</a>
+          </div>
+        </article>
+
+        <!-- 8. Rootstock -->
+        <article class="work-card" data-category="webinar">
+          <div class="work-card-image">
+            <img src="Unlocking ERP trends for Rootstock.png" alt="Rootstock ERP trends webinar screenshot" />
+          </div>
+          <div class="work-card-content">
+            <div class="tag">Rootstock ERP Trends webinar</div>
+            <h3 class="work-card-title">Unlocking ERP Trends with Nucleus Research</h3>
+            <p class="work-card-description">Analysis of current ERP market trends and future outlook with Rootstock Cloud ERP.</p>
+            <a class="work-card-link" href="https://clouderp.rootstock.com/unlocking-erp-trends-with-nucleus-research" target="_blank">Watch Now →</a>
+          </div>
+        </article>
+
+        <!-- 9. JAMIS -->
+        <article class="work-card" data-category="speaking">
+          <div class="work-card-image">
+            <img src="JAMIS presentation - Dallas 2024 1.png" alt="JAMIS Summit 2024 Dallas presentation screenshot" />
+          </div>
+          <div class="work-card-content">
+            <div class="tag">JAMIS Summit 2024</div>
+            <h3 class="work-card-title">JAMIS Summit 2024 - Dallas</h3>
+            <p class="work-card-description">Speaking engagement at JAMIS Summit 2024 in Dallas, presenting on enterprise software analysis and implementation strategies.</p>
+            <a class="work-card-link" href="https://www.youtube.com/watch?v=NfnZvMFQpK4" target="_blank">Watch Video →</a>
+          </div>
+        </article>
+
+        <!-- 10. Visibility (Epicor) -->
+        <article class="work-card" data-category="webinar">
+          <div class="work-card-image">
+            <img src="Supply chain visibility for epicor.png" alt="Epicor supply chain visibility webinar screenshot" />
+          </div>
+          <div class="work-card-content">
+            <div class="tag">Enhancing Supply Chain Visibility with Epicor webinar</div>
+            <h3 class="work-card-title">Supply Chain Visibility Strategies</h3>
+            <p class="work-card-description">Webinar discussing strategies for improving supply chain visibility and transparency with Nucleus Research insights.</p>
+            <a class="work-card-link" href="https://www.epicor.com/en/resources/events/cross-industry/scv-strategies-nucleus-webinar/" target="_blank">Watch Now →</a>
+          </div>
+        </article>
+        </div>
+      </div>
+
+      <!-- Tech Advisor Clients Section -->
+      <section class="clients-section container reveal" style="margin-top: var(--space-4xl); padding-top: var(--space-4xl); border-top: 1px solid rgba(138, 227, 255, 0.1);">
+        <h2 class="h2" style="text-align: center; margin-bottom: var(--space-xl);">Tech Advisor Clients</h2>
+        <p style="text-align: center; color: var(--muted); font-size: clamp(16px, 2vw, 18px); margin-bottom: var(--space-3xl); max-width: 600px; margin-left: auto; margin-right: auto;">
+          Providing strategic technology advisory services to innovative companies across various industries.
+        </p>
+        
+        <div class="clients-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: var(--space-2xl); align-items: center;">
+          
+          <!-- Tech Advisor Client Cards -->
+          <div class="client-card" style="background: var(--surface); border: 1px solid rgba(138, 227, 255, 0.1); border-radius: var(--border-radius); padding: var(--space-xl); text-align: center; transition: all var(--duration-normal) var(--easing);">
+            <div class="client-logo" style="height: 80px; border-radius: var(--border-radius); margin-bottom: var(--space-l); display: flex; align-items: center; justify-content: center; background: white; padding: var(--space-s);">
+              <img src="Oracle logo.png" alt="Oracle logo" style="max-width: 100%; max-height: 100%; object-fit: contain;">
+            </div>
+            <h3 style="color: var(--text); margin-bottom: var(--space-s); font-size: 18px;">Oracle</h3>
+            <p style="color: var(--muted); font-size: 14px; margin-bottom: var(--space-l);">Enterprise cloud computing and database technology advisory</p>
+            <a href="https://www.oracle.com/" target="_blank" class="btn btn-outline" style="font-size: 14px; padding: var(--space-s) var(--space-l);">Learn More →</a>
+          </div>
+
+          <div class="client-card" style="background: var(--surface); border: 1px solid rgba(138, 227, 255, 0.1); border-radius: var(--border-radius); padding: var(--space-xl); text-align: center; transition: all var(--duration-normal) var(--easing);">
+            <div class="client-logo" style="height: 80px; border-radius: var(--border-radius); margin-bottom: var(--space-l); display: flex; align-items: center; justify-content: center; background: white; padding: var(--space-s);">
+              <img src="epicor logo.png" alt="Epicor logo" style="max-width: 100%; max-height: 100%; object-fit: contain;">
+            </div>
+            <h3 style="color: var(--text); margin-bottom: var(--space-s); font-size: 18px;">Epicor</h3>
+            <p style="color: var(--muted); font-size: 14px; margin-bottom: var(--space-l);">ERP software solutions and business transformation advisory</p>
+            <a href="https://www.epicor.com/en-us/" target="_blank" class="btn btn-outline" style="font-size: 14px; padding: var(--space-s) var(--space-l);">Learn More →</a>
+          </div>
+
+          <div class="client-card" style="background: var(--surface); border: 1px solid rgba(138, 227, 255, 0.1); border-radius: var(--border-radius); padding: var(--space-xl); text-align: center; transition: all var(--duration-normal) var(--easing);">
+            <div class="client-logo" style="height: 80px; border-radius: var(--border-radius); margin-bottom: var(--space-l); display: flex; align-items: center; justify-content: center; background: white; padding: var(--space-s);">
+              <img src="Blue Yonder logo.webp" alt="Blue Yonder logo" style="max-width: 100%; max-height: 100%; object-fit: contain;">
+            </div>
+            <h3 style="color: var(--text); margin-bottom: var(--space-s); font-size: 18px;">Blue Yonder</h3>
+            <p style="color: var(--muted); font-size: 14px; margin-bottom: var(--space-l);">AI-driven supply chain and retail planning technology advisory</p>
+            <a href="https://blueyonder.com/" target="_blank" class="btn btn-outline" style="font-size: 14px; padding: var(--space-s) var(--space-l);">Learn More →</a>
+          </div>
+
+          <div class="client-card" style="background: var(--surface); border: 1px solid rgba(138, 227, 255, 0.1); border-radius: var(--border-radius); padding: var(--space-xl); text-align: center; transition: all var(--duration-normal) var(--easing);">
+            <div class="client-logo" style="height: 80px; border-radius: var(--border-radius); margin-bottom: var(--space-l); display: flex; align-items: center; justify-content: center; background: white; padding: var(--space-s);">
+              <img src="o9 logo.webp" alt="o9 Solutions logo" style="max-width: 100%; max-height: 100%; object-fit: contain;">
+            </div>
+            <h3 style="color: var(--text); margin-bottom: var(--space-s); font-size: 18px;">o9 Solutions</h3>
+            <p style="color: var(--muted); font-size: 14px; margin-bottom: var(--space-l);">AI-powered supply chain planning and optimization advisory</p>
+            <a href="https://o9solutions.com/" target="_blank" class="btn btn-outline" style="font-size: 14px; padding: var(--space-s) var(--space-l);">Learn More →</a>
+          </div>
+
+          <div class="client-card" style="background: var(--surface); border: 1px solid rgba(138, 227, 255, 0.1); border-radius: var(--border-radius); padding: var(--space-xl); text-align: center; transition: all var(--duration-normal) var(--easing);">
+            <div class="client-logo" style="height: 80px; border-radius: var(--border-radius); margin-bottom: var(--space-l); display: flex; align-items: center; justify-content: center; background: white; padding: var(--space-s);">
+              <img src="FourKites logo.jpeg" alt="FourKites logo" style="max-width: 100%; max-height: 100%; object-fit: contain;">
+            </div>
+            <h3 style="color: var(--text); margin-bottom: var(--space-s); font-size: 18px;">FourKites</h3>
+            <p style="color: var(--muted); font-size: 14px; margin-bottom: var(--space-l);">Real-time supply chain visibility platform advisory</p>
+            <a href="https://www.fourkites.com/" target="_blank" class="btn btn-outline" style="font-size: 14px; padding: var(--space-s) var(--space-l);">Learn More →</a>
+          </div>
+
+        </div>
+      </section>
+    </div>
+  </div>
+
+      <!-- Travel & Conferences Section -->
+      <section class="container reveal" id="travel" style="margin-top: var(--space-4xl); padding-top: var(--space-4xl); border-top: 1px solid rgba(138, 227, 255, 0.1);">
+        <h2 class="h2 headline-tight" style="text-align: center; margin-bottom: var(--space-xl);">Travel & Conferences (2022–2025)</h2>
+        <p style="text-align: center; color: var(--muted); font-size: clamp(16px, 2vw, 18px); margin-bottom: var(--space-xl); max-width: 600px; margin-left: auto; margin-right: auto;">A snapshot of events I've covered across the U.S. and abroad.</p>
+
+        <div class="travel-filters" aria-label="Filter by year" style="justify-content: center;">
+          <label><input type="checkbox" value="2022" checked> 2022</label>
+          <label><input type="checkbox" value="2023" checked> 2023</label>
+          <label><input type="checkbox" value="2024" checked> 2024</label>
+          <label><input type="checkbox" value="2025" checked> 2025</label>
+        </div>
+
+        <div id="travel-map" class="travel-map" role="region" aria-label="Conference travel map"></div>
+      </section>
+
+      <!-- Role Highlights Photos Section -->
+      <section class="container reveal" id="role-photos" style="margin-top: var(--space-4xl); padding-top: var(--space-4xl); border-top: 1px solid rgba(138, 227, 255, 0.1);">
+        <h2 class="h2 headline-tight" style="text-align: center; margin-bottom: var(--space-xl);">Behind the Scenes</h2>
+        <p style="text-align: center; color: var(--muted); font-size: clamp(16px, 2vw, 18px); margin-bottom: var(--space-3xl); max-width: 600px; margin-left: auto; margin-right: auto;">Highlights and moments from my time as Senior Analyst at Nucleus Research.</p>
+
+        <div class="role-photos-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: var(--space-xl); margin-bottom: var(--space-3xl);">
+          <div class="role-photo-card" style="background: var(--surface); border-radius: var(--border-radius); overflow: hidden; border: 1px solid rgba(138, 227, 255, 0.1); transition: transform var(--duration-normal) var(--easing);">
+            <img src="photos from the role/photo 1.png" alt="Role highlight photo 1" style="width: 100%; height: 250px; object-fit: cover; object-position: 20% 20%;" />
+          </div>
+          
+          <div class="role-photo-card" style="background: var(--surface); border-radius: var(--border-radius); overflow: hidden; border: 1px solid rgba(138, 227, 255, 0.1); transition: transform var(--duration-normal) var(--easing);">
+            <img src="photos from the role/photo 2.png" alt="Role highlight photo 2" style="width: 100%; height: 250px; object-fit: cover; object-position: 15% center;" />
+          </div>
+          
+          <div class="role-photo-card" style="background: var(--surface); border-radius: var(--border-radius); overflow: hidden; border: 1px solid rgba(138, 227, 255, 0.1); transition: transform var(--duration-normal) var(--easing);">
+            <img src="photos from the role/photo 3.jpg" alt="Role highlight photo 3" style="width: 100%; height: 250px; object-fit: cover; object-position: 15% 10%;" />
+          </div>
+          
+          <div class="role-photo-card" style="background: var(--surface); border-radius: var(--border-radius); overflow: hidden; border: 1px solid rgba(138, 227, 255, 0.1); transition: transform var(--duration-normal) var(--easing);">
+            <img src="photos from the role/photo 4.jpg" alt="Role highlight photo 4" style="width: 100%; height: 250px; object-fit: cover;" />
+          </div>
+          
+          <div class="role-photo-card" style="background: var(--surface); border-radius: var(--border-radius); overflow: hidden; border: 1px solid rgba(138, 227, 255, 0.1); transition: transform var(--duration-normal) var(--easing);">
+            <img src="photos from the role/photo 5.JPG" alt="Role highlight photo 5" style="width: 100%; height: 250px; object-fit: cover; object-position: center 40%;" />
+          </div>
+          
+          <div class="role-photo-card" style="background: var(--surface); border-radius: var(--border-radius); overflow: hidden; border: 1px solid rgba(138, 227, 255, 0.1); transition: transform var(--duration-normal) var(--easing);">
+            <img src="photos from the role/photo 6.jpg" alt="Role highlight photo 6" style="width: 100%; height: 250px; object-fit: cover;" />
+          </div>
+          
+          <div class="role-photo-card" style="background: var(--surface); border-radius: var(--border-radius); overflow: hidden; border: 1px solid rgba(138, 227, 255, 0.1); transition: transform var(--duration-normal) var(--easing);">
+            <img src="photos from the role/photo 7.jpg" alt="Role highlight photo 7" style="width: 100%; height: 250px; object-fit: cover;" />
+          </div>
+          
+          <div class="role-photo-card" style="background: var(--surface); border-radius: var(--border-radius); overflow: hidden; border: 1px solid rgba(138, 227, 255, 0.1); transition: transform var(--duration-normal) var(--easing);">
+            <img src="photos from the role/photo 8.jpg" alt="Role highlight photo 8" style="width: 100%; height: 250px; object-fit: cover;" />
+          </div>
+          
+          <div class="role-photo-card" style="background: var(--surface); border-radius: var(--border-radius); overflow: hidden; border: 1px solid rgba(138, 227, 255, 0.1); transition: transform var(--duration-normal) var(--easing);">
+            <img src="photos from the role/photo 9.jpg" alt="Role highlight photo 9" style="width: 100%; height: 250px; object-fit: cover;" />
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <p>© 2025 Charlie Brennan. All rights reserved.</p>
+  </footer>
+  
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin="anonymous"></script>
+  <script src="travel-map.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
