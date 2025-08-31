@@ -3,8 +3,9 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Nucleus Research — Charlie Brennan</title>
+  <title>Nucleus Research - Charlie Brennan</title>
   <link rel="stylesheet" href="styles.css" />
+  <!-- Load critical map styles synchronously for reliability -->
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="anonymous">
 </head>
 <body>
@@ -17,29 +18,60 @@
         <li><a class="nav-link" href="tlf.html">TLF Apparel</a></li>
         <li><a class="nav-link" href="contact.html">Contact</a></li>
       </ul>
+      <button class="mobile-menu-toggle" aria-label="Toggle mobile menu">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
     </nav>
   </header>
+
+  <!-- Mobile Navigation Overlay -->
+  <div class="mobile-nav-overlay">
+    <nav class="mobile-nav-menu">
+      <ul class="mobile-nav-links">
+        <li><a class="mobile-nav-link" href="about.html">About</a></li>
+        <li><a class="mobile-nav-link" href="nucleus.html">Nucleus Research</a></li>
+        <li><a class="mobile-nav-link" href="tlf.html">TLF Apparel</a></li>
+        <li><a class="mobile-nav-link" href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
 
   <div class="work-container">
     <div class="container">
       <div class="reveal">
         <!-- Nucleus Header with logo -->
-        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: var(--space-4xl);">
+        <div class="nucleus-header" style="display: flex; align-items: center; justify-content: space-between; margin-bottom: var(--space-4xl);">
           <h1 class="h1" style="margin: 0;">Nucleus Research</h1>
           <a href="https://nucleusresearch.com/" target="_blank">
             <img src="New Nucleus photo.png" alt="Nucleus Research" style="height: 120px; width: auto;" />
           </a>
         </div>
+      </div>
+        
+      <!-- Intro narrative -->
+      <div class="nucleus-narrative reveal" style="margin-bottom: var(--space-4xl);">
+        <p style="color: var(--muted); font-size: clamp(16px, 1.8vw, 18px); line-height: 1.6; margin-bottom: var(--space-l);">
+          I joined Nucleus Research in January 2023 as a Senior Research Analyst, diving into the world of enterprise technology research and analysis. My focus centers on ERP, supply chain management, and operational technology solutions, where I evaluate how these systems drive business value for organizations across industries. From day one, I've been responsible for producing in-depth research reports, conducting vendor briefings, and analyzing market trends that help both technology buyers and vendors make informed decisions. My work involves everything from ROI case studies and technology assessments to competitive analysis and market positioning research.
+        </p>
+        <p style="color: var(--muted); font-size: clamp(16px, 1.8vw, 18px); line-height: 1.6; margin-bottom: var(--space-l);">
+          What distinguishes my approach at Nucleus is the combination of hands-on operational experience with analytical rigor. Having worked directly in supply chain operations at TLF Apparel, I bring a practitioner's perspective to technology evaluation that resonates with both end users and solution providers. I regularly participate in industry conferences, conduct webinars, and engage in speaking opportunities to share insights on digital transformation trends. My research has covered everything from warehouse management systems and inventory optimization to broader ERP modernization strategies, always with a focus on quantifiable business outcomes.
+        </p>
+        <p style="color: var(--muted); font-size: clamp(16px, 1.8vw, 18px); line-height: 1.6; margin-bottom: var(--space-l);">
+          The work showcased below represents the breadth of my contributions to the Nucleus Research practice: comprehensive research reports, thought leadership content, webinar presentations, podcast appearances, and speaking engagements. Each piece reflects my commitment to delivering actionable insights that help organizations navigate their technology decisions with confidence, backed by data-driven analysis and real-world operational understanding.
+        </p>
+      </div>
 
-        <div class="filter-pills">
-          <button class="filter-pill active" data-filter="all">All Work</button>
-          <button class="filter-pill" data-filter="research">Research</button>
-          <button class="filter-pill" data-filter="webinar">Webinar</button>
-          <button class="filter-pill" data-filter="podcast">Podcast</button>
-          <button class="filter-pill" data-filter="speaking">Speaking</button>
-        </div>
+      <div class="filter-pills">
+        <button class="filter-pill active" data-filter="all">All Work</button>
+        <button class="filter-pill" data-filter="research">Research</button>
+        <button class="filter-pill" data-filter="webinar">Webinar</button>
+        <button class="filter-pill" data-filter="podcast">Podcast</button>
+        <button class="filter-pill" data-filter="speaking">Speaking</button>
+      </div>
 
-        <div class="work-grid">
+      <div class="work-grid">
         <!-- 1. Research Portfolio (stays first) -->
         <article class="work-card" data-category="research">
           <div class="work-card-image">
@@ -273,7 +305,7 @@
 
       <!-- Travel & Conferences Section -->
       <section class="container reveal" id="travel" style="margin-top: var(--space-4xl); padding-top: var(--space-4xl); border-top: 1px solid rgba(138, 227, 255, 0.1);">
-        <h2 class="h2 headline-tight" style="text-align: center; margin-bottom: var(--space-xl);">Travel & Conferences (2022–2025)</h2>
+        <h2 class="h2 headline-tight" style="text-align: center; margin-bottom: var(--space-xl);">Travel & Conferences (2022-2025)</h2>
         <p style="text-align: center; color: var(--muted); font-size: clamp(16px, 2vw, 18px); margin-bottom: var(--space-xl); max-width: 600px; margin-left: auto; margin-right: auto;">A snapshot of events I've covered across the U.S. and abroad.</p>
 
         <div class="travel-filters" aria-label="Filter by year" style="justify-content: center;">
@@ -293,39 +325,39 @@
 
         <div class="role-photos-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: var(--space-xl); margin-bottom: var(--space-3xl);">
           <div class="role-photo-card" style="background: var(--surface); border-radius: var(--border-radius); overflow: hidden; border: 1px solid rgba(138, 227, 255, 0.1); transition: transform var(--duration-normal) var(--easing);">
-            <img src="photos from the role/photo 1.png" alt="Role highlight photo 1" style="width: 100%; height: 250px; object-fit: cover; object-position: 20% 20%;" />
+            <img src="photos from the role/photo 1.png" alt="Role highlight photo 1" style="width: 100%; height: 250px; object-fit: cover; object-position: 20% 20%;" loading="lazy" />
           </div>
           
           <div class="role-photo-card" style="background: var(--surface); border-radius: var(--border-radius); overflow: hidden; border: 1px solid rgba(138, 227, 255, 0.1); transition: transform var(--duration-normal) var(--easing);">
-            <img src="photos from the role/photo 2.png" alt="Role highlight photo 2" style="width: 100%; height: 250px; object-fit: cover; object-position: 15% center;" />
+            <img src="photos from the role/photo 2.png" alt="Role highlight photo 2" style="width: 100%; height: 250px; object-fit: cover; object-position: 15% center;" loading="lazy" />
           </div>
           
           <div class="role-photo-card" style="background: var(--surface); border-radius: var(--border-radius); overflow: hidden; border: 1px solid rgba(138, 227, 255, 0.1); transition: transform var(--duration-normal) var(--easing);">
-            <img src="photos from the role/photo 3.jpg" alt="Role highlight photo 3" style="width: 100%; height: 250px; object-fit: cover; object-position: 15% 10%;" />
+            <img src="photos from the role/photo 3.jpg" alt="Role highlight photo 3" style="width: 100%; height: 250px; object-fit: cover; object-position: 15% 10%;" loading="lazy" />
           </div>
           
           <div class="role-photo-card" style="background: var(--surface); border-radius: var(--border-radius); overflow: hidden; border: 1px solid rgba(138, 227, 255, 0.1); transition: transform var(--duration-normal) var(--easing);">
-            <img src="photos from the role/photo 4.jpg" alt="Role highlight photo 4" style="width: 100%; height: 250px; object-fit: cover;" />
+            <img src="photos from the role/photo 4.jpg" alt="Role highlight photo 4" style="width: 100%; height: 250px; object-fit: cover;" loading="lazy" />
           </div>
           
           <div class="role-photo-card" style="background: var(--surface); border-radius: var(--border-radius); overflow: hidden; border: 1px solid rgba(138, 227, 255, 0.1); transition: transform var(--duration-normal) var(--easing);">
-            <img src="photos from the role/photo 5.JPG" alt="Role highlight photo 5" style="width: 100%; height: 250px; object-fit: cover; object-position: center 40%;" />
+            <img src="photos from the role/photo 5.JPG" alt="Role highlight photo 5" style="width: 100%; height: 250px; object-fit: cover; object-position: center 40%;" loading="lazy" />
           </div>
           
           <div class="role-photo-card" style="background: var(--surface); border-radius: var(--border-radius); overflow: hidden; border: 1px solid rgba(138, 227, 255, 0.1); transition: transform var(--duration-normal) var(--easing);">
-            <img src="photos from the role/photo 6.jpg" alt="Role highlight photo 6" style="width: 100%; height: 250px; object-fit: cover;" />
+            <img src="photos from the role/photo 6.jpg" alt="Role highlight photo 6" style="width: 100%; height: 250px; object-fit: cover;" loading="lazy" />
           </div>
           
           <div class="role-photo-card" style="background: var(--surface); border-radius: var(--border-radius); overflow: hidden; border: 1px solid rgba(138, 227, 255, 0.1); transition: transform var(--duration-normal) var(--easing);">
-            <img src="photos from the role/photo 7.jpg" alt="Role highlight photo 7" style="width: 100%; height: 250px; object-fit: cover;" />
+            <img src="photos from the role/photo 7.jpg" alt="Role highlight photo 7" style="width: 100%; height: 250px; object-fit: cover;" loading="lazy" />
           </div>
           
           <div class="role-photo-card" style="background: var(--surface); border-radius: var(--border-radius); overflow: hidden; border: 1px solid rgba(138, 227, 255, 0.1); transition: transform var(--duration-normal) var(--easing);">
-            <img src="photos from the role/photo 8.jpg" alt="Role highlight photo 8" style="width: 100%; height: 250px; object-fit: cover;" />
+            <img src="photos from the role/photo 8.jpg" alt="Role highlight photo 8" style="width: 100%; height: 250px; object-fit: cover;" loading="lazy" />
           </div>
           
           <div class="role-photo-card" style="background: var(--surface); border-radius: var(--border-radius); overflow: hidden; border: 1px solid rgba(138, 227, 255, 0.1); transition: transform var(--duration-normal) var(--easing);">
-            <img src="photos from the role/photo 9.jpg" alt="Role highlight photo 9" style="width: 100%; height: 250px; object-fit: cover;" />
+            <img src="photos from the role/photo 9.jpg" alt="Role highlight photo 9" style="width: 100%; height: 250px; object-fit: cover;" loading="lazy" />
           </div>
         </div>
       </section>
@@ -336,8 +368,25 @@
     <p>© 2025 Charlie Brennan. All rights reserved.</p>
   </footer>
   
+  <!-- Load scripts in proper dependency order -->
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin="anonymous"></script>
-  <script src="travel-map.js"></script>
+  
   <script src="script.js"></script>
+  
+  <!-- Load travel map after main script initialization -->
+  <script>
+    // Ensure main script is initialized before loading travel map
+    document.addEventListener('DOMContentLoaded', function() {
+      // Add small delay to ensure all initialization is complete
+      setTimeout(function() {
+        const script = document.createElement('script');
+        script.src = 'travel-map.js';
+        script.onerror = function() {
+          console.error('❌ Failed to load travel-map.js');
+        };
+        document.head.appendChild(script);
+      }, 100);
+    });
+  </script>
 </body>
 </html>

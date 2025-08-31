@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>TLF Tools & Systems - Charlie Brennan</title>
+  <title>TLF Tools & Systems — Charlie Brennan</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -16,25 +16,8 @@
         <li><a class="nav-link" href="tlf.html">TLF Apparel</a></li>
         <li><a class="nav-link" href="contact.html">Contact</a></li>
       </ul>
-      <button class="mobile-menu-toggle" aria-label="Toggle mobile menu">
-        <span class="hamburger-line"></span>
-        <span class="hamburger-line"></span>
-        <span class="hamburger-line"></span>
-      </button>
     </nav>
   </header>
-
-  <!-- Mobile Navigation Overlay -->
-  <div class="mobile-nav-overlay">
-    <nav class="mobile-nav-menu">
-      <ul class="mobile-nav-links">
-        <li><a class="mobile-nav-link" href="about.html">About</a></li>
-        <li><a class="mobile-nav-link" href="nucleus.html">Nucleus Research</a></li>
-        <li><a class="mobile-nav-link" href="tlf.html">TLF Apparel</a></li>
-        <li><a class="mobile-nav-link" href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-  </div>
 
   <div class="work-container">
     <div class="container">

@@ -285,15 +285,14 @@ p, body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 44px;
-  height: 44px;
+  width: 30px;
+  height: 30px;
   background: transparent;
   border: none;
   cursor: pointer;
-  padding: 7px;
+  padding: 0;
   z-index: 1001;
   position: relative;
-  touch-action: manipulation;
 }
 
 .hamburger-line {
@@ -307,12 +306,6 @@ p, body {
 
 .mobile-menu-toggle.active .hamburger-line:nth-child(1) {
   transform: rotate(45deg) translate(6px, 6px);
-}
-
-.mobile-menu-toggle:active,
-.mobile-menu-toggle:focus {
-  background: rgba(138, 227, 255, 0.1);
-  border-radius: var(--border-radius);
 }
 
 .mobile-menu-toggle.active .hamburger-line:nth-child(2) {
@@ -382,19 +375,11 @@ p, body {
   padding: var(--space-l) 0;
   border-bottom: 1px solid rgba(138, 227, 255, 0.1);
   transition: all var(--duration-normal) var(--easing);
-  outline: none; /* Remove default browser focus outline */
 }
 
 .mobile-nav-link:hover {
   color: var(--accent-1);
   padding-left: var(--space-l);
-}
-
-.mobile-nav-link:focus {
-  color: var(--accent-1);
-  padding-left: var(--space-l);
-  outline: none; /* Ensure no browser default outline */
-  background: rgba(138, 227, 255, 0.05);
 }
 
 /* [4] HERO LAYOUT + MEDIA PANEL
@@ -584,23 +569,9 @@ p, body {
 
 .work-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: var(--space-2xl);
   margin-bottom: var(--space-4xl);
-}
-
-/* Force single column layout on all mobile screens */
-@media (max-width: 768px) {
-  .work-grid {
-    display: grid !important;
-    grid-template-columns: 1fr !important;
-    gap: var(--space-l) !important;
-  }
-  
-  .work-grid .work-card {
-    width: 100% !important;
-    max-width: none !important;
-  }
 }
 
 .work-card {
@@ -930,12 +901,11 @@ img {
   }
   
   .about-container,
+  .work-container,
   .contact-container,
   .journey-container {
     padding-top: 90px;
   }
-  
-  /* work-container handled in main mobile breakpoint */
 }
 
 /* Landscape mobile optimization */
@@ -1035,7 +1005,9 @@ img {
     justify-content: center;
   }
   
-  /* work-grid mobile layout now handled above at line 585 */
+  .work-grid {
+    grid-template-columns: 1fr;
+  }
   
   .clients-grid {
     grid-template-columns: 1fr !important;
@@ -1122,29 +1094,15 @@ img {
     word-break: break-all;
   }
   
-  /* Better mobile work cards - using specificity instead of !important */
-  @media (max-width: 768px) {
-    .work-grid .work-card {
-      opacity: 1;
-      visibility: visible;
-      display: flex;
-    }
-    
-    .work-grid .work-card.hidden {
-      display: none;
-      opacity: 0;
-      visibility: hidden;
-    }
-    
-    .work-grid .work-card.mobile-visible {
-      display: flex !important;
-      opacity: 1 !important;
-      visibility: visible !important;
-    }
-    
-    .work-grid .work-card.mobile-hidden {
-      display: none !important;
-    }
+  /* Better mobile work cards */
+  .work-card {
+    opacity: 1 !important;
+    visibility: visible !important;
+    display: flex !important;
+  }
+  
+  .work-card.hidden {
+    display: none !important;
   }
   
   .work-card-content {
@@ -1177,7 +1135,7 @@ img {
   .work-container,
   .contact-container,
   .journey-container {
-    padding-top: 90px !important;
+    padding-top: 70px;
   }
   
   .journey-container h1,
@@ -1202,56 +1160,6 @@ img {
   display:flex; gap:12px; flex-wrap:wrap;
   margin: 10px 0 8px;
   font-size:14px; color: var(--muted);
-}
-
-/* Mobile travel section adjustments */
-@media (max-width: 768px) {
-  .travel-map {
-    height: 300px;
-    border-radius: 8px;
-    margin-top: var(--space-s);
-  }
-  
-  .travel-filters {
-    justify-content: center;
-    gap: var(--space-s);
-    margin: var(--space-s) 0;
-  }
-  
-  .travel-filters label {
-    font-size: 13px;
-    padding: var(--space-xs) var(--space-s);
-    background: rgba(138, 227, 255, 0.05);
-    border-radius: var(--border-radius);
-    border: 1px solid rgba(138, 227, 255, 0.1);
-  }
-  
-  /* Mobile optimization for role photos */
-  .role-photos-grid {
-    grid-template-columns: 1fr !important;
-    gap: var(--space-l) !important;
-  }
-  
-  .role-photo-card img {
-    height: 200px !important;
-  }
-  
-  /* Mobile client cards optimization */
-  .clients-grid {
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)) !important;
-  }
-  
-  /* Mobile responsive classes */
-  .nucleus-header {
-    flex-direction: column !important;
-    text-align: center !important;
-    gap: var(--space-l) !important;
-  }
-  
-  .nucleus-header img {
-    height: 80px !important;
-    width: auto !important;
-  }
 }
 .travel-filters input{ vertical-align: middle; margin-right:6px; }
 .leaflet-container{ background: #0b0f1a; } /* match site bg */

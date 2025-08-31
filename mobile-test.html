@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mobile Responsiveness Test - Charlie Brennan</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background: #0a0f16;
+      color: #eaf0ff;
+    }
+    
+    .test-section {
+      margin-bottom: 30px;
+      padding: 20px;
+      background: rgba(138, 227, 255, 0.1);
+      border-radius: 8px;
+      border: 1px solid rgba(138, 227, 255, 0.2);
+    }
+    
+    .test-result {
+      display: inline-block;
+      padding: 5px 10px;
+      border-radius: 4px;
+      font-weight: bold;
+      margin-left: 10px;
+    }
+    
+    .pass { background: #5cff8a; color: #0a0f16; }
+    .fail { background: #ff5b79; color: white; }
+    
+    .viewport-info {
+      background: rgba(155, 140, 255, 0.1);
+      padding: 10px;
+      border-radius: 4px;
+      margin: 10px 0;
+    }
+    
+    .back-link {
+      display: inline-block;
+      background: linear-gradient(135deg, #8ae3ff, #9b8cff);
+      color: #0a0f16;
+      text-decoration: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-weight: 600;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>📱 Mobile Responsiveness Test Results</h1>
+  
+  <div class="viewport-info">
+    <strong>Current Viewport:</strong>
+    <span id="viewport-size">Calculating...</span>
+  </div>
+  
+  <div class="test-section">
+    <h2>✅ Implemented Improvements</h2>
+    <p>✓ Mobile hamburger navigation menu</p>
+    <p>✓ Touch-friendly button sizing (min 44px)</p>
+    <p>✓ Responsive typography with fluid sizing</p>
+    <p>✓ Optimized image loading with lazy loading</p>
+    <p>✓ Better mobile spacing and layout</p>
+    <p>✓ Landscape orientation support</p>
+    <p>✓ Safe area support for devices with notches</p>
+    <p>✓ High DPI display optimizations</p>
+  </div>
+  
+  <div class="test-section">
+    <h2>🔍 Responsive Breakpoints Test</h2>
+    <p>Mobile (≤768px): <span id="mobile-test" class="test-result">Testing...</span></p>
+    <p>Small Mobile (≤480px): <span id="small-mobile-test" class="test-result">Testing...</span></p>
+    <p>Landscape (height ≤500px): <span id="landscape-test" class="test-result">Testing...</span></p>
+  </div>
+  
+  <div class="test-section">
+    <h2>📋 Manual Testing Checklist</h2>
+    <p>□ Navigate using hamburger menu</p>
+    <p>□ Test touch interactions on buttons</p>
+    <p>□ Check text readability on small screens</p>
+    <p>□ Verify image loading and scaling</p>
+    <p>□ Test in both portrait and landscape</p>
+    <p>□ Check contact page layout</p>
+    <p>□ Verify scroll behavior</p>
+  </div>
+  
+  <a href="index.html" class="back-link">← Back to Portfolio</a>
+  
+  <script>
+    function updateViewportInfo() {
+      const width = window.innerWidth;
+      const height = window.innerHeight;
+      const dpr = window.devicePixelRatio || 1;
+      
+      document.getElementById('viewport-size').textContent = 
+        `${width}x${height} (DPR: ${dpr})`;
+      
+      // Test breakpoints
+      const mobileTest = width <= 768;
+      const smallMobileTest = width <= 480;
+      const landscapeTest = height <= 500 && width > height;
+      
+      document.getElementById('mobile-test').textContent = mobileTest ? 'PASS' : 'FAIL';
+      document.getElementById('mobile-test').className = 'test-result ' + (mobileTest ? 'pass' : 'fail');
+      
+      document.getElementById('small-mobile-test').textContent = smallMobileTest ? 'PASS' : 'FAIL';
+      document.getElementById('small-mobile-test').className = 'test-result ' + (smallMobileTest ? 'pass' : 'fail');
+      
+      document.getElementById('landscape-test').textContent = landscapeTest ? 'PASS' : 'FAIL';
+      document.getElementById('landscape-test').className = 'test-result ' + (landscapeTest ? 'pass' : 'fail');
+    }
+    
+    updateViewportInfo();
+    window.addEventListener('resize', updateViewportInfo);
+    window.addEventListener('orientationchange', () => {
+      setTimeout(updateViewportInfo, 100);
+    });
+  </script>
+</body>
+</html>

@@ -1,13 +1,25 @@
 // Lightweight Leaflet map with year filters
 (function(){
+  // Check dependencies first
+  if (typeof L === 'undefined') {
+    console.error('❌ Leaflet.js not loaded - travel map cannot initialize');
+    return;
+  }
+  
   const mapEl = document.getElementById('travel-map');
-  if (!mapEl) return;
+  if (!mapEl) {
+    console.warn('⚠️ Travel map element not found');
+    return;
+  }
 
-  // Initialize
-  const map = L.map(mapEl, {
-    zoomControl: false,
-    worldCopyJump: true
-  });
+  try {
+    // Initialize map with error handling
+    const map = L.map(mapEl, {
+      zoomControl: false,
+      worldCopyJump: true
+    });
+    
+    console.log('📍 Travel map initialized successfully');
   // Use CartoDB Dark Matter (free, no auth required)
   L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
     maxZoom: 18,
@@ -157,4 +169,15 @@
     return div;
   };
   legend.addTo(map);
+  
+  } catch (error) {
+    console.error('❌ Travel map initialization failed:', error);
+    // Hide the map container if there's an error
+    if (mapEl) {
+      mapEl.style.display = 'none';
+      mapEl.insertAdjacentHTML('afterend', 
+        '<div style="text-align: center; color: var(--muted); padding: 40px;">Map temporarily unavailable</div>'
+      );
+    }
+  }
 })();
