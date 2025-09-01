@@ -51,6 +51,7 @@ class WebsiteInteractions {
   // ==========================================================================
   setupKineticUnderlines() {
     const navLinks = document.querySelectorAll('.nav-link');
+    const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
     
     navLinks.forEach(link => {
       link.addEventListener('mouseenter', (e) => {
@@ -65,6 +66,13 @@ class WebsiteInteractions {
       if (this.isCurrentPage(link.href)) {
         link.classList.add('active');
         this.animateUnderline(link, true);
+      }
+    });
+    
+    // Also set active state for mobile navigation links
+    mobileNavLinks.forEach(link => {
+      if (this.isCurrentPage(link.href)) {
+        link.classList.add('active');
       }
     });
   }

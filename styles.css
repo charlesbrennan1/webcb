@@ -397,6 +397,14 @@ p, body {
   background: rgba(138, 227, 255, 0.05);
 }
 
+.mobile-nav-link.active {
+  color: var(--accent-1);
+  padding-left: var(--space-l);
+  background: rgba(138, 227, 255, 0.1);
+  font-weight: 700;
+  border-left: 3px solid var(--accent-1);
+}
+
 /* [4] HERO LAYOUT + MEDIA PANEL
    ========================================================================== */
 .hero {
