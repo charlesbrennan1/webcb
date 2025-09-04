@@ -5,6 +5,8 @@
 
 class WebsiteInteractions {
   constructor() {
+    this.filtersInitialized = false; // Guard against duplicate initialization
+    this.lastWidth = window.innerWidth; // Track window width for resize handling
     this.init();
   }
   
@@ -102,116 +104,135 @@ class WebsiteInteractions {
   // WORK FILTER SYSTEM (for nucleus.html)
   // ==========================================================================
   setupWorkFilters() {
+    // Prevent duplicate initialization
+    if (this.filtersInitialized) {
+      console.log('🔄 Filters already initialized, skipping duplicate setup');
+      return;
+    }
+
+    // Better URL detection that works in production
+    const isNucleus = window.location.pathname.includes('nucleus') || 
+                     window.location.href.includes('nucleus') ||
+                     document.title.includes('Nucleus Research');
+    
+    // Only run on nucleus pages
+    if (!isNucleus) {
+      return;
+    }
+
     const filterPills = document.querySelectorAll('.filter-pill');
     const workCards = document.querySelectorAll('.work-card');
     const isMobile = window.innerWidth <= 768;
-    const isNucleus = window.location.pathname.includes('nucleus.html');
     
-    if (filterPills.length === 0 || workCards.length === 0) {
-      if (isMobile && isNucleus) {
-        console.error('❌ Work filters setup failed:', { 
-          filterPills: filterPills.length, 
-          workCards: workCards.length,
-          windowWidth: window.innerWidth,
-          pathname: window.location.pathname
-        });
-      }
+    // Production debugging - always log in production
+    console.log('🔧 PRODUCTION DEBUG - Filter setup:', {
+      filtersFound: filterPills.length,
+      cardsFound: workCards.length,
+      isMobile: isMobile,
+      pathname: window.location.pathname,
+      href: window.location.href,
+      title: document.title,
+      isNucleus: isNucleus
+    });
+    
+    // Enhanced error handling
+    if (filterPills.length === 0) {
+      console.error('❌ FILTER SETUP FAILED: No filter pills found');
+      console.log('Looking for elements with class .filter-pill');
       return;
     }
     
-    if (isMobile && isNucleus) {
-      console.log('📱 Setting up work filters on mobile nucleus page:', { 
-        filterPills: filterPills.length, 
-        workCards: workCards.length,
-        windowWidth: window.innerWidth
-      });
-      
-      // Check if any cards are initially hidden
-      const hiddenCards = document.querySelectorAll('.work-card.hidden');
-      if (hiddenCards.length > 0) {
-        console.warn('⚠️ Found hidden cards during setup:', hiddenCards.length);
-      }
+    if (workCards.length === 0) {
+      console.error('❌ FILTER SETUP FAILED: No work cards found');
+      console.log('Looking for elements with class .work-card');
+      return;
     }
     
-    // Force all work cards to be visible and remove any hidden classes
-    workCards.forEach((card, index) => {
-      card.classList.remove('hidden');
-      card.style.display = 'flex';
-      card.style.visibility = 'visible';
-      card.style.opacity = '1';
-      
-      // Mobile-specific fixes using CSS classes instead of inline styles
-      if (isMobile) {
-        card.classList.add('mobile-visible');
-        card.classList.remove('mobile-hidden');
-        
-        // Debug individual card visibility
-        const computedStyle = window.getComputedStyle(card);
-        if (computedStyle.display === 'none') {
-          console.warn(`⚠️ Card ${index} still hidden after setup:`, {
-            classList: Array.from(card.classList),
-            computedDisplay: computedStyle.display,
-            inlineDisplay: card.style.display
-          });
-        }
+    // Remove any existing event listeners by cloning elements
+    filterPills.forEach(pill => {
+      if (pill.hasAttribute('data-listeners-added')) {
+        return; // Skip if already has listeners
       }
+      pill.setAttribute('data-listeners-added', 'true');
     });
     
-    // Final verification on mobile
-    if (isMobile && isNucleus) {
-      setTimeout(() => {
-        const visibleCards = document.querySelectorAll('.work-card:not(.hidden)');
-        const actuallyVisible = Array.from(visibleCards).filter(card => {
-          const style = window.getComputedStyle(card);
-          return style.display !== 'none' && style.visibility !== 'hidden';
-        });
-        
-        console.log('✅ Final mobile setup result:', {
-          totalCards: workCards.length,
-          visibleCards: visibleCards.length,
-          actuallyVisible: actuallyVisible.length
-        });
-        
-        if (actuallyVisible.length === 0) {
-          console.error('🚨 NO CARDS VISIBLE ON MOBILE - This is the problem!');
-        }
-      }, 100);
-    }
+    // Ensure all cards are visible initially
+    workCards.forEach((card, index) => {
+      card.classList.remove('hidden');
+      card.style.display = '';
+      card.style.visibility = '';
+      card.style.opacity = '';
+      
+      console.log(`Card ${index} data-category:`, card.getAttribute('data-category'));
+    });
     
-    // Force "All Work" filter to be active
+    // Set "All Work" as active
     filterPills.forEach(pill => pill.classList.remove('active'));
     const allFilter = document.querySelector('.filter-pill[data-filter="all"]');
     if (allFilter) {
       allFilter.classList.add('active');
+      console.log('✅ Set "All Work" as active filter');
+    } else {
+      console.error('❌ Could not find "All Work" filter button');
     }
     
-    // Add event listeners
-    filterPills.forEach(pill => {
+    // Add click event listeners with robust error handling
+    filterPills.forEach((pill, index) => {
+      const filterValue = pill.getAttribute('data-filter');
+      console.log(`Adding listener to filter ${index}: ${filterValue}`);
+      
       pill.addEventListener('click', (e) => {
-        const filter = e.target.dataset.filter;
+        e.preventDefault();
+        const filter = e.target.getAttribute('data-filter');
+        console.log('🎯 Filter clicked:', filter);
         this.filterWork(filter, filterPills, workCards);
       });
     });
+    
+    // Mark as initialized
+    this.filtersInitialized = true;
+    console.log('✅ Work filters initialized successfully');
   }
   
   filterWork(filter, pills, cards) {
-    // Update active pill
-    pills.forEach(pill => {
-      pill.classList.toggle('active', pill.dataset.filter === filter);
-    });
+    console.log('🎯 Filtering work with filter:', filter);
     
-    // Filter cards instantly
-    cards.forEach(card => {
-      const categories = card.dataset.category ? card.dataset.category.split(' ') : ['all'];
-      const shouldShow = filter === 'all' || categories.includes(filter);
-      
-      // Instant show/hide without delays
-      if (shouldShow) {
-        card.classList.remove('hidden');
+    // Update active pill with better selection
+    pills.forEach(pill => {
+      const pillFilter = pill.getAttribute('data-filter');
+      if (pillFilter === filter) {
+        pill.classList.add('active');
+        console.log('✅ Activated filter pill:', pillFilter);
       } else {
-        card.classList.add('hidden');
+        pill.classList.remove('active');
       }
     });
+    
+    // Filter cards with enhanced logging
+    let hiddenCount = 0;
+    let shownCount = 0;
+    
+    cards.forEach((card, index) => {
+      const categoryAttr = card.getAttribute('data-category');
+      const categories = categoryAttr ? categoryAttr.split(' ') : ['all'];
+      const shouldShow = filter === 'all' || categories.includes(filter);
+      
+      console.log(`Card ${index}: categories=[${categories.join(',')}], shouldShow=${shouldShow}`);
+      
+      if (shouldShow) {
+        // Multiple ways to ensure card is visible
+        card.classList.remove('hidden');
+        card.style.display = '';
+        card.style.visibility = '';
+        card.style.opacity = '';
+        shownCount++;
+      } else {
+        card.classList.add('hidden');
+        hiddenCount++;
+      }
+    });
+    
+    console.log(`✅ Filter applied: ${shownCount} shown, ${hiddenCount} hidden`);
   }
   
   // ==========================================================================
@@ -294,15 +315,7 @@ class WebsiteInteractions {
       link.addEventListener('click', () => {
         this.closeMobileMenu();
         
-        // If navigating to nucleus page, ensure work filters initialize properly
-        if (link.href && link.href.includes('nucleus.html')) {
-          setTimeout(() => {
-            this.setupWorkFilters();
-          }, 100);
-          setTimeout(() => {
-            this.setupWorkFilters();
-          }, 500);
-        }
+        // Navigation to nucleus page - filters will auto-initialize via guard
       });
     });
     
@@ -319,10 +332,12 @@ class WebsiteInteractions {
         this.closeMobileMenu();
       }
       
-      // Re-initialize work filters on resize to fix visibility issues
-      setTimeout(() => {
+      // Reset filter initialization flag on significant resize
+      if (Math.abs(window.innerWidth - this.lastWidth) > 100) {
+        this.filtersInitialized = false;
+        this.lastWidth = window.innerWidth;
         this.setupWorkFilters();
-      }, 50);
+      }
     });
   }
   
@@ -376,10 +391,7 @@ class WebsiteInteractions {
     // Return focus to toggle button for accessibility
     if (mobileToggle) mobileToggle.focus();
     
-    // Re-initialize work filters after menu closes to ensure content visibility
-    setTimeout(() => {
-      this.setupWorkFilters();
-    }, 300);
+    // No need to re-initialize - filters are guarded against duplicates
   }
   
   // ==========================================================================
@@ -569,26 +581,7 @@ if (prefersReducedMotion) {
 // Initialize when DOM is ready
 document.addEventListener('DOMContentLoaded', () => {
   const website = new WebsiteInteractions();
-  
-  // Single robust initialization with proper fallbacks
-  function initializeWorkFilters() {
-    website.setupWorkFilters();
-    
-    // If on nucleus page and mobile, ensure work cards are visible
-    if (window.location.pathname.includes('nucleus.html') && window.innerWidth <= 768) {
-      const workCards = document.querySelectorAll('.work-card');
-      if (workCards.length === 0) {
-        // DOM not ready yet, try again
-        setTimeout(initializeWorkFilters, 100);
-        return;
-      }
-      console.log('Mobile nucleus page initialized with', workCards.length, 'work cards');
-    }
-  }
-  
-  // Initialize immediately and with one fallback
-  initializeWorkFilters();
-  setTimeout(initializeWorkFilters, 500);
+  // Constructor handles all initialization with proper guards
 });
 
 // Handle page visibility for performance
@@ -599,12 +592,6 @@ document.addEventListener('visibilitychange', () => {
   } else {
     document.body.classList.remove('page-hidden');
     
-    // Only re-initialize if on nucleus page and mobile
-    if (window.location.pathname.includes('nucleus.html') && window.innerWidth <= 768) {
-      const website = new WebsiteInteractions();
-      setTimeout(() => {
-        website.setupWorkFilters();
-      }, 100);
-    }
+    // Page visibility handling - no need to re-initialize due to guards
   }
 });

@@ -625,7 +625,9 @@ p, body {
 }
 
 .work-card.hidden {
-  display: none;
+  display: none !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
 }
 
 .work-card:hover {
