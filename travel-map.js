@@ -66,13 +66,21 @@
     {year:2025, city:'New York City, NY, USA', name:'IFS IndustrialX', lat:40.7128, lng:-74.0060},
     {year:2025, city:'Las Vegas, NV, USA', name:'SuiteWorld 2025', lat:36.1699, lng:-115.1398},
     {year:2025, city:'Las Vegas, NV, USA', name:'Oracle CloudWorld 2025', lat:36.1699, lng:-115.1398},
+
+    // 2026
+    {year:2026, city:'Seattle, WA, USA', name:'Acumatica Summit 2026', lat:47.6062, lng:-122.3321},
+    {year:2026, city:'Atlanta, GA, USA', name:'Sage Analyst Summit 2026', lat:33.7490, lng:-84.3880},
+    {year:2026, city:'Atlanta, GA, USA', name:'Infor Analyst Summit 2026', lat:33.7490, lng:-84.3880},
+    {year:2026, city:'Nashville, TN, USA', name:'Epicor Insights 2026', lat:36.1627, lng:-86.7816},
+    {year:2026, city:'San Diego, CA, USA', name:'Blue Yonder ICON 2026', lat:32.7157, lng:-117.1611},
+    {year:2026, city:'Houston, TX, USA', name:'GE Vernova Transform to Transition APM User Conference 2026', lat:29.7604, lng:-95.3698},
   ];
 
   // Year -> color
-  const colors = { 2022:'#8ae3ff', 2023:'#9b8cff', 2024:'#5cff8a', 2025:'#ffd166' };
+  const colors = { 2022:'#8ae3ff', 2023:'#9b8cff', 2024:'#5cff8a', 2025:'#ffd166', 2026:'#ff6bb5' };
 
   // Marker layer
-  const layersByYear = { 2022:L.layerGroup(), 2023:L.layerGroup(), 2024:L.layerGroup(), 2025:L.layerGroup() };
+  const layersByYear = { 2022:L.layerGroup(), 2023:L.layerGroup(), 2024:L.layerGroup(), 2025:L.layerGroup(), 2026:L.layerGroup() };
 
   // Group trips by location to handle multiple conferences per city
   const locationGroups = {};
