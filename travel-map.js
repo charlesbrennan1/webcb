@@ -29,7 +29,7 @@
   // Data — approximate coords are fine for a travel map
   const trips = [
     // 2022
-    {year:2022, city:'Miami Beach, FL, USA', name:'IFS Unleashed 2022', lat:25.7907, lng:-80.1300},
+    {year:2022, city:'Miami, FL, USA', name:'IFS Unleashed 2022', lat:25.7617, lng:-80.1918},
 
     // 2023
     {year:2023, city:'Nashville, TN, USA', name:'Kinexions 2023', lat:36.1627, lng:-86.7816},
@@ -38,7 +38,7 @@
 
     // 2024
     {year:2024, city:'New York City, NY, USA', name:'Infor Analyst Summit 2024', lat:40.7128, lng:-74.0060},
-    {year:2024, city:'Redwood City, CA, USA', name:'Oracle Analyst Summit 2024', lat:37.4852, lng:-122.2364},
+    {year:2024, city:'San Francisco, CA, USA', name:'Oracle Analyst Summit 2024', lat:37.7749, lng:-122.4194},
     {year:2024, city:'Dallas, TX, USA', name:'Blue Yonder ICON 2024', lat:32.7767, lng:-96.7970},
     {year:2024, city:'Miami, FL, USA', name:'Kinexions 2024', lat:25.7617, lng:-80.1918},
     {year:2024, city:'Nashville, TN, USA', name:'Epicor Insights 2024', lat:36.1627, lng:-86.7816},
@@ -54,7 +54,7 @@
 
     // 2025
     {year:2025, city:'New York City, NY, USA', name:'Infor Analyst Summit 2025', lat:40.7128, lng:-74.0060},
-    {year:2025, city:'Redwood City, CA, USA', name:'Oracle Analyst Summit 2025', lat:37.4852, lng:-122.2364},
+    {year:2025, city:'San Francisco, CA, USA', name:'Oracle Analyst Summit 2025', lat:37.7749, lng:-122.4194},
     {year:2025, city:'Austin, TX, USA', name:'Kinexions 2025', lat:30.2672, lng:-97.7431},
     {year:2025, city:'Atlanta, GA, USA', name:'RELEX Live 2025', lat:33.7490, lng:-84.3880},
     {year:2025, city:'Nashville, TN, USA', name:'Blue Yonder 2025', lat:36.1627, lng:-86.7816},
@@ -69,9 +69,11 @@
 
     // 2026
     {year:2026, city:'Seattle, WA, USA', name:'Acumatica Summit 2026', lat:47.6062, lng:-122.3321},
+    {year:2026, city:'San Francisco, CA, USA', name:'Oracle Analyst Summit 2026', lat:37.7749, lng:-122.4194},
     {year:2026, city:'Atlanta, GA, USA', name:'Sage Analyst Summit 2026', lat:33.7490, lng:-84.3880},
     {year:2026, city:'Atlanta, GA, USA', name:'Infor Analyst Summit 2026', lat:33.7490, lng:-84.3880},
     {year:2026, city:'Nashville, TN, USA', name:'Epicor Insights 2026', lat:36.1627, lng:-86.7816},
+    {year:2026, city:'Nashville, TN, USA', name:'RELEX Live 2026', lat:36.1627, lng:-86.7816},
     {year:2026, city:'San Diego, CA, USA', name:'Blue Yonder ICON 2026', lat:32.7157, lng:-117.1611},
     {year:2026, city:'Houston, TX, USA', name:'GE Vernova Transform to Transition APM User Conference 2026', lat:29.7604, lng:-95.3698},
   ];
@@ -102,32 +104,18 @@
   Object.values(locationGroups).forEach(location => {
     // Sort events by year
     location.events.sort((a, b) => a.year - b.year);
-    
-    // Determine marker color (use most recent year)
-    const latestYear = Math.max(...location.events.map(e => e.year));
-    const markerColor = colors[latestYear];
-    
-    // Create larger, more visible marker
-    const m = L.circleMarker([location.lat, location.lng], {
-      radius: 10, // Increased from 6
-      color: markerColor,
-      weight: 3, // Increased from 2
-      fillColor: markerColor,
-      fillOpacity: 0.6, // Increased from 0.35
-      stroke: true
-    });
-    
-    // Create popup content with all events for this location
-    let popupContent = `<div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; color: #eaf0ff; min-width: 200px;">`;
-    popupContent += `<h4 style="margin: 0 0 8px 0; color: #8ae3ff; font-size: 16px;">${location.city}</h4>`;
-    
-    // Group events by year for better organization
+
+    // Group events by year for popup content
     const eventsByYear = {};
     location.events.forEach(event => {
       if (!eventsByYear[event.year]) eventsByYear[event.year] = [];
       eventsByYear[event.year].push(event);
     });
-    
+
+    // Create popup content with all events for this location
+    let popupContent = `<div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; color: #eaf0ff; min-width: 200px;">`;
+    popupContent += `<h4 style="margin: 0 0 8px 0; color: #8ae3ff; font-size: 16px;">${location.city}</h4>`;
+
     Object.keys(eventsByYear).sort().forEach(year => {
       popupContent += `<div style="margin-bottom: 6px;">`;
       popupContent += `<span style="color: ${colors[year]}; font-weight: 600; font-size: 14px;">${year}:</span><br>`;
@@ -136,20 +124,36 @@
       });
       popupContent += `</div>`;
     });
-    
+
     popupContent += `</div>`;
-    
-    m.bindPopup(popupContent, {
-      maxWidth: 300,
-      className: 'custom-popup'
-    });
-    
-    // Add to appropriate year layers (add to all years that have events at this location)
+
+    // Get unique years at this location
     const yearsAtLocation = [...new Set(location.events.map(e => e.year))];
+
+    // Create a SEPARATE marker for EACH year at this location
     yearsAtLocation.forEach(year => {
+      const markerColor = colors[year];
+
+      // Create a new marker instance for this year
+      const m = L.circleMarker([location.lat, location.lng], {
+        radius: 10,
+        color: markerColor,
+        weight: 3,
+        fillColor: markerColor,
+        fillOpacity: 0.6,
+        stroke: true
+      });
+
+      // Bind the popup (showing all events at this location)
+      m.bindPopup(popupContent, {
+        maxWidth: 300,
+        className: 'custom-popup'
+      });
+
+      // Add this marker to only its year's layer
       m.addTo(layersByYear[year]);
     });
-    
+
     bounds.push([location.lat, location.lng]);
   });
 
