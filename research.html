@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Research Portfolio - Charles Brennan</title>
+  <meta name="description" content="Complete collection of 144 published research reports on supply chain management, AI tools, ERP modernization, and ROI analysis at Nucleus Research." />
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="shortcut icon" href="favicon.png">
+  <style>
+    body {
+      background: #05070b !important;
+      margin: 0;
+      color: #eaf0ff;
+    }
+  </style>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="header">
+    <nav class="nav">
+      <a class="logo" href="index.html">Charles Brennan</a>
+      <ul class="nav-links">
+        <li><a class="nav-link" href="about.html">About</a></li>
+        <li><a class="nav-link" href="nucleus.html">Nucleus Research</a></li>
+        <li><a class="nav-link" href="tlf.html">TLF Apparel</a></li>
+        <li><a class="nav-link" href="contact.html">Contact</a></li>
+      </ul>
+      <button class="mobile-menu-toggle" aria-label="Toggle mobile menu">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- Mobile Navigation Overlay -->
+  <div class="mobile-nav-overlay">
+    <nav class="mobile-nav-menu">
+      <ul class="mobile-nav-links">
+        <li><a class="mobile-nav-link" href="about.html">About</a></li>
+        <li><a class="mobile-nav-link" href="nucleus.html">Nucleus Research</a></li>
+        <li><a class="mobile-nav-link" href="tlf.html">TLF Apparel</a></li>
+        <li><a class="mobile-nav-link" href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <div class="work-container">
+    <div class="container">
+      <!-- Breadcrumb -->
+      <div class="breadcrumb reveal" style="margin-bottom: var(--space-l);">
+        <a href="nucleus.html" style="color: var(--muted); text-decoration: none;">Nucleus Research</a>
+        <span style="color: var(--muted); margin: 0 var(--space-s);">→</span>
+        <span style="color: var(--text);">Research Portfolio</span>
+      </div>
+
+      <h1 class="h1 reveal">Research Portfolio</h1>
+      <p class="reveal" style="color: var(--muted); font-size: clamp(16px, 2vw, 20px); margin-bottom: var(--space-xl);">
+        Complete collection of <strong id="total-count">144</strong> published research reports at Nucleus Research
+      </p>
+
+      <!-- Filters Section -->
+      <div class="reveal" style="margin-bottom: var(--space-2xl);">
+        <!-- Year Filters -->
+        <div style="margin-bottom: var(--space-l);">
+          <h3 style="font-size: clamp(16px, 2vw, 18px); margin-bottom: var(--space-m); color: var(--accent-1);">Filter by Year</h3>
+          <div class="travel-filters" style="justify-content: flex-start; flex-wrap: wrap;">
+            <label><input type="checkbox" value="all-years" id="all-years-checkbox" checked> All Years</label>
+            <label><input type="checkbox" value="2022" class="year-filter" checked> 2022</label>
+            <label><input type="checkbox" value="2023" class="year-filter" checked> 2023</label>
+            <label><input type="checkbox" value="2024" class="year-filter" checked> 2024</label>
+            <label><input type="checkbox" value="2025" class="year-filter" checked> 2025</label>
+            <label><input type="checkbox" value="2026" class="year-filter" checked> 2026</label>
+          </div>
+        </div>
+
+        <!-- Topic Filters -->
+        <div style="margin-bottom: var(--space-l);">
+          <h3 style="font-size: clamp(16px, 2vw, 18px); margin-bottom: var(--space-m); color: var(--accent-2);">Filter by Topic</h3>
+          <div class="filter-pills" style="display: flex; gap: var(--space-m); flex-wrap: wrap;">
+            <button class="filter-pill active" data-topic="all">All Topics</button>
+            <button class="filter-pill" data-topic="Analytics">Analytics</button>
+            <button class="filter-pill" data-topic="Enterprise Applications">Enterprise Applications</button>
+            <button class="filter-pill" data-topic="Supply Chain Management">Supply Chain Management</button>
+          </div>
+        </div>
+
+        <!-- Results Count -->
+        <p style="color: var(--muted); font-size: 14px;">
+          Showing <strong id="visible-count">144</strong> of <strong id="total-count-2">144</strong> reports
+        </p>
+      </div>
+
+      <!-- Reports Grid -->
+      <div id="reports-grid" class="work-grid" style="margin-top: var(--space-xl);">
+        <!-- Reports will be dynamically inserted here -->
+      </div>
+
+      <!-- Loading State -->
+      <div id="loading-state" style="text-align: center; padding: var(--space-4xl); color: var(--muted);">
+        <p>Loading research portfolio...</p>
+      </div>
+
+      <!-- No Results State -->
+      <div id="no-results" style="display: none; text-align: center; padding: var(--space-4xl); color: var(--muted);">
+        <p style="font-size: clamp(18px, 2vw, 20px); margin-bottom: var(--space-m);">No reports match your filters</p>
+        <p>Try selecting different year or topic filters</p>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <p>© 2026 Charles Brennan. All rights reserved.</p>
+  </footer>
+
+  <style>
+    /* Filter Pills Styling */
+    .filter-pills {
+      display: flex;
+      gap: var(--space-m);
+      flex-wrap: wrap;
+    }
+
+    .filter-pill {
+      padding: var(--space-s) var(--space-l);
+      border-radius: 50px;
+      border: 1px solid rgba(138, 227, 255, 0.3);
+      background: rgba(138, 227, 255, 0.1);
+      color: var(--text);
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: 500;
+      transition: all 0.2s ease;
+    }
+
+    .filter-pill:hover {
+      background: rgba(138, 227, 255, 0.2);
+      border-color: rgba(138, 227, 255, 0.5);
+    }
+
+    .filter-pill.active {
+      background: linear-gradient(135deg, var(--accent-1), var(--accent-2));
+      border-color: var(--accent-1);
+      color: #0a0f16;
+    }
+
+    /* Research Report Card Styling */
+    .research-card {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(138, 227, 255, 0.1);
+      border-radius: var(--border-radius);
+      padding: var(--space-l);
+      transition: all 0.3s ease;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-m);
+    }
+
+    .research-card:hover {
+      background: rgba(255, 255, 255, 0.05);
+      border-color: rgba(138, 227, 255, 0.3);
+      transform: translateY(-2px);
+    }
+
+    .research-card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: var(--space-m);
+    }
+
+    .research-card-tags {
+      display: flex;
+      gap: var(--space-s);
+      flex-wrap: wrap;
+    }
+
+    .research-card-title {
+      font-size: clamp(16px, 2vw, 18px);
+      font-weight: 600;
+      color: var(--text);
+      margin: 0;
+      line-height: 1.4;
+    }
+
+    .research-card-link {
+      color: var(--accent-1);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-xs);
+    }
+
+    .research-card-link:hover {
+      color: var(--accent-2);
+    }
+
+    .external-icon {
+      width: 14px;
+      height: 14px;
+      display: inline-block;
+    }
+  </style>
+
+  <script src="script.js"></script>
+  <script>
+    // Research Portfolio JavaScript with embedded data
+    (function() {
+      // Embedded research data (144 reports)
+      const allReports = [{"year":2022,"title":"Build enterprise apps with Quixy","url":"https://nucleusresearch.com/research/single/build-enterprise-apps-with-quixy/","topic_area":"Enterprise Applications","slug":"build-enterprise-apps-with-quixy"},{"year":2022,"title":"Controlling cash flow with Coupa","url":"https://nucleusresearch.com/research/single/controlling-cash-flow-with-coupa/","topic_area":"Enterprise Applications","slug":"controlling-cash-flow-with-coupa"},{"year":2022,"title":"Decrease demurrage costs by 50 percent with Project44","url":"https://nucleusresearch.com/research/single/project44-decreases-demurrage-costs/","topic_area":"Supply Chain Management","slug":"project44-decreases-demurrage-costs"},{"year":2022,"title":"Domo Everywhere brings analytics to the front lines","url":"https://nucleusresearch.com/research/single/domo-everywhere-brings-analytics-to-the-front-lines/","topic_area":"Analytics","slug":"domo-everywhere-brings-analytics-to-the-front-lines"},{"year":2022,"title":"FourKites improves OTIF and customer retention","url":"https://nucleusresearch.com/research/single/fourkites-improves-otif-and-customer-retention/","topic_area":"Supply Chain Management","slug":"fourkites-improves-otif-and-customer-retention"},{"year":2022,"title":"How AI/ML and IoT drive control tower autonomy","url":"https://nucleusresearch.com/research/single/how-ai-ml-and-iot-drive-control-tower-autonomy/","topic_area":"Enterprise Applications","slug":"how-ai-ml-and-iot-drive-control-tower-autonomy"},{"year":2022,"title":"IFS Unleashed 2022 updates","url":"https://nucleusresearch.com/research/single/ifs-unleashed-2022-updates/","topic_area":"Enterprise Applications","slug":"ifs-unleashed-2022-updates"},{"year":2022,"title":"Improve operational efficiency with IFS","url":"https://nucleusresearch.com/research/single/improve-operational-efficiency-with-ifs/","topic_area":"Enterprise Applications","slug":"improve-operational-efficiency-with-ifs"},{"year":2022,"title":"MPO increases service levels by 15 percent","url":"https://nucleusresearch.com/research/single/mpo-increases-service-levels-by-15-percent/","topic_area":"Supply Chain Management","slug":"mpo-increases-service-levels-by-15-percent"},{"year":2022,"title":"MercuryGate acquires ClearTrack","url":"https://nucleusresearch.com/research/single/mercurygate-acquires-cleartrack/","topic_area":"Supply Chain Management","slug":"mercurygate-acquires-cleartrack"},{"year":2022,"title":"Scaling up with Oracle Cloud EPM","url":"https://nucleusresearch.com/research/single/scaling-up-with-oracle-cloud-epm/","topic_area":"Enterprise Applications","slug":"scaling-up-with-oracle-cloud-epm"},{"year":2022,"title":"Why Kinaxis' MPO acquisition matters","url":"https://nucleusresearch.com/research/single/why-kinaxis-mpo-acquisition-matters/","topic_area":"Supply Chain Management","slug":"why-kinaxis-mpo-acquisition-matters"},{"year":2022,"title":"Why the Infor and Syntellis healthcare partnership matters","url":"https://nucleusresearch.com/research/single/why-the-infor-and-syntellis-healthcare-partnership-matters/","topic_area":"Enterprise Applications","slug":"why-the-infor-and-syntellis-healthcare-partnership-matters"},{"year":2023,"title":"2023 WMS Market Overview","url":"https://nucleusresearch.com/research/single/2023-warehouse-management-systems-market-overview/","topic_area":"Supply Chain Management","slug":"2023-warehouse-management-systems-market-overview"},{"year":2023,"title":"Accelerate insights with Vena Solutions","url":"https://nucleusresearch.com/research/single/accelerate-insights-with-vena-solutions/","topic_area":"Enterprise Applications","slug":"accelerate-insights-with-vena-solutions"},{"year":2023,"title":"Anatomy of a decision - Blue Yonder","url":"https://nucleusresearch.com/research/single/anatomy-of-a-decision-blue-yonder/","topic_area":"Supply Chain Management","slug":"anatomy-of-a-decision-blue-yonder"},{"year":2023,"title":"Anatomy of a decision - GAINSystems","url":"https://nucleusresearch.com/research/single/anatomy-of-a-decision-gainsystems/","topic_area":"Supply Chain Management","slug":"anatomy-of-a-decision-gainsystems"},{"year":2023,"title":"Anatomy of a decision - Kinaxis","url":"https://nucleusresearch.com/research/single/anatomy-of-a-decision-kinaxis/","topic_area":"Supply Chain Management","slug":"anatomy-of-a-decision-kinaxis"},{"year":2023,"title":"Anatomy of a decision - One Network Enterprises","url":"https://nucleusresearch.com/research/single/anatomy-of-a-decision-one-network-enterprises/","topic_area":"Supply Chain Management","slug":"anatomy-of-a-decision-one-network-enterprises"},{"year":2023,"title":"Anatomy of a decision - Planful","url":"https://nucleusresearch.com/research/single/anatomy-of-a-decision-planful/","topic_area":"Enterprise Applications","slug":"anatomy-of-a-decision-planful"},{"year":2023,"title":"Anatomy of a decision- Garvis","url":"https://nucleusresearch.com/research/single/anatomy-of-a-decision-garvis/","topic_area":"Supply Chain Management","slug":"anatomy-of-a-decision-garvis"},{"year":2023,"title":"Anatomy of a decision: Infor Nexus Control Center","url":"https://nucleusresearch.com/research/single/anatomy-of-a-decision-infor-nexus-control-center/","topic_area":"Supply Chain Management","slug":"anatomy-of-a-decision-infor-nexus-control-center"},{"year":2023,"title":"Anatomy of a decision: Savant Software","url":"https://nucleusresearch.com/research/single/anatomy-of-a-decision-savant-software/","topic_area":"Supply Chain Management","slug":"anatomy-of-a-decision-savant-software"},{"year":2023,"title":"Blue Yonder ICON 2023 updates","url":"https://nucleusresearch.com/research/single/blue-yonder-icon-2023-updates/","topic_area":"Supply Chain Management","slug":"blue-yonder-icon-2023-updates"},{"year":2023,"title":"Blue Yonder acquires reverse logistics specalist Doddle","url":"https://nucleusresearch.com/research/single/blue-yonder-acquires-reverse-logistics-specialist-doddle/","topic_area":"Supply Chain Management","slug":"blue-yonder-acquires-reverse-logistics-specialist-doddle"},{"year":2023,"title":"Consumer brands use Shipium to optimize logistics operations","url":"https://nucleusresearch.com/research/single/consumer-brands-use-shipium-to-optimize-logistics-operations/","topic_area":"Supply Chain Management","slug":"consumer-brands-use-shipium-to-optimize-logistics-operations"},{"year":2023,"title":"Drive manufacturing excellence with ETQ","url":"https://nucleusresearch.com/research/single/drive-manufacturing-excellence-with-etq/","topic_area":"Enterprise Applications","slug":"drive-manufacturing-excellence-with-etq"},{"year":2023,"title":"Epicor acquires logistics management platform Elite EXTRA","url":"https://nucleusresearch.com/research/single/epicor-acquires-logistics-management-platform-elite-extra/","topic_area":"Supply Chain Management","slug":"epicor-acquires-logistics-management-platform-elite-extra"},{"year":2023,"title":"Flexibility with Board Intelligent Supply Chain Planning","url":"https://nucleusresearch.com/research/single/flexibility-with-board-intelligent-supply-chain-planning/","topic_area":"Supply Chain Management","slug":"flexibility-with-board-intelligent-supply-chain-planning"},{"year":2023,"title":"FreightPOP enhances manufacturers logistics","url":"https://nucleusresearch.com/research/single/freightpop-enhances-manufacturers-logistics/","topic_area":"Supply Chain Management","slug":"freightpop-enhances-manufacturers-logistics"},{"year":2023,"title":"Freightwise benefit case study - Logistics Service Provider","url":"https://nucleusresearch.com/research/single/freightwise-benefit-case-study-logistics-service-provider/","topic_area":"Supply Chain Management","slug":"freightwise-benefit-case-study-logistics-service-provider"},{"year":2023,"title":"How Descartes MacroPoint saves 3PLs millions","url":"https://nucleusresearch.com/research/single/how-descartes-macropoint-saves-3pls-millions/","topic_area":"Supply Chain Management","slug":"how-descartes-macropoint-saves-3pls-millions"},{"year":2023,"title":"Kinexions 2023 updates","url":"https://nucleusresearch.com/research/single/kinexions-2023-updates/","topic_area":"Supply Chain Management","slug":"kinexions-2023-updates"},{"year":2023,"title":"Logility acquires Garvis to boost planning capabilties","url":"https://nucleusresearch.com/research/single/logility-acquires-garvis-to-boost-planning-capabilities/","topic_area":"Supply Chain Management","slug":"logility-acquires-garvis-to-boost-planning-capabilities"},{"year":2023,"title":"Manhattan Associates benefit case study - Logistics Company","url":"https://nucleusresearch.com/research/single/manhattan-associates-benefit-case-study-logistics-company/","topic_area":"Supply Chain Management","slug":"manhattan-associates-benefit-case-study-logistics-company"},{"year":2023,"title":"Manhattan Associates benefit case study - Retail Brand","url":"https://nucleusresearch.com/research/single/manhattan-associates-benefit-case-study-retail-brand/","topic_area":"Supply Chain Management","slug":"manhattan-associates-benefit-case-study-retail-brand"},{"year":2023,"title":"MercuryGate benefit case study - Logistics Company","url":"https://nucleusresearch.com/research/single/mercurygate-benefit-case-study-logistics-company/","topic_area":"Supply Chain Management","slug":"mercurygate-benefit-case-study-logistics-company"},{"year":2023,"title":"OneStream benefit case study - Consumer Goods Manufacturer","url":"https://nucleusresearch.com/research/single/onestream-benefit-case-study-consumer-goods-manufacturer/","topic_area":"Enterprise Applications","slug":"onestream-benefit-case-study-consumer-goods-manufacturer"},{"year":2023,"title":"Optimize inventory with Smart Software","url":"https://nucleusresearch.com/research/single/optimize-inventory-with-smart-software/","topic_area":"Supply Chain Management","slug":"optimize-inventory-with-smart-software"},{"year":2023,"title":"Oracle NetSuite benefit case study - Apparel Company","url":"https://nucleusresearch.com/research/single/oracle-netsuite-benefit-case-study-apparel-company/","topic_area":"Enterprise Applications","slug":"oracle-netsuite-benefit-case-study-apparel-company"},{"year":2023,"title":"Oracle SCM benefit case study - Electronics Manufacturer","url":"https://nucleusresearch.com/research/single/oracle-scm-benefit-case-study-electronics-manufacturer/","topic_area":"Supply Chain Management","slug":"oracle-scm-benefit-case-study-electronics-manufacturer"},{"year":2023,"title":"Reduce backorders with CCH Tagetik Supply Chain Planning","url":"https://nucleusresearch.com/research/single/reduce-backorders-with-cch-tagetik-supply-chain-planning/","topic_area":"Supply Chain Management","slug":"reduce-backorders-with-cch-tagetik-supply-chain-planning"},{"year":2023,"title":"Redwood acquires Rockfarm Supply Chain Solutions","url":"https://nucleusresearch.com/research/single/redwood-acquires-rockfarm-supply-chain-solutions/","topic_area":"Supply Chain Management","slug":"redwood-acquires-rockfarm-supply-chain-solutions"},{"year":2023,"title":"ShipStation benefit case study - Fashion Brand","url":"https://nucleusresearch.com/research/single/shipstation-benefit-case-study-fashion-brand/","topic_area":"Supply Chain Management","slug":"shipstation-benefit-case-study-fashion-brand"},{"year":2023,"title":"Shipium launches Simulation tool for smarter logistics","url":"https://nucleusresearch.com/research/single/shipium-launches-simulation-tool-for-smarter-logistics/","topic_area":"Supply Chain Management","slug":"shipium-launches-simulation-tool-for-smarter-logistics"},{"year":2023,"title":"TMS Market overview 2023","url":"https://nucleusresearch.com/research/single/2023-tms-market-overview/","topic_area":"Supply Chain Management","slug":"2023-tms-market-overview"},{"year":2023,"title":"TMS Technology Value Matrix 2023","url":"https://nucleusresearch.com/research/single/tms-technology-value-matrix-2023/","topic_area":"Supply Chain Management","slug":"tms-technology-value-matrix-2023"},{"year":2023,"title":"TMS platforms cut transportation costs by 11 percent","url":"https://nucleusresearch.com/research/single/tms-platforms-cut-transportation-costs-by-11-percent/","topic_area":"Supply Chain Management","slug":"tms-platforms-cut-transportation-costs-by-11-percent"},{"year":2023,"title":"Tecsys improves throughput times by 30 percent","url":"https://nucleusresearch.com/research/single/tecsys-improves-throughput-times-by-30-percent/","topic_area":"Supply Chain Management","slug":"tecsys-improves-throughput-times-by-30-percent"},{"year":2023,"title":"Unleashing robotic warehouse value","url":"https://nucleusresearch.com/research/single/unleashing-robotic-warehouse-value/","topic_area":"Supply Chain Management","slug":"unleashing-robotic-warehouse-value"},{"year":2023,"title":"WMS Technology Value Matrix 2023","url":"https://nucleusresearch.com/research/single/wms-technology-value-matrix-2023/","topic_area":"Supply Chain Management","slug":"wms-technology-value-matrix-2023"},{"year":2023,"title":"WMS improves inventory accuracy by 20 percent","url":"https://nucleusresearch.com/research/single/wms-improves-inventory-accuracy-by-20-percent/","topic_area":"Supply Chain Management","slug":"wms-improves-inventory-accuracy-by-20-percent"},{"year":2023,"title":"Why the Davinci and WARP partnership matters","url":"https://nucleusresearch.com/research/single/why-the-davinci-and-warp-partnership-matters/","topic_area":"Supply Chain Management","slug":"why-the-davinci-and-warp-partnership-matters"},{"year":2023,"title":"Why the Optessa and One Network partnership matters","url":"https://nucleusresearch.com/research/single/why-the-optessa-and-one-network-partnership-matters/","topic_area":"Supply Chain Management","slug":"why-the-optessa-and-one-network-partnership-matters"},{"year":2023,"title":"o9 Solutions benefit case study- Materials Supplier","url":"https://nucleusresearch.com/research/single/o9-solutions-benefit-case-study-materials-supplier/","topic_area":"Supply Chain Management","slug":"o9-solutions-benefit-case-study-materials-supplier"},{"year":2024,"title":"Anatomy of a decision - Descartes Systems Group","url":"https://nucleusresearch.com/research/single/anatomy-of-a-decision-descartes-systems-group/","topic_area":"Supply Chain Management","slug":"anatomy-of-a-decision-descartes-systems-group"},{"year":2024,"title":"Anatomy of a decision - John Galt Solutions","url":"https://nucleusresearch.com/research/single/anatomy-of-a-decision-john-galt-solutions/","topic_area":"Supply Chain Management","slug":"anatomy-of-a-decision-john-galt-solutions"},{"year":2024,"title":"Assessing the value Kinaxis TMS brings to customers","url":"https://nucleusresearch.com/research/single/assessing-the-value-kinaxis-tms-brings-to-customers/","topic_area":"Supply Chain Management","slug":"assessing-the-value-kinaxis-tms-brings-to-customers"},{"year":2024,"title":"Assessing the value of DELMIAWorks for manufacturers","url":"https://nucleusresearch.com/research/single/assessing-the-value-of-delmiaworks-for-manufacturers/","topic_area":"Enterprise Applications","slug":"assessing-the-value-of-delmiaworks-for-manufacturers"},{"year":2024,"title":"Assessing the value of Logility for end-to-end supply chain planning","url":"https://nucleusresearch.com/research/single/assessing-the-value-of-logility-for-end-to-end-supply-chain-planning/","topic_area":"Supply Chain Management","slug":"assessing-the-value-of-logility-for-end-to-end-supply-chain-planning"},{"year":2024,"title":"Assessing the value of QAD for manufacturing","url":"https://nucleusresearch.com/research/single/assessing-the-value-of-qad-for-manufacturing/","topic_area":"Enterprise Applications","slug":"assessing-the-value-of-qad-for-manufacturing"},{"year":2024,"title":"Assessing the value of QAD for supply chain planning","url":"https://nucleusresearch.com/research/single/assessing-the-value-of-qad-for-supply-chain-planning/","topic_area":"Supply Chain Management","slug":"assessing-the-value-of-qad-for-supply-chain-planning"},{"year":2024,"title":"Blue Yonder ICON 2024 updates","url":"https://nucleusresearch.com/research/single/blue-yonder-icon-2024-updates/","topic_area":"Supply Chain Management","slug":"blue-yonder-icon-2024-updates"},{"year":2024,"title":"Blue Yonder enters binding agreement to acquire One Network","url":"https://nucleusresearch.com/research/single/blue-yonder-enters-binding-agreement-to-acquire-one-network/","topic_area":"Supply Chain Management","slug":"blue-yonder-enters-binding-agreement-to-acquire-one-network"},{"year":2024,"title":"CPM Technology Value Matrix 2024","url":"https://nucleusresearch.com/research/single/cpm-technology-value-matrix-2024/","topic_area":"Enterprise Applications","slug":"cpm-technology-value-matrix-2024"},{"year":2024,"title":"Close accounting books faster with OneStream","url":"https://nucleusresearch.com/research/single/close-accounting-books-faster-with-onestream/","topic_area":"Supply Chain Management","slug":"close-accounting-books-faster-with-onestream"},{"year":2024,"title":"Connecting the top floor to the shop floor","url":"https://nucleusresearch.com/research/single/connecting-the-top-floor-to-the-shop-floor/","topic_area":"Enterprise Applications","slug":"connecting-the-top-floor-to-the-shop-floor"},{"year":2024,"title":"Control Tower Technology Value Matrix 2024","url":"https://nucleusresearch.com/research/single/control-tower-technology-value-matrix-2024/","topic_area":"Supply Chain Management","slug":"control-tower-technology-value-matrix-2024"},{"year":2024,"title":"Decrease inventory carrying costs with FuturMaster","url":"https://nucleusresearch.com/research/single/decrease-inventory-carrying-costs-with-futurmaster/","topic_area":"Supply Chain Management","slug":"decrease-inventory-carrying-costs-with-futurmaster"},{"year":2024,"title":"Deltek ProjectCon 2024 updates","url":"https://nucleusresearch.com/research/single/deltek-projectcon-2024-updates/","topic_area":"Enterprise Applications","slug":"deltek-projectcon-2024-updates"},{"year":2024,"title":"Enhance financial control and reporting with Centage","url":"https://nucleusresearch.com/research/single/enhance-financial-control-and-reporting-with-centage/","topic_area":"Enterprise Applications","slug":"enhance-financial-control-and-reporting-with-centage"},{"year":2024,"title":"Enhancing visibility for makers, movers, and sellers.","url":"https://nucleusresearch.com/research/single/enhancing-visibility-for-makes-movers-and-sellers/","topic_area":"Supply Chain Management","slug":"enhancing-visibility-for-makes-movers-and-sellers"},{"year":2024,"title":"Gaining control of your pharmacy supply chain with a CPSC","url":"https://nucleusresearch.com/research/single/gaining-control-of-your-pharmacy-supply-chain-with-a-cpsc/","topic_area":"Supply Chain Management","slug":"gaining-control-of-your-pharmacy-supply-chain-with-a-cpsc"},{"year":2024,"title":"How to maximize the ROI of a TMS in 2024","url":"https://nucleusresearch.com/research/single/how-to-maximize-the-roi-of-a-tms-in-2024/","topic_area":"Supply Chain Management","slug":"how-to-maximize-the-roi-of-a-tms-in-2024"},{"year":2024,"title":"IFS unleashed 2024 updates","url":"https://nucleusresearch.com/research/single/ifs-unleashed-2024-updates/","topic_area":"Enterprise Applications","slug":"ifs-unleashed-2024-updates"},{"year":2024,"title":"Industrial IoT Data Platform Technology Value Matrix 2024","url":"https://nucleusresearch.com/research/single/industrial-iot-data-platform-value-matrix-2024/","topic_area":"Enterprise Applications","slug":"industrial-iot-data-platform-value-matrix-2024"},{"year":2024,"title":"Infor Nexus announces map and trace capabilities","url":"https://nucleusresearch.com/research/single/infor-nexus-announces-map-and-trace-capabilities/","topic_area":"Supply Chain Management","slug":"infor-nexus-announces-map-and-trace-capabilities"},{"year":2024,"title":"Infor Velocity Summit 2024","url":"https://nucleusresearch.com/research/single/infor-velocity-summit-2024/","topic_area":"Enterprise Applications","slug":"infor-velocity-summit-2024"},{"year":2024,"title":"Kinaxis announces the Maestro platform","url":"https://nucleusresearch.com/research/single/kinaxis-announces-the-maestro-platform/","topic_area":"Supply Chain Management","slug":"kinaxis-announces-the-maestro-platform"},{"year":2024,"title":"Körber Supply Chain Software to acquire MercuryGate","url":"https://nucleusresearch.com/research/single/korber-supply-chain-software-to-acquire-mercurygate/","topic_area":"Supply Chain Management","slug":"korber-supply-chain-software-to-acquire-mercurygate"},{"year":2024,"title":"Modernizing construction operations with CMiC","url":"https://nucleusresearch.com/research/single/modernizing-construction-operations-with-cmic/","topic_area":"Enterprise Applications","slug":"modernizing-construction-operations-with-cmic"},{"year":2024,"title":"Operational savings with Epicor supply chain planning","url":"https://nucleusresearch.com/research/single/operational-savings-with-epicor-supply-chain-planning/","topic_area":"Enterprise Applications","slug":"operational-savings-with-epicor-supply-chain-planning"},{"year":2024,"title":"Organizations reduce inventory costs with Wolters Kluwer SCP","url":"https://nucleusresearch.com/research/single/organizations-reduce-inventory-costs-with-wolters-kluwer-scp/","topic_area":"Supply Chain Management","slug":"organizations-reduce-inventory-costs-with-wolters-kluwer-scp"},{"year":2024,"title":"Planful slashes close times by 40 percent","url":"https://nucleusresearch.com/research/single/planful-slashes-close-times-by-40-percent/","topic_area":"Enterprise Applications","slug":"planful-slashes-close-times-by-40-percent"},{"year":2024,"title":"Propel Software ROI Case Study : Breg","url":"https://nucleusresearch.com/research/single/propel-software-roi-case-study-breg/","topic_area":"Enterprise Applications","slug":"propel-software-roi-case-study-breg"},{"year":2024,"title":"RELEX Solutions ROI case study - AAH Pharmaceuticals","url":"https://nucleusresearch.com/research/single/relex-solutions-roi-case-study-aah-pharmaceuticals/","topic_area":"Supply Chain Management","slug":"relex-solutions-roi-case-study-aah-pharmaceuticals"},{"year":2024,"title":"RELEX customers cut inventory costs by 20 percent on average","url":"https://nucleusresearch.com/research/single/relex-customers-cut-inventory-costs-by-20-percent-on-average/","topic_area":"Supply Chain Management","slug":"relex-customers-cut-inventory-costs-by-20-percent-on-average"},{"year":2024,"title":"Reduce financial reporting times with Pigment","url":"https://nucleusresearch.com/research/single/reduce-financial-reporting-times-with-pigment/","topic_area":"Enterprise Applications","slug":"reduce-financial-reporting-times-with-pigment"},{"year":2024,"title":"Relex Solutions acquires supply chain vendor Optimity","url":"https://nucleusresearch.com/research/single/relex-solutions-acquires-supply-chain-vendor-optimity/","topic_area":"Supply Chain Management","slug":"relex-solutions-acquires-supply-chain-vendor-optimity"},{"year":2024,"title":"SCP Technology Value Matrix 2024","url":"https://nucleusresearch.com/research/single/scp-technology-value-matrix-2024/","topic_area":"Supply Chain Management","slug":"scp-technology-value-matrix-2024"},{"year":2024,"title":"Streamline inventory management with Blue Ridge SCP","url":"https://nucleusresearch.com/research/single/streamline-inventory-management-with-blue-ridge-scp/","topic_area":"Supply Chain Management","slug":"streamline-inventory-management-with-blue-ridge-scp"},{"year":2024,"title":"SuiteWorld 2024 updates","url":"https://nucleusresearch.com/research/single/suiteworld-2024-updates/","topic_area":"Enterprise Applications","slug":"suiteworld-2024-updates"},{"year":2024,"title":"TMS Technology Value Matrix 2024","url":"https://nucleusresearch.com/research/single/tms-technology-value-matrix-2024/","topic_area":"Supply Chain Management","slug":"tms-technology-value-matrix-2024"},{"year":2024,"title":"The value Vena brings to finance teams","url":"https://nucleusresearch.com/research/single/the-value-vena-brings-to-finance-teams/","topic_area":"Enterprise Applications","slug":"the-value-vena-brings-to-finance-teams"},{"year":2024,"title":"Versapay ROI case study - North Atlantic International Logistics","url":"https://nucleusresearch.com/research/single/versapay-roi-case-study-north-atlantic-international-logistics/","topic_area":"Enterprise Applications","slug":"versapay-roi-case-study-north-atlantic-international-logistics"},{"year":2024,"title":"WMS Technology Value Matrix 2024","url":"https://nucleusresearch.com/research/single/wms-technology-value-matrix-2024/","topic_area":"Supply Chain Management","slug":"wms-technology-value-matrix-2024"},{"year":2024,"title":"Why the TraceLink and Tecsys partnership matters","url":"https://nucleusresearch.com/research/single/why-the-tracelink-and-tecsys-partnership-matters/","topic_area":"Supply Chain Management","slug":"why-the-tracelink-and-tecsys-partnership-matters"},{"year":2025,"title":"2025 Supply Chain Agility Index","url":"https://nucleusresearch.com/research/single/2025-supply-chain-agility-index/","topic_area":"Supply Chain Management","slug":"2025-supply-chain-agility-index"},{"year":2025,"title":"Accelerating supply chain decision-making with John Galt Solutions","url":"https://nucleusresearch.com/research/single/accelerating-supply-chain-decision-making-with-john-galt-solutions/","topic_area":"Supply Chain Management","slug":"accelerating-supply-chain-decision-making-with-john-galt-solutions"},{"year":2025,"title":"Advancing Supply Chain Excellence with New Horizon Soft","url":"https://nucleusresearch.com/research/single/advancing-supply-chain-planning-excellence-with-new-horizon-soft/","topic_area":"Supply Chain Management","slug":"advancing-supply-chain-planning-excellence-with-new-horizon-soft"},{"year":2025,"title":"Assessing Ramco's Impact on Manufacturing Enterprises","url":"https://nucleusresearch.com/research/single/assessing-ramcos-impact-on-manufacturing-enterprises/","topic_area":"Enterprise Applications","slug":"assessing-ramcos-impact-on-manufacturing-enterprises"},{"year":2025,"title":"Assessing the Value of AI-Enabled ERP Systems in Construction","url":"https://nucleusresearch.com/research/single/assessing-the-value-of-ai-enabled-erp-systems-in-construction/","topic_area":"Enterprise Applications","slug":"assessing-the-value-of-ai-enabled-erp-systems-in-construction"},{"year":2025,"title":"Assessing the value of Tecsys WMS for healthcare organizations","url":"https://nucleusresearch.com/research/single/assessing-the-value-of-tecsys-wms-for-healthcare-organizations/","topic_area":"Supply Chain Management","slug":"assessing-the-value-of-tecsys-wms-for-healthcare-organizations"},{"year":2025,"title":"Assessing the value of e2open SCP for manufacturers","url":"https://nucleusresearch.com/research/single/assessing-the-value-of-e2open-scp-for-manufacturers/","topic_area":"Supply Chain Management","slug":"assessing-the-value-of-e2open-scp-for-manufacturers"},{"year":2025,"title":"Benefit Case Study: Infor CloudSuite Industrial at a Materials Manufacturer","url":"https://nucleusresearch.com/research/single/benefit-case-study-infor-cloudsuite-industrial-at-a-materials-manufacturer/","topic_area":"Enterprise Applications","slug":"benefit-case-study-infor-cloudsuite-industrial-at-a-materials-manufacturer"},{"year":2025,"title":"Benefit Case Study: Infor Nexus at an Apparel and Fashion Company","url":"https://nucleusresearch.com/research/single/benefit-case-study-infor-nexus-at-an-apparel-and-fashion-company/","topic_area":"Supply Chain Management","slug":"benefit-case-study-infor-nexus-at-an-apparel-and-fashion-company"},{"year":2025,"title":"Benefit case study - DAT enables $1.5M in cost savings for Henkel","url":"https://nucleusresearch.com/research/single/benefit-case-study-dat-enables-1-5m-in-cost-savings-for-henkel/","topic_area":"Supply Chain Management","slug":"benefit-case-study-dat-enables-1-5m-in-cost-savings-for-henkel"},{"year":2025,"title":"Benefit case study - G2Mint drives 10x revenue productivity for a 3PL","url":"https://nucleusresearch.com/research/single/benefit-case-study-g2mint-drives-10x-revenue-productivity-for-a-3pl/","topic_area":"Supply Chain Management","slug":"benefit-case-study-g2mint-drives-10x-revenue-productivity-for-a-3pl"},{"year":2025,"title":"Benefit case study - Logility cuts forecasting errors by 50% for a manufacturer","url":"https://nucleusresearch.com/research/single/benefit-case-study-logility-cuts-forecasting-errors-by-50-for-a-manufacturer/","topic_area":"Supply Chain Management","slug":"benefit-case-study-logility-cuts-forecasting-errors-by-50-for-a-manufacturer"},{"year":2025,"title":"Benefit case study - Rootstock enables 5x growth at a manufacturer","url":"https://nucleusresearch.com/research/single/benefit-case-study-rootstock-enables-5x-growth-at-a-manufacturer/","topic_area":"Enterprise Applications","slug":"benefit-case-study-rootstock-enables-5x-growth-at-a-manufacturer"},{"year":2025,"title":"Benefit case study: DAT drives up to 10% cost savings for Colgate","url":"https://nucleusresearch.com/research/single/benefit-case-study-dat-drives-up-to-10-cost-savings-for-colgate/","topic_area":"Supply Chain Management","slug":"benefit-case-study-dat-drives-up-to-10-cost-savings-for-colgate"},{"year":2025,"title":"Control Tower Technology Value Matrix 2025","url":"https://nucleusresearch.com/research/single/control-tower-technology-value-matrix-2025/","topic_area":"Supply Chain Management","slug":"control-tower-technology-value-matrix-2025"},{"year":2025,"title":"Demystifying the value of composable architectures for supply chains","url":"https://nucleusresearch.com/research/single/demystifying-the-value-of-composable-architectures-for-supply-chains/","topic_area":"Supply Chain Management","slug":"demystifying-the-value-of-composable-architectures-for-supply-chains"},{"year":2025,"title":"Drive manufacturing excellence with Plex, by Rockwell Automation","url":"https://nucleusresearch.com/research/single/drive-manufacturing-excellence-with-plex-by-rockwell-automation/","topic_area":"Enterprise Applications","slug":"drive-manufacturing-excellence-with-plex-by-rockwell-automation"},{"year":2025,"title":"Enhancing manufacturing efficiency with Eyelit Technologies MES","url":"https://nucleusresearch.com/research/single/enhancing-manufacturing-efficiency-with-eyelit-technologies-mes/","topic_area":"Enterprise Applications","slug":"enhancing-manufacturing-efficiency-with-eyelit-technologies-mes"},{"year":2025,"title":"Enterprise ERP Technology Value Matrix 2025","url":"https://nucleusresearch.com/research/single/enterprise-erp-technology-value-matrix-2025/","topic_area":"Enterprise Applications","slug":"enterprise-erp-technology-value-matrix-2025"},{"year":2025,"title":"Eyelit Technologies acquires Adexa to extend its SCP functionality","url":"https://nucleusresearch.com/research/single/eyelit-technologies-acquires-adexa-to-extend-its-scp-functionality/","topic_area":"Enterprise Applications","slug":"eyelit-technologies-acquires-adexa-to-extend-its-scp-functionality"},{"year":2025,"title":"FourKites launches Inventory Twin to enhance Control Tower offerings","url":"https://nucleusresearch.com/research/single/fourkites-launches-inventory-twin-to-enhance-control-tower-offerings/","topic_area":"Supply Chain Management","slug":"fourkites-launches-inventory-twin-to-enhance-control-tower-offerings"},{"year":2025,"title":"Guidebook: Assessing the value of DAT for shippers","url":"https://nucleusresearch.com/research/single/guidebook-assessing-the-value-of-dat-for-shippers/","topic_area":"Supply Chain Management","slug":"guidebook-assessing-the-value-of-dat-for-shippers"},{"year":2025,"title":"How manufacturers utilize Nextworld to optimize warehouse operations","url":"https://nucleusresearch.com/research/single/how-manufacturers-utilize-nextworld-to-optimize-warehouse-operations/","topic_area":"Supply Chain Management","slug":"how-manufacturers-utilize-nextworld-to-optimize-warehouse-operations"},{"year":2025,"title":"Kinaxis debuts new partnerships and AI agents at Kinexions 2025","url":"https://nucleusresearch.com/research/single/kinaxis-debuts-new-partnerships-and-ai-agents-at-kinexions-2025/","topic_area":"Supply Chain Management","slug":"kinaxis-debuts-new-partnerships-and-ai-agents-at-kinexions-2025"},{"year":2025,"title":"Manufacturing Execution System Technology Value Matrix 2025","url":"https://nucleusresearch.com/research/single/manufacturing-execution-system-technology-value-matrix-2025/","topic_area":"Enterprise Applications","slug":"manufacturing-execution-system-technology-value-matrix-2025"},{"year":2025,"title":"Modernizing discrete manufacturing operations with Pelico","url":"https://nucleusresearch.com/research/single/modernizing-discrete-manufacturing-operations-with-pelico/","topic_area":"Enterprise Applications","slug":"modernizing-discrete-manufacturing-operations-with-pelico"},{"year":2025,"title":"Modernizing healthcare operations with Tecsys Elite WMS","url":"https://nucleusresearch.com/research/single/modernizing-healthcare-operations-with-tecsys-elite-wms/","topic_area":"Supply Chain Management","slug":"modernizing-healthcare-operations-with-tecsys-elite-wms"},{"year":2025,"title":"Quantifying the value of warehouse modernization with Savant WMS","url":"https://nucleusresearch.com/research/single/quantifying-the-value-of-warehouse-modernization-with-savant-wms/","topic_area":"Supply Chain Management","slug":"quantifying-the-value-of-warehouse-modernization-with-savant-wms"},{"year":2025,"title":"ROI Case Study: BlackLine Systems at Creditsafe","url":"https://nucleusresearch.com/research/single/roi-case-study-blackline-systems-at-creditsafe/","topic_area":"Enterprise Applications","slug":"roi-case-study-blackline-systems-at-creditsafe"},{"year":2025,"title":"ROI Case Study: Blue Ridge SCP at Heidelberg Distributing Company","url":"https://nucleusresearch.com/research/single/roi-case-study-blue-ridge-scp-at-heidelberg-distributing-company/","topic_area":"Supply Chain Management","slug":"roi-case-study-blue-ridge-scp-at-heidelberg-distributing-company"},{"year":2025,"title":"ROI Case Study: ECI Deacom ERP at Van Drunen Farms","url":"https://nucleusresearch.com/research/single/roi-case-study-eci-deacom-erp-at-van-drunen-farms/","topic_area":"Enterprise Applications","slug":"roi-case-study-eci-deacom-erp-at-van-drunen-farms"},{"year":2025,"title":"ROI Case Study: GAINS SCP LTP at Border States","url":"https://nucleusresearch.com/research/single/roi-case-study-gains-scp-ltp-tool-at-border-states/","topic_area":"Supply Chain Management","slug":"roi-case-study-gains-scp-ltp-tool-at-border-states"},{"year":2025,"title":"ROI Case Study: RELEX Supply Chain Planning at Rastelli Food Group","url":"https://nucleusresearch.com/research/single/roi-case-study-relex-supply-chain-planning-at-rastelli-food-group/","topic_area":"Supply Chain Management","slug":"roi-case-study-relex-supply-chain-planning-at-rastelli-food-group"},{"year":2025,"title":"ROI Case Study: Savant WMS at an International industrial parts distributor","url":"https://nucleusresearch.com/research/single/savant-wms-roi-case-study-international-industrial-parts-distributor/","topic_area":"Supply Chain Management","slug":"savant-wms-roi-case-study-international-industrial-parts-distributor"},{"year":2025,"title":"ROI case study – Propel Software at a Home Electronics Brand","url":"https://nucleusresearch.com/research/single/roi-case-study-propel-software-at-a-home-electronics-brand/","topic_area":"Enterprise Applications","slug":"roi-case-study-propel-software-at-a-home-electronics-brand"},{"year":2025,"title":"Rootstock accelerates manufacturing agility for mid-market producers","url":"https://nucleusresearch.com/research/single/rootstock-accelerates-manufacturing-agility-for-mid-market-producers/","topic_area":"Enterprise Applications","slug":"rootstock-accelerates-manufacturing-agility-for-mid-market-producers"},{"year":2025,"title":"SMB ERP Technology Value Matrix 2025","url":"https://nucleusresearch.com/research/single/smb-erp-technology-value-matrix-2025/","topic_area":"Enterprise Applications","slug":"smb-erp-technology-value-matrix-2025"},{"year":2025,"title":"Scaling beyond QuickBooks with Acumatica","url":"https://nucleusresearch.com/research/single/scaling-beyond-quickbooks-with-acumatica/","topic_area":"Enterprise Applications","slug":"scaling-beyond-quickbooks-with-acumatica"},{"year":2025,"title":"SuiteWorld 2025 updates and announcements","url":"https://nucleusresearch.com/research/single/suiteworld-2025-updates-and-announcements/","topic_area":"Enterprise Applications","slug":"suiteworld-2025-updates-and-announcements"},{"year":2025,"title":"Supply Chain Planning Technology Value Matrix 2025","url":"https://nucleusresearch.com/research/single/supply-chain-planning-technology-value-matrix-2025/","topic_area":"Supply Chain Management","slug":"supply-chain-planning-technology-value-matrix-2025"},{"year":2025,"title":"TMS Technology Value Matrix 2025","url":"https://nucleusresearch.com/research/single/tms-technology-value-matrix-2025/","topic_area":"Supply Chain Management","slug":"tms-technology-value-matrix-2025"},{"year":2025,"title":"The value of Zebra's Demand Intelligence Suite for enterprise retailers","url":"https://nucleusresearch.com/research/single/the-value-of-zebras-demand-intelligence-suite-for-enterprise-retailers/","topic_area":"Supply Chain Management","slug":"the-value-of-zebras-demand-intelligence-suite-for-enterprise-retailers"},{"year":2025,"title":"WMS Technology Value Matrix 2025","url":"https://nucleusresearch.com/research/single/wms-technology-value-matrix-2025/","topic_area":"Supply Chain Management","slug":"wms-technology-value-matrix-2025"},{"year":2026,"title":"Accelerating time to value in warehouse management with Savant Systems WMS","url":"https://nucleusresearch.com/research/single/accelerating-time-to-value-in-warehouse-management-with-savant-software-wms/","topic_area":"Supply Chain Management","slug":"accelerating-time-to-value-in-warehouse-management-with-savant-software-wms"},{"year":2026,"title":"Benefit case study: Blue Ridge cuts inventory levels by 31% for a distributor","url":"https://nucleusresearch.com/research/single/benefit-case-study-blue-ridge-cuts-inventory-levels-by-31-for-a-distributor/","topic_area":"Supply Chain Management","slug":"benefit-case-study-blue-ridge-cuts-inventory-levels-by-31-for-a-distributor"},{"year":2026,"title":"Examining the value of ICRON SCP for complex industrial planning","url":"https://nucleusresearch.com/research/single/examining-the-value-of-icron-scp-for-complex-industrial-planning/","topic_area":"Supply Chain Management","slug":"examining-the-value-of-icron-scp-for-complex-industrial-planning"},{"year":2026,"title":"IFS intends to acquire supply chain execution vendor Softeon","url":"https://nucleusresearch.com/research/single/ifs-intends-to-acquire-supply-chain-execution-vendor-softeon/","topic_area":"Enterprise Applications","slug":"ifs-intends-to-acquire-supply-chain-execution-vendor-softeon"}];
+
+      let selectedYears = new Set(['2022', '2023', '2024', '2025', '2026']);
+      let selectedTopic = 'all';
+
+      // Hide loading state and render reports immediately
+      document.getElementById('loading-state').style.display = 'none';
+      renderReports();
+
+      // Topic filter handling
+      const topicButtons = document.querySelectorAll('.filter-pill');
+      topicButtons.forEach(button => {
+        button.addEventListener('click', () => {
+          topicButtons.forEach(btn => btn.classList.remove('active'));
+          button.classList.add('active');
+          selectedTopic = button.getAttribute('data-topic');
+          renderReports();
+        });
+      });
+
+      // Year filter handling
+      const yearCheckboxes = document.querySelectorAll('.year-filter');
+      const allYearsCheckbox = document.getElementById('all-years-checkbox');
+
+      yearCheckboxes.forEach(checkbox => {
+        checkbox.addEventListener('change', () => {
+          if (checkbox.checked) {
+            selectedYears.add(checkbox.value);
+          } else {
+            selectedYears.delete(checkbox.value);
+          }
+
+          // Update "All Years" checkbox
+          allYearsCheckbox.checked = selectedYears.size === 5;
+          renderReports();
+        });
+      });
+
+      allYearsCheckbox.addEventListener('change', () => {
+        if (allYearsCheckbox.checked) {
+          yearCheckboxes.forEach(cb => {
+            cb.checked = true;
+            selectedYears.add(cb.value);
+          });
+        } else {
+          yearCheckboxes.forEach(cb => {
+            cb.checked = false;
+            selectedYears.delete(cb.value);
+          });
+        }
+        renderReports();
+      });
+
+      // Render reports based on filters
+      function renderReports() {
+        const grid = document.getElementById('reports-grid');
+        const noResults = document.getElementById('no-results');
+
+        // Filter reports and sort by year (newest first)
+        const filteredReports = allReports.filter(report => {
+          const yearMatch = selectedYears.has(String(report.year));
+          const topicMatch = selectedTopic === 'all' || report.topic_area === selectedTopic;
+          return yearMatch && topicMatch;
+        }).sort((a, b) => b.year - a.year);
+
+        // Update counts
+        document.getElementById('visible-count').textContent = filteredReports.length;
+        document.getElementById('total-count-2').textContent = allReports.length;
+
+        // Show/hide no results message
+        if (filteredReports.length === 0) {
+          grid.style.display = 'none';
+          noResults.style.display = 'block';
+          return;
+        } else {
+          grid.style.display = 'grid';
+          noResults.style.display = 'none';
+        }
+
+        // Render cards
+        grid.innerHTML = filteredReports.map(report => `
+          <article class="research-card" onclick="window.open('${report.url}', '_blank')">
+            <div class="research-card-header">
+              <div class="research-card-tags">
+                <div class="tag" style="background: rgba(138, 227, 255, 0.15); color: var(--accent-1);">${report.year}</div>
+                <div class="tag" style="background: rgba(155, 140, 255, 0.15); color: var(--accent-2);">${report.topic_area}</div>
+              </div>
+            </div>
+            <h3 class="research-card-title">${report.title}</h3>
+            <a class="research-card-link" href="${report.url}" target="_blank" onclick="event.stopPropagation()">
+              Read Report
+              <svg class="external-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+              </svg>
+            </a>
+          </article>
+        `).join('');
+      }
+    })();
+  </script>
+</body>
+</html>
