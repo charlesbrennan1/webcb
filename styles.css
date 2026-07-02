@@ -1,3 +1,68 @@
+/* Self-hosted fonts (assets/fonts) - no external dependency */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('assets/fonts/inter-400.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('assets/fonts/inter-500.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('assets/fonts/inter-600.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('assets/fonts/inter-700.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url('assets/fonts/inter-800.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('assets/fonts/space-grotesk-500.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('assets/fonts/space-grotesk-600.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('assets/fonts/space-grotesk-700.woff2') format('woff2');
+}
+
 /* ==========================================================================
    PREMIUM NVIDIA-INSPIRED DESIGN SYSTEM
    ========================================================================== */
@@ -48,10 +113,11 @@
 
 html {
   scroll-behavior: smooth;
+  background: var(--bg-0);
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   background: linear-gradient(135deg, var(--bg-0), var(--bg-1));
   color: var(--text);
   line-height: 1.6;
@@ -78,6 +144,10 @@ body::before {
    ========================================================================== */
 
 /* Typography scale */
+h1, .h1, h2, .h2, h3, .h3 {
+  font-family: "Space Grotesk", "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
 h1, .h1 {
   font-size: clamp(28px, 6vw, 72px);
   font-weight: 700;
@@ -1892,4 +1962,67 @@ img {
   .road-milestones {
     position: static;
   }
+}
+/* [X] ACCESSIBILITY (moved from script.js style injection)
+   ========================================================================== */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 8px;
+  background: var(--accent-1);
+  color: var(--bg-0);
+  padding: 8px 16px;
+  text-decoration: none;
+  border-radius: var(--border-radius);
+  font-weight: 600;
+  z-index: 2000;
+  transition: top var(--duration-normal) var(--easing);
+}
+
+.skip-link:focus {
+  top: 8px;
+}
+
+.nav-link:focus-visible,
+.btn:focus-visible,
+.filter-pill:focus-visible {
+  outline: 2px solid var(--accent-1);
+  outline-offset: 2px;
+  border-radius: var(--border-radius);
+}
+
+.work-card:focus-within {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-strong);
+  border-color: var(--accent-1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .reveal {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
+/* [X] MODERN UI UTILITIES
+   ========================================================================== */
+.gradient-text {
+  background: linear-gradient(135deg, var(--accent-1), var(--accent-2));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Smooth cross-page navigation in supporting browsers */
+@view-transition {
+  navigation: auto;
 }
