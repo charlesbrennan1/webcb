@@ -26,7 +26,7 @@
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/attributions">CARTO</a>'
   }).addTo(map);
 
-  // Data — approximate coords are fine for a travel map
+  // Data - approximate coords are fine for a travel map
   const trips = [
     // 2022
     {year:2022, city:'Miami, FL, USA', name:'IFS Unleashed 2022', lat:25.7617, lng:-80.1918},
