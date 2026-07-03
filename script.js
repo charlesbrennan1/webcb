@@ -84,19 +84,39 @@ class WebsiteInteractions {
     filterPills.forEach(pill => {
       pill.addEventListener('click', (e) => {
         e.preventDefault();
-        this.filterWork(pill.getAttribute('data-filter'), filterPills, workCards);
+        this.filterWork([pill.getAttribute('data-filter')], filterPills, workCards);
       });
     });
+
+    this.applyFilterFromUrl(filterPills, workCards);
   }
 
-  filterWork(filter, pills, cards) {
+  // Supports deep links like nucleus.html?filter=webinar,podcast,speaking
+  applyFilterFromUrl(pills, cards) {
+    const param = new URLSearchParams(window.location.search).get('filter');
+    if (!param) return;
+
+    const known = [...pills].map(pill => pill.getAttribute('data-filter'));
+    const filters = param.split(',').map(f => f.trim()).filter(f => known.includes(f));
+    if (filters.length === 0) return;
+
+    this.filterWork(filters, pills, cards);
+
+    const pillsContainer = document.querySelector('.filter-pills');
+    if (pillsContainer) {
+      setTimeout(() => pillsContainer.scrollIntoView({ behavior: 'smooth', block: 'start' }), 100);
+    }
+  }
+
+  filterWork(filters, pills, cards) {
     pills.forEach(pill => {
-      pill.classList.toggle('active', pill.getAttribute('data-filter') === filter);
+      pill.classList.toggle('active', filters.includes(pill.getAttribute('data-filter')));
     });
 
     cards.forEach(card => {
       const categories = (card.getAttribute('data-category') || 'all').split(' ');
-      card.classList.toggle('hidden', filter !== 'all' && !categories.includes(filter));
+      const show = filters.includes('all') || categories.some(c => filters.includes(c));
+      card.classList.toggle('hidden', !show);
     });
   }
 
