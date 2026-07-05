@@ -483,7 +483,7 @@ p, body {
   grid-template-columns: 1fr 1fr;
   align-items: center;
   gap: var(--space-4xl);
-  padding: 120px var(--space-xl) var(--space-4xl);
+  padding: 96px var(--space-xl) var(--space-2xl);
   max-width: var(--max-width);
   margin: 0 auto;
   position: relative;
@@ -494,25 +494,58 @@ p, body {
 }
 
 .hero-title {
+  font-size: clamp(30px, 4.5vw, 54px);
   margin-bottom: var(--space-xl);
 }
 
 .hero-subtitle {
   color: var(--muted);
-  font-size: clamp(16px, 2vw, 24px);
-  margin-bottom: var(--space-3xl);
+  font-size: clamp(16px, 1.8vw, 20px);
+  margin-bottom: var(--space-xl);
   max-width: 80%;
 }
 
 .hero-actions {
   display: flex;
   gap: var(--space-l);
-  margin-bottom: var(--space-3xl);
+  margin-bottom: var(--space-xl);
+}
+
+.hero-logos {
+  display: flex;
+  align-items: center;
+  gap: var(--space-l);
+  margin-top: var(--space-2xl);
+}
+
+.hero-logos a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-s) var(--space-m);
+  background: rgba(255, 255, 255, 0.92);
+  border-radius: var(--border-radius);
+  opacity: 0.55;
+  transition: opacity var(--duration-normal) var(--easing), transform var(--duration-normal) var(--easing);
+}
+
+.hero-logos a:hover,
+.hero-logos a:focus-visible {
+  opacity: 1;
+  transform: translateY(-2px);
+}
+
+.hero-logos img {
+  height: 30px;
+  width: auto;
+  display: block;
 }
 
 .hero-media {
   position: relative;
   width: 100%;
+  max-width: 440px;
+  margin-inline: auto;
   aspect-ratio: 4 / 5; /* portrait ratio */
   border-radius: 20px;
   overflow: hidden;
@@ -603,7 +636,7 @@ p, body {
   border: 1px solid rgba(138, 227, 255, 0.1);
   border-radius: var(--border-radius);
   padding: var(--space-3xl);
-  margin: var(--space-3xl) 0;
+  margin: var(--space-3xl) auto;
   position: relative;
   z-index: 2;
 }
@@ -642,6 +675,19 @@ p, body {
 .about-content .h2 {
   text-align: center;
   margin: var(--space-4xl) 0 var(--space-2xl);
+}
+
+.about-content .section-header {
+  margin-top: var(--space-4xl);
+}
+
+.about-content .section-header .h1,
+.about-content .section-header .h2 {
+  margin: 0;
+}
+
+.about-content > .section-header:first-child {
+  margin-top: 0;
 }
 
 .about-content .credentials-strip {
@@ -1140,6 +1186,10 @@ img {
     min-width: 120px;
     font-size: 14px;
     padding: var(--space-s) var(--space-l);
+  }
+
+  .hero-logos {
+    justify-content: center;
   }
   
   .nav-links {
