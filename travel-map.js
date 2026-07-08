@@ -75,7 +75,10 @@
     {year:2026, city:'Nashville, TN, USA', name:'Epicor Insights 2026', lat:36.1627, lng:-86.7816},
     {year:2026, city:'Nashville, TN, USA', name:'RELEX Live 2026', lat:36.1627, lng:-86.7816},
     {year:2026, city:'San Diego, CA, USA', name:'Blue Yonder ICON 2026', lat:32.7157, lng:-117.1611},
-    {year:2026, city:'Houston, TX, USA', name:'GE Vernova Transform to Transition APM User Conference 2026', lat:29.7604, lng:-95.3698},
+    {year:2026, city:'Amsterdam, Netherlands', name:'o9 Solutions aim10x Europe 2026', lat:52.3676, lng:4.9041},
+    {year:2026, city:'Orlando, FL, USA', name:'SAP Sapphire 2026', lat:28.5383, lng:-81.3792},
+    {year:2026, city:'Chicago, IL, USA', name:'Unit4 Analyst Summit 2026', lat:41.8781, lng:-87.6298},
+    {year:2026, city:'San Francisco, CA, USA', name:'NetSuite Analyst Summit 2026', lat:37.7749, lng:-122.4194},
   ];
 
   // Year -> color
