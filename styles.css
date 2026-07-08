@@ -522,10 +522,12 @@ p, body {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: var(--space-s) var(--space-m);
+  width: 46px;
+  height: 46px;
+  padding: 7px;
   background: rgba(255, 255, 255, 0.92);
-  border-radius: var(--border-radius);
-  opacity: 0.55;
+  border-radius: 11px;
+  opacity: 0.85;
   transition: opacity var(--duration-normal) var(--easing), transform var(--duration-normal) var(--easing);
 }
 
@@ -536,8 +538,36 @@ p, body {
 }
 
 .hero-logos img {
-  height: 30px;
-  width: auto;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+/* Uniform brand-mark tile used in the Nucleus/TLF page headers */
+.role-logo-tile {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 100px;
+  padding: 16px;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.28);
+  transition: transform var(--duration-normal) var(--easing);
+}
+
+.role-logo-tile:hover,
+.role-logo-tile:focus-visible {
+  transform: translateY(-3px);
+}
+
+.role-logo-tile img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
   display: block;
 }
 
@@ -904,6 +934,66 @@ p, body {
 .contact-value a {
   color: var(--accent-1);
   text-decoration: none;
+}
+
+/* Connect row: favicon / glyph chips */
+.contact-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-l);
+  justify-content: center;
+  margin-bottom: var(--space-xl);
+}
+
+.contact-chip {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-s);
+  width: 72px;
+  text-decoration: none;
+}
+
+.contact-chip-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  padding: 11px;
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+  transition: transform var(--duration-normal) var(--easing), box-shadow var(--duration-normal) var(--easing);
+}
+
+.contact-chip:hover .contact-chip-icon,
+.contact-chip:focus-visible .contact-chip-icon {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 26px rgba(0, 0, 0, 0.32);
+}
+
+.contact-chip-icon img,
+.contact-chip-icon svg {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.contact-chip-icon svg {
+  color: #1b2436;
+}
+
+.contact-chip-label {
+  font-size: 13px;
+  color: var(--muted);
+  transition: color var(--duration-normal) var(--easing);
+}
+
+.contact-chip:hover .contact-chip-label,
+.contact-chip:focus-visible .contact-chip-label {
+  color: var(--text);
 }
 
 .copy-btn {
