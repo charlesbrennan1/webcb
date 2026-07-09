@@ -218,15 +218,15 @@
       width: 40px;
       height: 40px;
       padding: 4px;
-      background: rgba(255, 255, 255, 0.95);
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(138, 227, 255, 0.18);
       border-radius: 9px;
-      opacity: 0.92;
-      transition: opacity var(--duration-normal) var(--easing), transform var(--duration-normal) var(--easing);
+      transition: border-color var(--duration-normal) var(--easing), transform var(--duration-normal) var(--easing);
     }
 
     .vendor-logo-chip:hover,
     .vendor-logo-chip:focus-visible {
-      opacity: 1;
+      border-color: rgba(138, 227, 255, 0.45);
       transform: translateY(-2px);
     }
 

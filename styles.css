@@ -525,15 +525,15 @@ p, body {
   width: 46px;
   height: 46px;
   padding: 7px;
-  background: rgba(255, 255, 255, 0.92);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(138, 227, 255, 0.18);
   border-radius: 11px;
-  opacity: 0.85;
-  transition: opacity var(--duration-normal) var(--easing), transform var(--duration-normal) var(--easing);
+  transition: border-color var(--duration-normal) var(--easing), transform var(--duration-normal) var(--easing);
 }
 
 .hero-logos a:hover,
 .hero-logos a:focus-visible {
-  opacity: 1;
+  border-color: rgba(138, 227, 255, 0.45);
   transform: translateY(-2px);
 }
 
@@ -553,10 +553,11 @@ p, body {
   width: 100px;
   height: 100px;
   padding: 16px;
-  background: #fff;
+  background: var(--surface);
+  border: 1px solid rgba(138, 227, 255, 0.18);
   border-radius: 20px;
   box-shadow: 0 10px 28px rgba(0, 0, 0, 0.28);
-  transition: transform var(--duration-normal) var(--easing);
+  transition: transform var(--duration-normal) var(--easing), border-color var(--duration-normal) var(--easing);
 }
 
 .role-logo-tile:hover,
@@ -961,10 +962,11 @@ p, body {
   width: 52px;
   height: 52px;
   padding: 11px;
-  background: #fff;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(138, 227, 255, 0.18);
   border-radius: 14px;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
-  transition: transform var(--duration-normal) var(--easing), box-shadow var(--duration-normal) var(--easing);
+  transition: transform var(--duration-normal) var(--easing), box-shadow var(--duration-normal) var(--easing), border-color var(--duration-normal) var(--easing);
 }
 
 .contact-chip:hover .contact-chip-icon,
@@ -981,8 +983,13 @@ p, body {
   display: block;
 }
 
+.contact-chip:hover .contact-chip-icon,
+.contact-chip:focus-visible .contact-chip-icon {
+  border-color: rgba(138, 227, 255, 0.45);
+}
+
 .contact-chip-icon svg {
-  color: #1b2436;
+  color: var(--text);
 }
 
 .contact-chip-label {
