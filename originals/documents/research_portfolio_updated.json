@@ -1571,6 +1571,26 @@
       "vendor": "o9 Solutions",
       "vendor_url": "https://o9solutions.com",
       "logo": "assets/img/logos/o9.png"
+    },
+    {
+      "year": 2026,
+      "title": "Enterprise SCP Technology Value Matrix 2026",
+      "url": "https://nucleusresearch.com/research/single/enterprise-scp-technology-value-matrix-2026/",
+      "topic_area": "Supply Chain Management",
+      "slug": "enterprise-scp-technology-value-matrix-2026",
+      "vendor": null,
+      "vendor_url": null,
+      "logo": null
+    },
+    {
+      "year": 2026,
+      "title": "Guidebook: Assessing the value of Scanmarket by Unit4",
+      "url": "https://nucleusresearch.com/research/single/guidebook-assessing-the-value-of-scanmarket-by-unit4/",
+      "topic_area": "Enterprise Applications",
+      "slug": "guidebook-assessing-the-value-of-scanmarket-by-unit4",
+      "vendor": "Unit4",
+      "vendor_url": "https://www.unit4.com",
+      "logo": "assets/img/logos/unit4.png"
     }
   ]
 }
