@@ -821,6 +821,10 @@ p, body {
   height: 100%;
 }
 
+.work-card[onclick] {
+  cursor: pointer;
+}
+
 .work-card.hidden {
   display: none !important;
   opacity: 0 !important;
@@ -2271,9 +2275,18 @@ img {
 }
 
 .proof-stat {
+  display: block;
   background: var(--surface);
   padding: var(--space-2xl) var(--space-xl);
   text-align: center;
+  text-decoration: none;
+  color: inherit;
+  transition: background var(--duration-normal) var(--easing);
+}
+
+a.proof-stat:hover,
+a.proof-stat:focus-visible {
+  background: #111827;
 }
 
 .proof-value {
@@ -2315,28 +2328,6 @@ img {
   border-radius: var(--border-radius);
   padding: var(--space-xl);
   transition: all var(--duration-normal) var(--easing);
-}
-
-.advisory-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 2px;
-  background: linear-gradient(90deg, var(--accent-1), var(--accent-2));
-  opacity: 0;
-  transition: opacity var(--duration-normal) var(--easing);
-}
-
-.advisory-card:hover {
-  transform: translateY(-4px);
-  border-color: rgba(138, 227, 255, 0.35);
-  box-shadow: var(--shadow-subtle);
-}
-
-.advisory-card:hover::before {
-  opacity: 1;
 }
 
 .advisory-card h3 {

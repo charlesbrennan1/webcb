@@ -66,7 +66,7 @@
       </p>
 
       <!-- Filters Section -->
-      <div class="reveal" style="margin-bottom: var(--space-2xl);">
+      <div id="filters-bar" style="margin-bottom: var(--space-2xl);">
         <!-- Year Filters -->
         <div style="margin-bottom: var(--space-l);">
           <h3 style="font-size: clamp(16px, 2vw, 18px); margin-bottom: var(--space-m); color: var(--accent-1);">Filter by Year</h3>
@@ -115,9 +115,22 @@
     </div>
   </div>
 
+  <button id="back-to-top" aria-label="Back to top">↑ Top</button>
+
   <footer class="footer">
     <p>© 2026 Charles Brennan. All rights reserved.</p>
   </footer>
+
+  <script>
+    (function() {
+      const btn = document.getElementById('back-to-top');
+      if (!btn) return;
+      const toggle = () => btn.classList.toggle('visible', window.scrollY > 900);
+      window.addEventListener('scroll', toggle, { passive: true });
+      toggle();
+      btn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+    })();
+  </script>
 
   <style>
     /* Filter Pills Styling */
@@ -235,6 +248,50 @@
       height: 100%;
       object-fit: contain;
       display: block;
+    }
+
+    /* Sticky filters (desktop) so deep scrollers can re-filter without scrolling back */
+    @media (min-width: 769px) {
+      #filters-bar {
+        position: sticky;
+        top: 64px;
+        z-index: 600;
+        background: rgba(5, 7, 11, 0.92);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        padding: var(--space-m) 0;
+        border-bottom: 1px solid rgba(138, 227, 255, 0.1);
+      }
+    }
+
+    /* Back to top */
+    #back-to-top {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      z-index: 900;
+      padding: 10px 16px;
+      background: var(--surface);
+      color: var(--text);
+      border: 1px solid rgba(138, 227, 255, 0.3);
+      border-radius: 999px;
+      font-size: 14px;
+      font-weight: 500;
+      cursor: pointer;
+      opacity: 0;
+      pointer-events: none;
+      transform: translateY(8px);
+      transition: opacity var(--duration-normal) var(--easing), transform var(--duration-normal) var(--easing), border-color var(--duration-normal) var(--easing);
+    }
+
+    #back-to-top.visible {
+      opacity: 1;
+      pointer-events: auto;
+      transform: translateY(0);
+    }
+
+    #back-to-top:hover {
+      border-color: rgba(138, 227, 255, 0.6);
     }
   </style>
 
