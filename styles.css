@@ -203,20 +203,6 @@ p, body {
   white-space: nowrap;
   border: 0;
 }
-
-/* Noise overlay utility */
-.noise::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZGVmcz48ZmlsdGVyIGlkPSJub2lzZSI+PGZlVHVyYnVsZW5jZSBiYXNlRnJlcXVlbmN5PSIwLjkiIG51bU9jdGF2ZXM9IjQiIHNlZWQ9IjEiLz48L2ZpbHRlcj48L2RlZnM+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsdGVyPSJ1cmwoI25vaXNlKSIgb3BhY2l0eT0iMC4wMiIvPjwvc3ZnPg==') repeat;
-  pointer-events: none;
-  z-index: 1;
-}
-
 /* Button variants */
 .btn {
   display: inline-flex;
@@ -590,15 +576,6 @@ p, body {
   object-fit: cover;
   display: block;
 }
-
-/* [5] FEATURE TILES
-   ========================================================================== */
-.features {
-  padding: var(--space-4xl) var(--space-xl);
-  max-width: var(--max-width);
-  margin: 0 auto;
-}
-
 .feature-tile {
   background: var(--surface);
   border: 1px solid rgba(138, 227, 255, 0.1);
@@ -632,28 +609,6 @@ p, body {
 .feature-tile:hover::before {
   opacity: 0.05;
 }
-
-.feature-number {
-  font-size: 48px;
-  font-weight: 800;
-  background: linear-gradient(135deg, var(--accent-1), var(--accent-2));
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  line-height: 1;
-  margin-bottom: var(--space-l);
-}
-
-.feature-title {
-  color: var(--text);
-  margin-bottom: var(--space-s);
-}
-
-.feature-description {
-  color: var(--muted);
-  font-size: 14px;
-}
-
 /* [6] ABOUT PAGE CARD + CREDENTIALS STRIP
    ========================================================================== */
 .about-container {
@@ -797,14 +752,14 @@ p, body {
 /* Force single column layout on all mobile screens */
 @media (max-width: 768px) {
   .work-grid {
-    display: grid !important;
-    grid-template-columns: 1fr !important;
-    gap: var(--space-l) !important;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-l);
   }
   
   .work-grid .work-card {
-    width: 100% !important;
-    max-width: none !important;
+    width: 100%;
+    max-width: none;
   }
 }
 
@@ -826,9 +781,9 @@ p, body {
 }
 
 .work-card.hidden {
-  display: none !important;
-  opacity: 0 !important;
-  visibility: hidden !important;
+  display: none;
+  opacity: 0;
+  visibility: hidden;
 }
 
 .work-card:hover {
@@ -1072,19 +1027,6 @@ p, body {
     background: linear-gradient(135deg, rgba(138, 227, 255, 0.1), rgba(155, 140, 255, 0.1));
   }
 }
-
-/* [11] CLIENT CARDS
-   ========================================================================== */
-.client-card:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-strong);
-  border-color: var(--accent-1);
-}
-
-.client-card:hover .client-logo {
-  background: linear-gradient(135deg, rgba(138, 227, 255, 0.2), rgba(155, 140, 255, 0.2)) !important;
-}
-
 /* [11.5] RESPONSIVE IMAGES & TOUCH OPTIMIZATIONS
    ========================================================================== */
 img {
@@ -1205,13 +1147,10 @@ img {
     margin: var(--space-s) !important;
     padding: var(--space-s) !important;
   }
-  
-  .about-container,
-  .contact-container,
-  .journey-container {
+ .about-container,
+.contact-container {
     padding-top: 90px;
-  }
-  
+  }  
   /* work-container handled in main mobile breakpoint */
 }
 
@@ -1269,7 +1208,7 @@ img {
   
   /* Disable loading spinners on mobile */
   .work-card-image::before {
-    display: none !important;
+    display: none;
   }
   
   .hero-media {
@@ -1316,18 +1255,6 @@ img {
     justify-content: center;
   }
   
-  /* work-grid mobile layout now handled above at line 585 */
-  
-  .clients-grid {
-    grid-template-columns: 1fr !important;
-    gap: var(--space-l) !important;
-  }
-  
-  .client-card {
-    max-width: 300px !important;
-    margin: 0 auto !important;
-  }
-  
   .hero-subtitle {
     max-width: 100%;
   }
@@ -1337,16 +1264,11 @@ img {
     padding: var(--space-l);
   }
   
-  .feature-number {
-    font-size: 36px;
-    text-align: center;
-  }
-  
   /* Mobile typography improvements */
   .hero-title {
     line-height: 1.3;
     margin-bottom: var(--space-l);
-    font-size: clamp(24px, 7vw, 48px) !important;
+    font-size: clamp(24px, 7vw, 48px);
   }
   
   .hero-title br {
@@ -1357,11 +1279,6 @@ img {
     font-size: clamp(14px, 4vw, 18px);
     line-height: 1.5;
     margin-bottom: var(--space-2xl);
-  }
-  
-  .feature-description {
-    font-size: 14px;
-    line-height: 1.6;
   }
   
   /* Improved mobile content spacing */
@@ -1378,7 +1295,7 @@ img {
   .contact-panel {
     padding: var(--space-l) !important;
     margin: var(--space-l);
-    flex-direction: column !important;
+    flex-direction: column;
     text-align: center;
   }
   
@@ -1403,7 +1320,7 @@ img {
     word-break: break-all;
   }
   
-  /* Better mobile work cards - using specificity instead of !important */
+  /* Better mobile work cards - using specificity instead of */
   @media (max-width: 768px) {
     .work-grid .work-card {
       opacity: 1;
@@ -1415,16 +1332,6 @@ img {
       display: none;
       opacity: 0;
       visibility: hidden;
-    }
-    
-    .work-grid .work-card.mobile-visible {
-      display: flex !important;
-      opacity: 1 !important;
-      visibility: visible !important;
-    }
-    
-    .work-grid .work-card.mobile-hidden {
-      display: none !important;
     }
   }
   
@@ -1449,25 +1356,20 @@ img {
   }
   
   .work-card-image img {
-    opacity: 1 !important;
-    display: block !important;
+    opacity: 1;
+    display: block;
   }
-  
-  /* Mobile-specific improvements for TLF and project pages */
+ /* Mobile-specific improvements for TLF and project pages */
   .about-container,
-  .work-container,
-  .contact-container,
-  .journey-container {
-    padding-top: 90px !important;
-  }
-  
-  .journey-container h1,
+.work-container,
+.contact-container {
+    padding-top: 90px;
+  }  
   .work-container h1 {
     font-size: clamp(24px, 6vw, 32px);
     text-align: center;
     margin-bottom: var(--space-xl);
-  }
-}
+  }}
 
 /* [12] TRAVEL MAP STYLES
    ========================================================================== */
@@ -1517,21 +1419,16 @@ img {
     height: 200px !important;
   }
   
-  /* Mobile client cards optimization */
-  .clients-grid {
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)) !important;
-  }
-  
   /* Mobile responsive classes */
   .nucleus-header {
-    flex-direction: column !important;
-    text-align: center !important;
-    gap: var(--space-l) !important;
+    flex-direction: column;
+    text-align: center;
+    gap: var(--space-l);
   }
   
   .nucleus-header img {
-    height: 80px !important;
-    width: auto !important;
+    height: 80px;
+    width: auto;
   }
 }
 .travel-filters input{ vertical-align: middle; margin-right:6px; }
@@ -1559,610 +1456,16 @@ img {
   border-bottom: 1px solid rgba(138, 227, 255, 0.3);
   padding-bottom: 4px;
 }
-
-/* [13] JOURNEY TIMELINE STYLES
-   ========================================================================== */
-.journey-container {
-  padding-top: 80px;
-  min-height: 100vh;
-}
-
-.journey-timeline {
-  position: relative;
-  max-width: 800px;
-  margin: 0 auto;
-  padding: var(--space-2xl) 0;
-}
-
-/* Central timeline line */
-.journey-timeline::before {
-  content: '';
-  position: absolute;
-  left: 50%;
-  top: 0;
-  bottom: 0;
-  width: 2px;
-  background: linear-gradient(180deg, var(--accent-1), var(--accent-2), var(--accent-3));
-  transform: translateX(-50%);
-}
-
-.journey-step {
-  position: relative;
-  margin-bottom: var(--space-4xl);
-  display: flex;
-  align-items: center;
-}
-
-.journey-step:nth-child(odd) {
-  flex-direction: row;
-}
-
-.journey-step:nth-child(even) {
-  flex-direction: row-reverse;
-}
-
-.step-marker {
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 2;
-  border: 3px solid var(--surface);
-}
-
-.step-marker.start {
-  background: var(--accent-3);
-  box-shadow: 0 0 20px rgba(92, 255, 138, 0.5);
-}
-
-.step-marker.transition {
-  background: var(--accent-2);
-  box-shadow: 0 0 20px rgba(155, 140, 255, 0.5);
-}
-
-.step-marker.current {
-  background: var(--accent-1);
-  box-shadow: 0 0 20px rgba(138, 227, 255, 0.5);
-  animation: pulse-current 2s ease-in-out infinite;
-}
-
 @keyframes pulse-current {
   0%, 100% { transform: translateX(-50%) scale(1); }
   50% { transform: translateX(-50%) scale(1.1); }
 }
-
-.step-content {
-  background: var(--surface);
-  border: 1px solid rgba(138, 227, 255, 0.1);
-  border-radius: var(--border-radius);
-  padding: var(--space-xl);
-  width: calc(50% - var(--space-3xl));
-  position: relative;
-  transition: all var(--duration-normal) var(--easing);
-}
-
-.journey-step:nth-child(odd) .step-content {
-  margin-left: auto;
-}
-
-.journey-step:nth-child(even) .step-content {
-  margin-right: auto;
-}
-
-.step-content:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-strong);
-  border-color: var(--accent-1);
-}
-
-.step-content h3 {
-  color: var(--text);
-  font-size: 24px;
-  font-weight: 700;
-  margin-bottom: var(--space-s);
-}
-
-.step-date {
-  color: var(--accent-1);
-  font-size: 14px;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-}
-
-.step-role {
-  color: var(--muted);
-  font-size: 16px;
-  font-weight: 600;
-  margin: var(--space-s) 0;
-}
-
-.step-description {
-  color: var(--muted);
-  line-height: 1.6;
-  margin: var(--space-l) 0;
-}
-
-.step-achievements {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--space-s);
-  margin: var(--space-l) 0;
-}
-
-.achievement {
-  background: rgba(138, 227, 255, 0.1);
-  color: var(--accent-1);
-  padding: var(--space-xs) var(--space-s);
-  border-radius: calc(var(--border-radius) / 2);
-  font-size: 12px;
-  font-weight: 500;
-}
-
-.journey-cta {
-  display: inline-flex;
-  align-items: center;
-  gap: var(--space-s);
-  color: var(--accent-1);
-  text-decoration: none;
-  font-weight: 600;
-  margin-top: var(--space-l);
-  transition: gap var(--duration-normal) var(--easing);
-}
-
-.journey-cta:hover {
-  gap: var(--space-m);
-}
-
 /* Mobile responsive */
-@media (max-width: 768px) {
-  .journey-timeline::before {
-    left: 20px;
-  }
-  
-  .journey-step {
-    flex-direction: row !important;
-  }
-  
-  .step-marker {
-    left: 20px;
-  }
-  
-  .step-content {
-    width: calc(100% - 60px);
-    margin-left: 60px !important;
-    margin-right: 0 !important;
-  }
-  
-  .step-achievements {
-    flex-direction: column;
-    gap: var(--space-xs);
-  }
-}
-
-/* [14] ROADWAY TIMELINE STYLES
-   ========================================================================== */
-.road-intro { 
-  margin: 32px 0 8px; 
-}
-
 .surface {
   background: linear-gradient(180deg, rgba(14,19,37,.55), rgba(14,19,37,.35));
   border: 1px solid #232a40; 
   border-radius: 16px; 
   padding: 20px;
-}
-
-.road-wrap { 
-  position: relative; 
-  min-height: 1400px; 
-  margin-top: var(--space-xl); 
-}
-
-.road-svg {
-  position: absolute; 
-  inset: 0; 
-  width: 100%; 
-  height: 100%;
-  filter: drop-shadow(0 20px 60px rgba(0,0,0,.35));
-}
-
-.road-base { 
-  stroke: #1b2336; 
-  stroke-width: 28; 
-  fill: none; 
-  stroke-linecap: round; 
-}
-
-.road-dash { 
-  stroke: rgba(160, 180, 220, .55); 
-  stroke-width: 4; 
-  fill: none; 
-  stroke-linecap: round; 
-  stroke-dasharray: 12 16; 
-}
-
-.road-glow { 
-  stroke: #79e4ff; 
-  stroke-width: 8; 
-  fill: none; 
-  stroke-linecap: round; 
-  filter: blur(6px); 
-  opacity: 0; 
-}
-
-.road-list { 
-  list-style: none; 
-  margin: 0; 
-  padding: 0; 
-  position: relative; 
-}
-
-.road-item { 
-  position: absolute; 
-  width: min(460px, 86vw); 
-  transform: translate(-50%, -50%); 
-}
-
-.road-item.left { 
-  text-align: right; 
-}
-
-.road-item.right { 
-  text-align: left;  
-}
-
-.road-card {
-  display: inline-block; 
-  background: #0d1222; 
-  border: 1px solid #24304b; 
-  border-radius: 14px; 
-  padding: 14px 16px;
-  box-shadow: 0 10px 28px rgba(0,0,0,.35); 
-  color: var(--text);
-  transition: all var(--duration-normal) var(--easing);
-}
-
-.road-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 20px 40px rgba(0,0,0,.5);
-  border-color: var(--accent-1);
-}
-
-.road-card h3 { 
-  margin: 0 0 4px; 
-  font-size: 18px; 
-}
-
-.road-card .step-date { 
-  display: block; 
-  color: var(--muted); 
-  font-size: 12px; 
-  margin-bottom: 6px; 
-}
-
-.road-card .step-role { 
-  font-weight: 700; 
-  margin: 0 0 6px; 
-}
-
-.road-card .step-description { 
-  margin: 0 0 8px; 
-  color: var(--muted); 
-  font-size: 14px; 
-}
-
-.step-achievements { 
-  display: flex; 
-  gap: 8px; 
-  flex-wrap: wrap; 
-}
-
-.step-achievements .achievement { 
-  font-size: 12px; 
-  color: #0b0f1d; 
-  background: linear-gradient(90deg, #8ae3ff, #9b8cff); 
-  padding: 4px 8px; 
-  border-radius: 999px; 
-}
-
-.road-progress { 
-  position: sticky; 
-  top: 56px; 
-  height: 4px; 
-  z-index: 5; 
-  background: rgba(35,42,64,.6); 
-}
-
-.road-progress__bar { 
-  width: 0%; 
-  height: 100%; 
-  background: linear-gradient(90deg, #8ae3ff, #5cff8a); 
-  box-shadow: 0 0 18px rgba(110,231,255,.45); 
-  transition: width .15s linear; 
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .road-glow { 
-    opacity: .25; 
-    filter: none; 
-  }
-  .road-dash { 
-    stroke-dasharray: none; 
-  }
-  .road-progress__bar { 
-    transition: none; 
-  }
-}
-
-@media (max-width: 720px) {
-  .road-card { 
-    max-width: 92vw; 
-  }
-}
-
-/* Road Milestone Styles */
-.road-milestones {
-  position: relative;
-  width: 100%;
-  height: 100%;
-}
-
-.road-milestone {
-  position: absolute;
-  width: min(400px, 85vw);
-  z-index: 10;
-}
-
-.milestone-right {
-  text-align: left;
-}
-
-.milestone-left {
-  text-align: right;
-}
-
-.milestone-card {
-  display: inline-block;
-  background: var(--surface);
-  border: 1px solid rgba(138, 227, 255, 0.2);
-  border-radius: 12px;
-  padding: var(--space-l);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
-  position: relative;
-  transition: all var(--duration-normal) var(--easing);
-  max-width: 320px;
-}
-
-.milestone-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5);
-  border-color: var(--accent-1);
-}
-
-.milestone-marker {
-  position: absolute;
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background: var(--accent-1);
-  border: 3px solid var(--surface);
-  box-shadow: 0 0 0 2px var(--accent-1);
-}
-
-.milestone-right .milestone-marker {
-  left: -20px;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-.milestone-left .milestone-marker {
-  right: -20px;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-.milestone-date {
-  color: var(--accent-1);
-  font-size: 12px;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  display: block;
-  margin-bottom: var(--space-xs);
-}
-
-.milestone-title {
-  color: var(--text);
-  font-size: 18px;
-  font-weight: 700;
-  margin: 0 0 var(--space-xs);
-}
-
-.milestone-role {
-  color: var(--muted);
-  font-size: 14px;
-  font-weight: 600;
-  margin: 0 0 var(--space-s);
-}
-
-.milestone-desc {
-  color: var(--muted);
-  font-size: 14px;
-  line-height: 1.5;
-  margin: 0 0 var(--space-s);
-}
-
-.milestone-chips {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--space-xs);
-}
-
-.milestone-chips .chip {
-  background: linear-gradient(90deg, var(--accent-1), var(--accent-2));
-  color: var(--bg-0);
-  padding: 4px 8px;
-  border-radius: 12px;
-  font-size: 11px;
-  font-weight: 600;
-}
-
-.milestone-quote {
-  color: var(--accent-1);
-  font-style: italic;
-  font-size: 14px;
-  margin-top: var(--space-l);
-  padding-top: var(--space-s);
-  border-top: 1px solid rgba(138, 227, 255, 0.2);
-}
-
-/* Special styling for info box milestone */
-.milestone-card.info-box-style {
-  background: linear-gradient(135deg, rgba(12, 17, 26, 0.95), rgba(14, 19, 37, 0.9));
-  border: 2px solid rgba(138, 227, 255, 0.3);
-  max-width: 420px;
-  padding: var(--space-xl);
-}
-
-.info-box-style .milestone-title {
-  background: linear-gradient(135deg, var(--accent-1), var(--accent-2));
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  font-size: 20px;
-}
-
-.info-box-style .milestone-chips .chip {
-  background: rgba(138, 227, 255, 0.15);
-  color: var(--text);
-  border: 1px solid rgba(138, 227, 255, 0.3);
-  font-size: 12px;
-  padding: 6px 10px;
-}
-
-/* Simple static road start box */
-.road-start-box {
-  position: absolute;
-  top: 50px;
-  right: 50px;
-  width: 320px;
-  background: var(--surface);
-  border: 1px solid rgba(138, 227, 255, 0.2);
-  border-radius: var(--border-radius);
-  padding: var(--space-xl);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
-  z-index: 20;
-}
-
-.road-start-box h3 {
-  color: var(--text);
-  font-size: 20px;
-  font-weight: 700;
-  margin-bottom: var(--space-l);
-  background: linear-gradient(135deg, var(--accent-1), var(--accent-2));
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-}
-
-.road-start-box p {
-  color: var(--muted);
-  line-height: 1.6;
-  margin-bottom: var(--space-l);
-}
-
-.box-highlights {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-s);
-}
-
-.box-highlights span {
-  background: rgba(138, 227, 255, 0.1);
-  color: var(--text);
-  padding: var(--space-s) var(--space-l);
-  border-radius: calc(var(--border-radius) / 2);
-  font-size: 14px;
-  border: 1px solid rgba(138, 227, 255, 0.2);
-}
-
-/* Transition box positioned on left side */
-.road-transition-box {
-  position: absolute;
-  top: 350px;
-  left: 20px;
-  width: 280px;
-  background: var(--surface);
-  border: 1px solid rgba(155, 140, 255, 0.3);
-  border-radius: var(--border-radius);
-  padding: var(--space-l);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
-  z-index: 20;
-}
-
-.road-transition-box h3 {
-  color: var(--text);
-  font-size: 20px;
-  font-weight: 700;
-  margin-bottom: var(--space-l);
-  background: linear-gradient(135deg, var(--accent-2), var(--accent-3));
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-}
-
-.road-transition-box p {
-  color: var(--muted);
-  line-height: 1.6;
-  margin-bottom: var(--space-l);
-  font-size: 14px;
-}
-
-.road-transition-box .box-highlights {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-s);
-}
-
-.road-transition-box .box-highlights span {
-  background: rgba(155, 140, 255, 0.1);
-  border: 1px solid rgba(155, 140, 255, 0.2);
-}
-
-@media (max-width: 768px) {
-  .road-milestone {
-    position: relative !important;
-    width: 100% !important;
-    left: auto !important;
-    top: auto !important;
-    transform: none !important;
-    text-align: center !important;
-    margin-bottom: var(--space-2xl);
-  }
-  
-  .milestone-card {
-    max-width: none;
-    margin: 0 auto;
-  }
-  
-  .milestone-marker {
-    display: none;
-  }
-  
-  .road-wrap {
-    min-height: auto !important;
-  }
-  
-  .road-svg {
-    display: none;
-  }
-  
-  .road-milestones {
-    position: static;
-  }
 }
 /* [X] ACCESSIBILITY (moved from script.js style injection)
    ========================================================================== */

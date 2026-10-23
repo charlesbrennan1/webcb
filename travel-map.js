@@ -20,10 +20,11 @@
     });
     
     console.log('📍 Travel map initialized successfully');
-  // Use CartoDB Dark Matter (free, no auth required)
-  L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
-    maxZoom: 18,
-    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/attributions">CARTO</a>'
+  // Esri World Dark Gray Canvas - keyless, and dark to match the site.
+  // Note the {z}/{y}/{x} order: Esri puts the row before the column.
+  L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Dark_Gray_Base/MapServer/tile/{z}/{y}/{x}', {
+    maxZoom: 16,
+    attribution: 'Tiles &copy; <a href="https://www.esri.com/">Esri</a>'
   }).addTo(map);
 
   // Data - approximate coords are fine for a travel map
