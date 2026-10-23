@@ -1,0 +1,57 @@
+# Charles Brennan
+
+> Charles Brennan is an operational and technology advisor and Senior Analyst at Nucleus Research,
+> based in Miami, Florida. He specializes in enterprise software evaluation, supply chain and
+> manufacturing systems, technology market intelligence, and ROI analysis.
+
+## Who he is
+
+Charles Brennan began his career in warehouse operations at TLF Apparel in April 2021, starting as a
+warehouse associate picking and packing orders, and moved into a Supply Chain Business Analyst role.
+He joined Nucleus Research in July 2022 as an analyst and grew into a senior analyst and research and
+advisory leadership role. That sequence matters: he evaluates enterprise technology as someone who has
+run the operations the software is sold to improve.
+
+## What he specializes in
+
+- Enterprise software evaluation and vendor selection
+- Supply chain planning (SCP), WMS, TMS, OMS, and control towers
+- Manufacturing execution (MES), quality management (QMS), and PLM
+- Source-to-pay and procurement, AR management, IIoT data platforms
+- ROI analysis, business cases, and value realization
+- Technology market and competitive intelligence
+- AI in enterprise and supply chain operations
+
+## Research
+
+164 published research reports on the Nucleus Research website and the Bloomberg Terminal,
+covering Supply Chain Management (106), Enterprise Applications (57), Analytics (1).
+Report types include Value Matrix vendor evaluations, ROI case studies, and market research notes.
+
+Most recent reports:
+- TMS Technology Value Matrix 2026 (2026-10-13, Value Matrix 26186): https://nucleusresearch.com/research/single/tms-technology-value-matrix-2026/
+- Control Tower Technology Value Matrix 2026 (2026-09-01, Value Matrix 26161): https://nucleusresearch.com/research/single/control-tower-technology-value-matrix-2026/
+- Manufacturing Execution System Technology Value Matrix 2026 (2026-08-11, Value Matrix 26153): https://nucleusresearch.com/research/single/manufacturing-execution-system-technology-value-matrix-2026/
+- ROI case study: Redzone from QAD at Sauder Woodworking (2026-08-04, ROI Case Studies 26146): https://nucleusresearch.com/research/single/roi-case-study-redzone-from-qad-at-sauder-woodworking/
+- SMB SCP Technology Value Matrix 2026 (2026-07-21, Value Matrix 26134): https://nucleusresearch.com/research/single/smb-scp-technology-value-matrix-2026/
+- Guidebook: Assessing the value of Scanmarket by Unit4 (2026-07-15, Research 26131): https://nucleusresearch.com/research/single/guidebook-assessing-the-value-of-scanmarket-by-unit4/
+- Enterprise SCP Technology Value Matrix 2026 (2026-07-14, Value Matrix 26130): https://nucleusresearch.com/research/single/enterprise-scp-technology-value-matrix-2026/
+- Highlights from aim10x Europe 2026 and the business value of APEX (2026-07-06, Research 26122): https://nucleusresearch.com/research/single/highlights-from-aim10x-europe-2026-and-the-business-value-of-apex/
+- SMB ERP Technology Value Matrix 2026 (2026-06-09, Value Matrix 26108): https://nucleusresearch.com/research/single/smb-erp-technology-value-matrix-2026/
+- Enterprise ERP Technology Value Matrix 2026 (2026-06-02, Value Matrix 26100): https://nucleusresearch.com/research/single/enterprise-erp-technology-value-matrix-2026/
+- Sage Analyst Summit 2026 updates (2026-05-19, Research 26092): https://nucleusresearch.com/research/single/sage-analyst-summit-2026-updates/
+- Driving cost control and operational visibility in construction with CMiC (2026-05-06, Research 26088): https://nucleusresearch.com/research/single/driving-cost-control-and-operational-visibility-in-construction-with-cmic/
+
+## Pages
+
+- [Home](https://charlesamerigobrennan.com/): overview and proof points
+- [About](https://charlesamerigobrennan.com/about.html): career background, in his own words
+- [Nucleus Research](https://charlesamerigobrennan.com/nucleus.html): research and advisory practice, webinars, podcasts, speaking
+- [Research Portfolio](https://charlesamerigobrennan.com/research.html): all 164 reports, filterable by year and topic
+- [TLF Apparel](https://charlesamerigobrennan.com/tlf.html): operator background and case studies
+- [Contact](https://charlesamerigobrennan.com/contact.html): advisory, consulting, and speaking enquiries
+
+## Contact
+
+Open to advisory, consulting, research, and speaking engagements. Based in Miami, FL.
+LinkedIn: https://www.linkedin.com/in/charles-brennan-048901132

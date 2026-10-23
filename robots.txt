@@ -1,0 +1,14 @@
+User-agent: *
+Allow: /
+
+# AI and research crawlers are welcome; the research index is the point of the site.
+User-agent: GPTBot
+Allow: /
+User-agent: ClaudeBot
+Allow: /
+User-agent: PerplexityBot
+Allow: /
+User-agent: Google-Extended
+Allow: /
+
+Sitemap: https://charlesamerigobrennan.com/sitemap.xml

@@ -4,6 +4,32 @@
   "reports": [
     {
       "year": 2026,
+      "date": "2026-10-13",
+      "title": "TMS Technology Value Matrix 2026",
+      "url": "https://nucleusresearch.com/research/single/tms-technology-value-matrix-2026/",
+      "topic_area": "Supply Chain Management",
+      "slug": "tms-technology-value-matrix-2026",
+      "report_number": "26186",
+      "report_type": "Value Matrix",
+      "vendor": null,
+      "vendor_url": null,
+      "logo": null
+    },
+    {
+      "year": 2026,
+      "date": "2026-09-01",
+      "title": "Control Tower Technology Value Matrix 2026",
+      "url": "https://nucleusresearch.com/research/single/control-tower-technology-value-matrix-2026/",
+      "topic_area": "Supply Chain Management",
+      "slug": "control-tower-technology-value-matrix-2026",
+      "report_number": "26161",
+      "report_type": "Value Matrix",
+      "vendor": null,
+      "vendor_url": null,
+      "logo": null
+    },
+    {
+      "year": 2026,
       "title": "Manufacturing Execution System Technology Value Matrix 2026",
       "url": "https://nucleusresearch.com/research/single/manufacturing-execution-system-technology-value-matrix-2026/",
       "topic_area": "Enterprise Applications",
@@ -751,7 +777,7 @@
       "slug": "drive-manufacturing-excellence-with-plex-by-rockwell-automation",
       "vendor": "Plex, by Rockwell Automation",
       "vendor_url": "https://www.plex.com",
-      "logo": "assets/img/logos/plex.png",
+      "logo": "assets/img/logos/rockwell-automation.png",
       "date": "2025-03-20",
       "report_number": "Z43",
       "report_type": "Research"
@@ -854,7 +880,7 @@
       "topic_area": "Enterprise Applications",
       "slug": "assessing-the-value-of-delmiaworks-for-manufacturers",
       "vendor": "DELMIAWorks",
-      "vendor_url": "https://www.3ds.com/products/delmiaworks",
+      "vendor_url": "https://www.3ds.com/",
       "logo": "assets/img/logos/delmiaworks.png",
       "date": "2024-12-10",
       "report_number": "Y188",
