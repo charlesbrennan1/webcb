@@ -1,6 +1,6 @@
 # Charles Brennan
 
-> Charles Brennan is an operational and technology advisor and Senior Analyst at Nucleus Research,
+> Charles Brennan is an operational and technology advisor and Principal Analyst at Nucleus Research,
 > based in Miami, Florida. He specializes in enterprise software evaluation, supply chain and
 > manufacturing systems, technology market intelligence, and ROI analysis.
 
@@ -42,6 +42,40 @@ Most recent reports:
 - Sage Analyst Summit 2026 updates (2026-05-19, Research 26092): https://nucleusresearch.com/research/single/sage-analyst-summit-2026-updates/
 - Driving cost control and operational visibility in construction with CMiC (2026-05-06, Research 26088): https://nucleusresearch.com/research/single/driving-cost-control-and-operational-visibility-in-construction-with-cmic/
 
+## Press and analyst citations
+
+Charles Brennan is quoted as a named analyst in Nucleus Research and vendor press releases
+distributed through PR Newswire and carried by Yahoo Finance, Morningstar and StreetInsider.
+He was promoted from Senior Analyst to Principal Analyst in 2026; releases from September 2026
+onward carry the Principal Analyst title.
+
+- 2026-11-10 — Nucleus Research Releases 2026 Warehouse Management System Technology Value Matrix
+  "The strongest returns often come from resolving specific operational problems, whether that's reducing inventory handling, accelerating employee onboarding, or improving …"
+  https://www.prnewswire.com/news-releases/nucleus-research-releases-2026-warehouse-management-system-technology-value-matrix-302935055.html
+- 2026-10-13 — Nucleus Research Releases 2026 Transportation Management System Technology Value Matrix
+  "Connecting procurement, planning, execution, and financial data allows organizations to identify avoidable costs earlier, improve capacity utilization, and translate oper…"
+  https://www.prnewswire.com/news-releases/nucleus-research-releases-2026-transportation-management-system-technology-value-matrix-302907253.html
+- 2026-09-01 — Nucleus Research Releases 2026 Control Tower Technology Value Matrix
+  "The value comes from identifying the disruptions that materially affect the business, understanding their operational and financial consequences, and acting while there i…"
+  https://www.prnewswire.com/news-releases/nucleus-research-releases-2026-control-tower-technology-value-matrix-302866439.html
+- 2026-08-11 — Nucleus Research Releases 2026 Manufacturing Execution System Technology Value Matrix
+  "The platforms delivering the strongest returns are the ones translating plant floor data into measurable gains in throughput, labor utilization, and delivery performance,…"
+  https://www.prnewswire.com/news-releases/nucleus-research-releases-2026-manufacturing-execution-system-technology-value-matrix-302848529.html
+- 2026-07-22 — Nucleus Research Releases 2026 SMB SCP Technology Value Matrix
+  "The strongest ROI comes from giving lean teams the ability to evaluate tradeoffs quickly, act on recommendations, and improve service and working capital without adding u…"
+  https://www.prnewswire.com/news-releases/nucleus-research-releases-2026-smb-scp-technology-value-matrix-302832535.html
+- 2026-07-15 — RELEX Named a Leader in the 2026 Nucleus Research Enterprise Supply Chain Planning Value Matrix
+  "That connected approach is important because customers realize ROI when planning decisions translate into better forecast accuracy, lower inventory exposure, improved ava…"
+  https://www.prnewswire.com/news-releases/relex-named-a-leader-in-the-2026-nucleus-research-enterprise-supply-chain-planning-value-matrix-302826327.html
+- 2026-07-14 — Nucleus Research Releases 2026 Enterprise SCP Technology Value Matrix
+  "Organizations realize ROI when planning platforms connect operational execution with financial impact and enable faster, more informed decisions across the enterprise.…"
+  https://www.prnewswire.com/news-releases/nucleus-research-releases-2026-enterprise-scp-technology-value-matrix-302824985.html
+- 2026-07-07 — Nucleus Research Recognizes Deltek as an Expert, Highlighting AI Capabilities, User Experience, and Commitment to Security and Compliance
+  "Deltek has built its platform around that reality. The combination of deep industry-specific functionality and a growing AI layer that's grounded in governed, operational…"
+  https://www.prnewswire.com/news-releases/nucleus-research-recognizes-deltek-as-an-expert-highlighting-ai-capabilities-user-experience-and-commitment-to-security-and-compliance-302818956.html
+
+Full list: https://charlesamerigobrennan.com/press.html
+
 ## Pages
 
 - [Home](https://charlesamerigobrennan.com/): overview and proof points
@@ -49,6 +83,7 @@ Most recent reports:
 - [Nucleus Research](https://charlesamerigobrennan.com/nucleus.html): research and advisory practice, webinars, podcasts, speaking
 - [Research Portfolio](https://charlesamerigobrennan.com/research.html): all 164 reports, filterable by year and topic
 - [TLF Apparel](https://charlesamerigobrennan.com/tlf.html): operator background and case studies
+- [Press](https://charlesamerigobrennan.com/press.html): analyst quotes in PR Newswire, Yahoo Finance, Morningstar
 - [Contact](https://charlesamerigobrennan.com/contact.html): advisory, consulting, and speaking enquiries
 
 ## Contact
