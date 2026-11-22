@@ -71,6 +71,18 @@
     }
     .press-stat-value { font-size: clamp(24px, 3vw, 32px); font-weight: 700; color: var(--accent-1); }
     .press-stat-label { font-size: 13px; color: var(--muted); margin-top: 4px; }
+    .vendor-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(330px, 1fr)); gap: var(--space-l); max-width: 1100px; margin: 0 auto; }
+    .vendor-card { background: var(--surface); border: 1px solid rgba(138,227,255,0.1); border-radius: var(--border-radius); padding: var(--space-l); }
+    .vendor-head { display: flex; align-items: baseline; justify-content: space-between; gap: var(--space-s); margin-bottom: var(--space-m); padding-bottom: var(--space-s); border-bottom: 1px solid rgba(138,227,255,0.1); }
+    .vendor-name { margin: 0; font-size: clamp(16px,1.8vw,18px); font-weight: 650; color: var(--accent-1); }
+    .vendor-count { font-size: 12px; color: var(--muted); white-space: nowrap; }
+    .vendor-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: var(--space-m); }
+    .vendor-list li { font-size: 14px; line-height: 1.5; }
+    .vendor-list a { color: var(--text); text-decoration: none; display: block; }
+    .vendor-list a:hover { color: var(--accent-2); text-decoration: underline; }
+    .vendor-kind { display: inline-block; margin-top: 4px; font-size: 11px; letter-spacing: 0.04em; text-transform: uppercase; color: var(--accent-2); background: rgba(155,140,255,0.12); border-radius: 4px; padding: 2px 7px; }
+    .vendor-variant { font-size: 11px; color: var(--muted); margin-left: 4px; }
+    @media (max-width: 768px) { .vendor-grid { grid-template-columns: 1fr; } }
     @media (max-width: 768px) {
       .press-item { padding: var(--space-l); }
       .press-quote { padding-left: var(--space-m); }
@@ -573,6 +585,526 @@
           }
         ]
       }
+    },
+    {
+      "@type": "ItemList",
+      "@id": "https://charlesamerigobrennan.com/press.html#vendor-citations",
+      "name": "Vendor pages citing Charles Brennan's research",
+      "numberOfItems": 32,
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "item": {
+            "@type": "WebPage",
+            "name": "Blue Yonder Recognized as a Leader in the Nucleus Research 2026 Control Tower Technology Value Matrix™",
+            "url": "https://blueyonder.com/blog/2026/blue-yonder-recognized-as-a-leader-in-the-nucleus-research-control-tower-technology-value-matrix",
+            "publisher": {
+              "@type": "Organization",
+              "name": "Blue Yonder"
+            },
+            "mentions": {
+              "@id": "https://charlesamerigobrennan.com/#charles-brennan"
+            }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "item": {
+            "@type": "WebPage",
+            "name": "Blue Yonder recognized again as a Leader in the Nucleus Research 2025 Control Tower Technology Value Matrix™",
+            "url": "https://blueyonder.com/blog/2025/blue-yonder-recognized-again-as-a-leader-in-the-nucleus-research",
+            "publisher": {
+              "@type": "Organization",
+              "name": "Blue Yonder"
+            },
+            "mentions": {
+              "@id": "https://charlesamerigobrennan.com/#charles-brennan"
+            }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "item": {
+            "@type": "WebPage",
+            "name": "Blue Yonder recognized again as a Leader in the Nucleus Research 2026 Enterprise Supply Chain Planning Technology Value Matrix™",
+            "url": "https://blueyonder.com/blog/2026/blue-yonder-recognized-again-as-a-leader-in-the-nucleus-research",
+            "publisher": {
+              "@type": "Organization",
+              "name": "Blue Yonder"
+            },
+            "mentions": {
+              "@id": "https://charlesamerigobrennan.com/#charles-brennan"
+            }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "item": {
+            "@type": "WebPage",
+            "name": "Blue Yonder recognized again as a Leader in the Nucleus Research 2026 Transportation Management Systems Technology Value Matrix™",
+            "url": "https://blueyonder.com/blog/2026/blue-yonder-recognized-again-as-a-leader-in-the-nucleus-research-transportation-management-systems",
+            "publisher": {
+              "@type": "Organization",
+              "name": "Blue Yonder"
+            },
+            "mentions": {
+              "@id": "https://charlesamerigobrennan.com/#charles-brennan"
+            }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "item": {
+            "@type": "WebPage",
+            "name": "Blue Yonder recognized as leader in Nucleus Research 2025 Value Matrix",
+            "url": "https://blueyonder.com/blog/2025/blue-yonder-recognized-as-leader-in-nucleus-research-2025-value-matrix",
+            "publisher": {
+              "@type": "Organization",
+              "name": "Blue Yonder"
+            },
+            "mentions": {
+              "@id": "https://charlesamerigobrennan.com/#charles-brennan"
+            }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 6,
+          "item": {
+            "@type": "WebPage",
+            "name": "FourKites Advances AI-First Supply Chain Strategy, Withdraws from Gartner RTTVP Magic Quadrant | FourKites",
+            "url": "https://www.fourkites.ai/press/fourkites-withdraws-from-gartner-rttvp-magic-quadrant",
+            "publisher": {
+              "@type": "Organization",
+              "name": "FourKites"
+            },
+            "mentions": {
+              "@id": "https://charlesamerigobrennan.com/#charles-brennan"
+            }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 7,
+          "item": {
+            "@type": "WebPage",
+            "name": "FourKites Introduces Intelligent Control Tower with Real-Time Data, Digital Twins and AI-Powered Digital Workforce | FourKites",
+            "url": "https://www.fourkites.ai/press/fourkites-introduces-intelligent-control-tower-with-real-time-data-digital-twins-and-ai-powered-digital-workforce",
+            "publisher": {
+              "@type": "Organization",
+              "name": "FourKites"
+            },
+            "mentions": {
+              "@id": "https://charlesamerigobrennan.com/#charles-brennan"
+            }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 8,
+          "item": {
+            "@type": "WebPage",
+            "name": "FourKites Launches Loft: AI Platform for Enterprise Orchestration - FourKites | FourKites",
+            "url": "https://www.fourkites.ai/press/fourkites-launches-loft-ai-platform-supply-chain-orchestration",
+            "publisher": {
+              "@type": "Organization",
+              "name": "FourKites"
+            },
+            "mentions": {
+              "@id": "https://charlesamerigobrennan.com/#charles-brennan"
+            }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 9,
+          "item": {
+            "@type": "WebPage",
+            "name": "FourKites Named Accelerator in Nucleus Research 2025 | FourKites",
+            "url": "https://www.fourkites.ai/press/fourkites-named-accelerator-nucleus-research-control-tower-tech",
+            "publisher": {
+              "@type": "Organization",
+              "name": "FourKites"
+            },
+            "mentions": {
+              "@id": "https://charlesamerigobrennan.com/#charles-brennan"
+            }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 10,
+          "item": {
+            "@type": "WebPage",
+            "name": "FourKites Named Leader in Control Tower Value Matrix | FourKites",
+            "url": "https://www.fourkites.ai/press/fourkites-named-a-leader-in-the-nucleus-research-2026-control-tower-technology-value-matrix",
+            "publisher": {
+              "@type": "Organization",
+              "name": "FourKites"
+            },
+            "mentions": {
+              "@id": "https://charlesamerigobrennan.com/#charles-brennan"
+            }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 11,
+          "item": {
+            "@type": "WebPage",
+            "name": "GAINS Named Leader in Supply Chain Planning Technology Report - GAINS",
+            "url": "https://gainsystems.com/blog/gains-recognized-as-a-2023-leader-by-nucleus-research/",
+            "publisher": {
+              "@type": "Organization",
+              "name": "GAINS"
+            },
+            "mentions": {
+              "@id": "https://charlesamerigobrennan.com/#charles-brennan"
+            }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 12,
+          "item": {
+            "@type": "WebPage",
+            "name": "GAINS On Podcast S2 EP8: Composability",
+            "url": "https://gainsystems.com/resources/gains-on-podcast-s2-ep8-the-real-meaning-of-composability-in-supply-chain-with-nucleus-research/",
+            "publisher": {
+              "@type": "Organization",
+              "name": "GAINS"
+            },
+            "mentions": {
+              "@id": "https://charlesamerigobrennan.com/#charles-brennan"
+            }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 13,
+          "item": {
+            "@type": "WebPage",
+            "name": "GAINS On Podcast S2E9: Composability w/ Nucleus Research - GAINS",
+            "url": "https://gainsystems.com/resources/gains-on-podcast-s2-ep-9-supply-chain-composability-in-action-with-nucleus-research/",
+            "publisher": {
+              "@type": "Organization",
+              "name": "GAINS"
+            },
+            "mentions": {
+              "@id": "https://charlesamerigobrennan.com/#charles-brennan"
+            }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 14,
+          "item": {
+            "@type": "WebPage",
+            "name": "GAINS Recognized by Nucleus Research for Optimizing Supply Chain Processes",
+            "url": "https://gainsystems.com/resources/nucleus-research-anatomy-of-a-decision-gains/",
+            "publisher": {
+              "@type": "Organization",
+              "name": "GAINS"
+            },
+            "mentions": {
+              "@id": "https://charlesamerigobrennan.com/#charles-brennan"
+            }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 15,
+          "item": {
+            "@type": "WebPage",
+            "name": "Winning in Uncertainty | Free Supply Chain Webinar",
+            "url": "https://gainsystems.com/gains-nucleus-research-webinar-april-2025/",
+            "publisher": {
+              "@type": "Organization",
+              "name": "GAINS"
+            },
+            "mentions": {
+              "@id": "https://charlesamerigobrennan.com/#charles-brennan"
+            }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 16,
+          "item": {
+            "@type": "WebPage",
+            "name": "E2open Named a Leader in Nucleus Research Enterprise Supply Chain Planning Technology Value Matrix 2026 | e2open",
+            "url": "https://www.e2open.com/news/press-releases/e2open-named-a-leader-in-nucleus-research-enterprise-supply-chain-planning-technology-value-matrix-2026",
+            "publisher": {
+              "@type": "Organization",
+              "name": "e2open"
+            },
+            "mentions": {
+              "@id": "https://charlesamerigobrennan.com/#charles-brennan"
+            }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 17,
+          "item": {
+            "@type": "WebPage",
+            "name": "Nucleus Research Names e2open a Leader in Control Tower Technology Value Matrix for the 11th Consecutive Year | e2open",
+            "url": "https://www.e2open.com/news/press-releases/nucleus-research-names-e2open-a-leader-in-control-tower-technology-value-matrix",
+            "publisher": {
+              "@type": "Organization",
+              "name": "e2open"
+            },
+            "mentions": {
+              "@id": "https://charlesamerigobrennan.com/#charles-brennan"
+            }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 18,
+          "item": {
+            "@type": "WebPage",
+            "name": "Supply Chain Planning Leaders: 2026 Nucleus Value Matrix",
+            "url": "https://www.e2open.com/resources/Nucleus-Research-Enterprise-Supply-Chain-Planning-Technology-Value-Matrix-2026",
+            "publisher": {
+              "@type": "Organization",
+              "name": "e2open"
+            },
+            "mentions": {
+              "@id": "https://charlesamerigobrennan.com/#charles-brennan"
+            }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 19,
+          "item": {
+            "@type": "WebPage",
+            "name": "Unlocking Value: Research Insights on Supply Chain Planning | e2open",
+            "url": "https://www.e2open.com/resources/unlocking-value-research-insights-on-supply-chain-planning",
+            "publisher": {
+              "@type": "Organization",
+              "name": "e2open"
+            },
+            "mentions": {
+              "@id": "https://charlesamerigobrennan.com/#charles-brennan"
+            }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 20,
+          "item": {
+            "@type": "WebPage",
+            "name": "Rootstock Named a Leader in 2026 ERP Value Matrix",
+            "url": "https://www.rootstock.com/press-releases/rootstock-software-named-an-erp-leader-in-2026-nucleus-value-matrix/",
+            "publisher": {
+              "@type": "Organization",
+              "name": "Rootstock Software"
+            },
+            "mentions": {
+              "@id": "https://charlesamerigobrennan.com/#charles-brennan"
+            }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 21,
+          "item": {
+            "@type": "WebPage",
+            "name": "Rootstock Software Named an ERP Leader for Fourth Consecutive Year in Nucleus Research’s 2025 Value Matrix - Rootstock Software",
+            "url": "https://www.rootstock.com/press-releases/rootstock-named-an-erp-leader-in-nucleus-2025-value-matrix/",
+            "publisher": {
+              "@type": "Organization",
+              "name": "Rootstock Software"
+            },
+            "mentions": {
+              "@id": "https://charlesamerigobrennan.com/#charles-brennan"
+            }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 22,
+          "item": {
+            "@type": "WebPage",
+            "name": "Rootstock Software to Host Webinar with Nucleus Research on ERP Trends in 2025 - Rootstock Software",
+            "url": "https://www.rootstock.com/press-releases/rootstock-software-to-host-webinar-with-nucleus-research-on-erp-trends-in-2025/",
+            "publisher": {
+              "@type": "Organization",
+              "name": "Rootstock Software"
+            },
+            "mentions": {
+              "@id": "https://charlesamerigobrennan.com/#charles-brennan"
+            }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 23,
+          "item": {
+            "@type": "WebPage",
+            "name": "Syspro Launches Torque: The Industrial AI Platform That Transforms Manufacturing Decisions into Auditable, Automatic Action - Syspro",
+            "url": "https://www.syspro.com/press_release/syspro-launches-torque-the-industrial-ai-platform-that-transforms-manufacturing-decisions-into-auditable-automatic-action/",
+            "publisher": {
+              "@type": "Organization",
+              "name": "Syspro"
+            },
+            "mentions": {
+              "@id": "https://charlesamerigobrennan.com/#charles-brennan"
+            }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 24,
+          "item": {
+            "@type": "WebPage",
+            "name": "Syspro Recognized as a Leader in 2026 SMB ERP Technology Value Matrix",
+            "url": "https://www.syspro.com/press_release/syspro-recognized-as-a-leader-by-nucleus-research-in-2026-smb-erp-technology-value-matrix/",
+            "publisher": {
+              "@type": "Organization",
+              "name": "Syspro"
+            },
+            "mentions": {
+              "@id": "https://charlesamerigobrennan.com/#charles-brennan"
+            }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 25,
+          "item": {
+            "@type": "WebPage",
+            "name": "Tecsys Positioned as Leader in the 2024 Nucleus WMS Technology Value Matrix",
+            "url": "https://www.tecsys.com/blog/press-release/tecsys-positioned-leader-2024-nucleus-wms-technology-value-matrix",
+            "publisher": {
+              "@type": "Organization",
+              "name": "Tecsys"
+            },
+            "mentions": {
+              "@id": "https://charlesamerigobrennan.com/#charles-brennan"
+            }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 26,
+          "item": {
+            "@type": "WebPage",
+            "name": "Tecsys Recognized as an Expert in Nucleus Research's Inaugural 2023 WMS Technology Value Matrix",
+            "url": "https://www.tecsys.com/blog/tecsys-recognized-as-an-expert-in-nucleus-researchs-inaugural-2023-wms-technology-value-matrix",
+            "publisher": {
+              "@type": "Organization",
+              "name": "Tecsys"
+            },
+            "mentions": {
+              "@id": "https://charlesamerigobrennan.com/#charles-brennan"
+            }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 27,
+          "item": {
+            "@type": "WebPage",
+            "name": "Acumatica: Leader in 2026 SMB ERP Value Matrix | Acumatica Cloud ERP",
+            "url": "https://www.acumatica.com/resources/analyst-reports/2026-smb-erp-technology-value-matrix/",
+            "publisher": {
+              "@type": "Organization",
+              "name": "Acumatica"
+            },
+            "mentions": {
+              "@id": "https://charlesamerigobrennan.com/#charles-brennan"
+            }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 28,
+          "item": {
+            "@type": "WebPage",
+            "name": "Nucleus Research Recognizes Deltek as an Expert, Highlighting AI Capabilities, User Experience, and Commitment to Security and Compliance | Deltek",
+            "url": "https://www.deltek.com/company/news/nucleus-research-recognizes-deltek-as-an-expert-2026/",
+            "publisher": {
+              "@type": "Organization",
+              "name": "Deltek"
+            },
+            "mentions": {
+              "@id": "https://charlesamerigobrennan.com/#charles-brennan"
+            }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 29,
+          "item": {
+            "@type": "WebPage",
+            "name": "Eyelit Technologies Named a Leader in Nucleus Research’s Inaugural MES Technology Value Matrix 2025 — Eyelit Technologies",
+            "url": "https://www.eyelit.com/pr-eyelit-technologies-leader-nucleus-researchs-mes-value-matrix-2025",
+            "publisher": {
+              "@type": "Organization",
+              "name": "Eyelit Technologies"
+            },
+            "mentions": {
+              "@id": "https://charlesamerigobrennan.com/#charles-brennan"
+            }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 30,
+          "item": {
+            "@type": "WebPage",
+            "name": "John Galt Solutions Named a Leader in the 2026 Nucleus Research Enterprise Supply Chain Planning Technology Value Matrix",
+            "url": "https://johngalt.com/learn/press-releases/john-galt-leader-2026-nucleus-research-enterprise-supply-chain-planning-tech-value-matrix",
+            "publisher": {
+              "@type": "Organization",
+              "name": "John Galt Solutions"
+            },
+            "mentions": {
+              "@id": "https://charlesamerigobrennan.com/#charles-brennan"
+            }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 31,
+          "item": {
+            "@type": "WebPage",
+            "name": "o9 Solutions, Nucleus Research ‘SCP Technology Value Matrix 2025’ 리더 기업으로 선정",
+            "url": "https://o9solutions.com/ko/news/o9-named-a-leader-in-the-nucleus-research-scp-technology-value-matrix-2025",
+            "publisher": {
+              "@type": "Organization",
+              "name": "o9 Solutions"
+            },
+            "mentions": {
+              "@id": "https://charlesamerigobrennan.com/#charles-brennan"
+            }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 32,
+          "item": {
+            "@type": "WebPage",
+            "name": "Analysts | RELEX Solutions",
+            "url": "https://www.relexsolutions.com/analysts/",
+            "publisher": {
+              "@type": "Organization",
+              "name": "RELEX Solutions"
+            },
+            "mentions": {
+              "@id": "https://charlesamerigobrennan.com/#charles-brennan"
+            }
+          }
+        }
+      ]
     }
   ]
 }
@@ -629,8 +1161,8 @@
           <div class="press-stat-label">Years of continuous coverage</div>
         </div>
         <div class="press-stat">
-          <div class="press-stat-value">164</div>
-          <div class="press-stat-label">Published research reports</div>
+          <div class="press-stat-value">32</div>
+          <div class="press-stat-label">Vendor pages citing his research</div>
         </div>
       </div>
 
@@ -1000,6 +1532,248 @@
           <a class="press-link" href="https://nucleusresearch.com/news/nucleus-research-releases-2023-transportation-management-systems-technology-value-matrix/" target="_blank" rel="noopener">Read the release <svg class="external-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg></a>
         </article>
       </div>
+
+
+      <section class="reveal" id="vendor-citations" style="margin-top: var(--space-4xl); padding-top: var(--space-4xl); border-top: 1px solid rgba(138, 227, 255, 0.1);">
+        <h2 class="h2" style="text-align: center; margin-bottom: var(--space-l);">Cited by Vendors</h2>
+        <p style="text-align: center; color: var(--muted); font-size: clamp(16px, 2vw, 18px); max-width: 760px; margin: 0 auto var(--space-3xl);">
+          32 pages across 13 enterprise software vendors reference Charles Brennan&#39;s research by name &mdash; their own press releases, analyst pages, webinars and podcasts. These are the vendors citing the work, not the other way round.
+        </p>
+        <div class="vendor-grid">
+        <article class="vendor-card">
+          <div class="vendor-head">
+            <h3 class="vendor-name">Blue Yonder</h3>
+            <span class="vendor-count">5 pages</span>
+          </div>
+          <ul class="vendor-list">
+            <li>
+              <a href="https://blueyonder.com/blog/2026/blue-yonder-recognized-as-a-leader-in-the-nucleus-research-control-tower-technology-value-matrix" target="_blank" rel="noopener">Blue Yonder Recognized as a Leader in the Nucleus Research 2026 Control Tower Technology Value Matrix™</a>
+              <span class="vendor-kind">Announcement</span>
+            </li>
+            <li>
+              <a href="https://blueyonder.com/blog/2025/blue-yonder-recognized-again-as-a-leader-in-the-nucleus-research" target="_blank" rel="noopener">Blue Yonder recognized again as a Leader in the Nucleus Research 2025 Control Tower Technology Value Matrix™</a>
+              <span class="vendor-kind">Announcement</span>
+            </li>
+            <li>
+              <a href="https://blueyonder.com/blog/2026/blue-yonder-recognized-again-as-a-leader-in-the-nucleus-research" target="_blank" rel="noopener">Blue Yonder recognized again as a Leader in the Nucleus Research 2026 Enterprise Supply Chain Planning Technology Value Matrix™</a>
+              <span class="vendor-kind">Announcement</span>
+            </li>
+            <li>
+              <a href="https://blueyonder.com/blog/2026/blue-yonder-recognized-again-as-a-leader-in-the-nucleus-research-transportation-management-systems" target="_blank" rel="noopener">Blue Yonder recognized again as a Leader in the Nucleus Research 2026 Transportation Management Systems Technology Value Matrix™</a>
+              <span class="vendor-kind">Announcement</span>
+            </li>
+            <li>
+              <a href="https://blueyonder.com/blog/2025/blue-yonder-recognized-as-leader-in-nucleus-research-2025-value-matrix" target="_blank" rel="noopener">Blue Yonder recognized as leader in Nucleus Research 2025 Value Matrix</a>
+              <span class="vendor-kind">Announcement</span>
+            </li>
+          </ul>
+        </article>
+        <article class="vendor-card">
+          <div class="vendor-head">
+            <h3 class="vendor-name">FourKites</h3>
+            <span class="vendor-count">5 pages</span>
+          </div>
+          <ul class="vendor-list">
+            <li>
+              <a href="https://www.fourkites.ai/press/fourkites-withdraws-from-gartner-rttvp-magic-quadrant" target="_blank" rel="noopener">FourKites Advances AI-First Supply Chain Strategy, Withdraws from Gartner RTTVP Magic Quadrant | FourKites</a>
+              <span class="vendor-kind">Press release</span>
+            </li>
+            <li>
+              <a href="https://www.fourkites.ai/press/fourkites-introduces-intelligent-control-tower-with-real-time-data-digital-twins-and-ai-powered-digital-workforce" target="_blank" rel="noopener">FourKites Introduces Intelligent Control Tower with Real-Time Data, Digital Twins and AI-Powered Digital Workforce | FourKites</a>
+              <span class="vendor-kind">Press release</span>
+            </li>
+            <li>
+              <a href="https://www.fourkites.ai/press/fourkites-launches-loft-ai-platform-supply-chain-orchestration" target="_blank" rel="noopener">FourKites Launches Loft: AI Platform for Enterprise Orchestration - FourKites | FourKites</a>
+              <span class="vendor-kind">Press release</span>
+            </li>
+            <li>
+              <a href="https://www.fourkites.ai/press/fourkites-named-accelerator-nucleus-research-control-tower-tech" target="_blank" rel="noopener">FourKites Named Accelerator in Nucleus Research 2025 | FourKites</a>
+              <span class="vendor-kind">Press release</span>
+            </li>
+            <li>
+              <a href="https://www.fourkites.ai/press/fourkites-named-a-leader-in-the-nucleus-research-2026-control-tower-technology-value-matrix" target="_blank" rel="noopener">FourKites Named Leader in Control Tower Value Matrix | FourKites</a>
+              <span class="vendor-kind">Press release</span> <span class="vendor-variant">as Charles A. Brennan</span>
+            </li>
+          </ul>
+        </article>
+        <article class="vendor-card">
+          <div class="vendor-head">
+            <h3 class="vendor-name">GAINS</h3>
+            <span class="vendor-count">5 pages</span>
+          </div>
+          <ul class="vendor-list">
+            <li>
+              <a href="https://gainsystems.com/blog/gains-recognized-as-a-2023-leader-by-nucleus-research/" target="_blank" rel="noopener">GAINS Named Leader in Supply Chain Planning Technology Report - GAINS</a>
+              <span class="vendor-kind">Announcement</span>
+            </li>
+            <li>
+              <a href="https://gainsystems.com/resources/gains-on-podcast-s2-ep8-the-real-meaning-of-composability-in-supply-chain-with-nucleus-research/" target="_blank" rel="noopener">GAINS On Podcast S2 EP8: Composability</a>
+              <span class="vendor-kind">Podcast</span>
+            </li>
+            <li>
+              <a href="https://gainsystems.com/resources/gains-on-podcast-s2-ep-9-supply-chain-composability-in-action-with-nucleus-research/" target="_blank" rel="noopener">GAINS On Podcast S2E9: Composability w/ Nucleus Research - GAINS</a>
+              <span class="vendor-kind">Podcast</span>
+            </li>
+            <li>
+              <a href="https://gainsystems.com/resources/nucleus-research-anatomy-of-a-decision-gains/" target="_blank" rel="noopener">GAINS Recognized by Nucleus Research for Optimizing Supply Chain Processes</a>
+              <span class="vendor-kind">Resource</span>
+            </li>
+            <li>
+              <a href="https://gainsystems.com/gains-nucleus-research-webinar-april-2025/" target="_blank" rel="noopener">Winning in Uncertainty | Free Supply Chain Webinar</a>
+              <span class="vendor-kind">Webinar</span>
+            </li>
+          </ul>
+        </article>
+        <article class="vendor-card">
+          <div class="vendor-head">
+            <h3 class="vendor-name">e2open</h3>
+            <span class="vendor-count">4 pages</span>
+          </div>
+          <ul class="vendor-list">
+            <li>
+              <a href="https://www.e2open.com/news/press-releases/e2open-named-a-leader-in-nucleus-research-enterprise-supply-chain-planning-technology-value-matrix-2026" target="_blank" rel="noopener">E2open Named a Leader in Nucleus Research Enterprise Supply Chain Planning Technology Value Matrix 2026 | e2open</a>
+              <span class="vendor-kind">Press release</span> <span class="vendor-variant">as Charles A. Brennan</span>
+            </li>
+            <li>
+              <a href="https://www.e2open.com/news/press-releases/nucleus-research-names-e2open-a-leader-in-control-tower-technology-value-matrix" target="_blank" rel="noopener">Nucleus Research Names e2open a Leader in Control Tower Technology Value Matrix for the 11th Consecutive Year | e2open</a>
+              <span class="vendor-kind">Press release</span> <span class="vendor-variant">as Charles A. Brennan</span>
+            </li>
+            <li>
+              <a href="https://www.e2open.com/resources/Nucleus-Research-Enterprise-Supply-Chain-Planning-Technology-Value-Matrix-2026" target="_blank" rel="noopener">Supply Chain Planning Leaders: 2026 Nucleus Value Matrix</a>
+              <span class="vendor-kind">Resource</span>
+            </li>
+            <li>
+              <a href="https://www.e2open.com/resources/unlocking-value-research-insights-on-supply-chain-planning" target="_blank" rel="noopener">Unlocking Value: Research Insights on Supply Chain Planning | e2open</a>
+              <span class="vendor-kind">Resource</span>
+            </li>
+          </ul>
+        </article>
+        <article class="vendor-card">
+          <div class="vendor-head">
+            <h3 class="vendor-name">Rootstock Software</h3>
+            <span class="vendor-count">3 pages</span>
+          </div>
+          <ul class="vendor-list">
+            <li>
+              <a href="https://www.rootstock.com/press-releases/rootstock-software-named-an-erp-leader-in-2026-nucleus-value-matrix/" target="_blank" rel="noopener">Rootstock Named a Leader in 2026 ERP Value Matrix</a>
+              <span class="vendor-kind">Press release</span> <span class="vendor-variant">as Charles A. Brennan</span>
+            </li>
+            <li>
+              <a href="https://www.rootstock.com/press-releases/rootstock-named-an-erp-leader-in-nucleus-2025-value-matrix/" target="_blank" rel="noopener">Rootstock Software Named an ERP Leader for Fourth Consecutive Year in Nucleus Research’s 2025 Value Matrix - Rootstock Software</a>
+              <span class="vendor-kind">Press release</span> <span class="vendor-variant">as Charles A. Brennan</span>
+            </li>
+            <li>
+              <a href="https://www.rootstock.com/press-releases/rootstock-software-to-host-webinar-with-nucleus-research-on-erp-trends-in-2025/" target="_blank" rel="noopener">Rootstock Software to Host Webinar with Nucleus Research on ERP Trends in 2025 - Rootstock Software</a>
+              <span class="vendor-kind">Press release</span> <span class="vendor-variant">as Charles A. Brennan</span>
+            </li>
+          </ul>
+        </article>
+        <article class="vendor-card">
+          <div class="vendor-head">
+            <h3 class="vendor-name">Syspro</h3>
+            <span class="vendor-count">2 pages</span>
+          </div>
+          <ul class="vendor-list">
+            <li>
+              <a href="https://www.syspro.com/press_release/syspro-launches-torque-the-industrial-ai-platform-that-transforms-manufacturing-decisions-into-auditable-automatic-action/" target="_blank" rel="noopener">Syspro Launches Torque: The Industrial AI Platform That Transforms Manufacturing Decisions into Auditable, Automatic Action - Syspro</a>
+              <span class="vendor-kind">Press release</span>
+            </li>
+            <li>
+              <a href="https://www.syspro.com/press_release/syspro-recognized-as-a-leader-by-nucleus-research-in-2026-smb-erp-technology-value-matrix/" target="_blank" rel="noopener">Syspro Recognized as a Leader in 2026 SMB ERP Technology Value Matrix</a>
+              <span class="vendor-kind">Press release</span>
+            </li>
+          </ul>
+        </article>
+        <article class="vendor-card">
+          <div class="vendor-head">
+            <h3 class="vendor-name">Tecsys</h3>
+            <span class="vendor-count">2 pages</span>
+          </div>
+          <ul class="vendor-list">
+            <li>
+              <a href="https://www.tecsys.com/blog/press-release/tecsys-positioned-leader-2024-nucleus-wms-technology-value-matrix" target="_blank" rel="noopener">Tecsys Positioned as Leader in the 2024 Nucleus WMS Technology Value Matrix</a>
+              <span class="vendor-kind">Press release</span>
+            </li>
+            <li>
+              <a href="https://www.tecsys.com/blog/tecsys-recognized-as-an-expert-in-nucleus-researchs-inaugural-2023-wms-technology-value-matrix" target="_blank" rel="noopener">Tecsys Recognized as an Expert in Nucleus Research&#x27;s Inaugural 2023 WMS Technology Value Matrix</a>
+              <span class="vendor-kind">Announcement</span>
+            </li>
+          </ul>
+        </article>
+        <article class="vendor-card">
+          <div class="vendor-head">
+            <h3 class="vendor-name">Acumatica</h3>
+            <span class="vendor-count">1 page</span>
+          </div>
+          <ul class="vendor-list">
+            <li>
+              <a href="https://www.acumatica.com/resources/analyst-reports/2026-smb-erp-technology-value-matrix/" target="_blank" rel="noopener">Acumatica: Leader in 2026 SMB ERP Value Matrix | Acumatica Cloud ERP</a>
+              <span class="vendor-kind">Analyst page</span> <span class="vendor-variant">as Charles A. Brennan</span>
+            </li>
+          </ul>
+        </article>
+        <article class="vendor-card">
+          <div class="vendor-head">
+            <h3 class="vendor-name">Deltek</h3>
+            <span class="vendor-count">1 page</span>
+          </div>
+          <ul class="vendor-list">
+            <li>
+              <a href="https://www.deltek.com/company/news/nucleus-research-recognizes-deltek-as-an-expert-2026/" target="_blank" rel="noopener">Nucleus Research Recognizes Deltek as an Expert, Highlighting AI Capabilities, User Experience, and Commitment to Security and Compliance | Deltek</a>
+              <span class="vendor-kind">Press release</span>
+            </li>
+          </ul>
+        </article>
+        <article class="vendor-card">
+          <div class="vendor-head">
+            <h3 class="vendor-name">Eyelit Technologies</h3>
+            <span class="vendor-count">1 page</span>
+          </div>
+          <ul class="vendor-list">
+            <li>
+              <a href="https://www.eyelit.com/pr-eyelit-technologies-leader-nucleus-researchs-mes-value-matrix-2025" target="_blank" rel="noopener">Eyelit Technologies Named a Leader in Nucleus Research’s Inaugural MES Technology Value Matrix 2025 — Eyelit Technologies</a>
+              <span class="vendor-kind">Announcement</span> <span class="vendor-variant">as Charles A. Brennan</span>
+            </li>
+          </ul>
+        </article>
+        <article class="vendor-card">
+          <div class="vendor-head">
+            <h3 class="vendor-name">John Galt Solutions</h3>
+            <span class="vendor-count">1 page</span>
+          </div>
+          <ul class="vendor-list">
+            <li>
+              <a href="https://johngalt.com/learn/press-releases/john-galt-leader-2026-nucleus-research-enterprise-supply-chain-planning-tech-value-matrix" target="_blank" rel="noopener">John Galt Solutions Named a Leader in the 2026 Nucleus Research Enterprise Supply Chain Planning Technology Value Matrix</a>
+              <span class="vendor-kind">Press release</span>
+            </li>
+          </ul>
+        </article>
+        <article class="vendor-card">
+          <div class="vendor-head">
+            <h3 class="vendor-name">o9 Solutions</h3>
+            <span class="vendor-count">1 page</span>
+          </div>
+          <ul class="vendor-list">
+            <li>
+              <a href="https://o9solutions.com/ko/news/o9-named-a-leader-in-the-nucleus-research-scp-technology-value-matrix-2025" target="_blank" rel="noopener">o9 Solutions, Nucleus Research ‘SCP Technology Value Matrix 2025’ 리더 기업으로 선정</a>
+              <span class="vendor-kind">Press release</span>
+            </li>
+          </ul>
+        </article>
+        <article class="vendor-card">
+          <div class="vendor-head">
+            <h3 class="vendor-name">RELEX Solutions</h3>
+            <span class="vendor-count">1 page</span>
+          </div>
+          <ul class="vendor-list">
+            <li>
+              <a href="https://www.relexsolutions.com/analysts/" target="_blank" rel="noopener">Analysts | RELEX Solutions</a>
+              <span class="vendor-kind">Analyst page</span>
+            </li>
+          </ul>
+        </article>
+        </div>
+      </section>
 
       <p style="text-align: center; color: var(--muted); font-size: 14px; margin-top: var(--space-4xl);">
         Press enquiries: <a href="contact.html" style="color: var(--accent-1);">get in touch</a>.

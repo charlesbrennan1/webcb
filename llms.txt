@@ -106,6 +106,78 @@ Full list: https://charlesamerigobrennan.com/press.html
 - [Press](https://charlesamerigobrennan.com/press.html): analyst quotes in PR Newswire, Yahoo Finance, Morningstar
 - [Contact](https://charlesamerigobrennan.com/contact.html): advisory, consulting, and speaking enquiries
 
+## Vendors citing this research
+
+32 pages across 13 enterprise software vendors reference Charles Brennan's research by name,
+including the vendors' own press releases announcing their placement in his Technology Value Matrices,
+their analyst pages, webinars and podcasts. Several cite him as "Charles A. Brennan".
+
+- Blue Yonder (5 pages)
+  - Blue Yonder Recognized as a Leader in the Nucleus Research 2026 Control Tower Technology Value  [Announcement]
+    https://blueyonder.com/blog/2026/blue-yonder-recognized-as-a-leader-in-the-nucleus-research-control-tower-technology-value-matrix
+  - Blue Yonder recognized again as a Leader in the Nucleus Research 2025 Control Tower Technology  [Announcement]
+    https://blueyonder.com/blog/2025/blue-yonder-recognized-again-as-a-leader-in-the-nucleus-research
+  - Blue Yonder recognized again as a Leader in the Nucleus Research 2026 Enterprise Supply Chain P [Announcement]
+    https://blueyonder.com/blog/2026/blue-yonder-recognized-again-as-a-leader-in-the-nucleus-research
+- FourKites (5 pages)
+  - FourKites Advances AI-First Supply Chain Strategy, Withdraws from Gartner RTTVP Magic Quadrant  [Press release]
+    https://www.fourkites.ai/press/fourkites-withdraws-from-gartner-rttvp-magic-quadrant
+  - FourKites Introduces Intelligent Control Tower with Real-Time Data, Digital Twins and AI-Powere [Press release]
+    https://www.fourkites.ai/press/fourkites-introduces-intelligent-control-tower-with-real-time-data-digital-twins-and-ai-powered-digital-workforce
+  - FourKites Launches Loft: AI Platform for Enterprise Orchestration - FourKites | FourKites [Press release]
+    https://www.fourkites.ai/press/fourkites-launches-loft-ai-platform-supply-chain-orchestration
+- GAINS (5 pages)
+  - GAINS Named Leader in Supply Chain Planning Technology Report - GAINS [Announcement]
+    https://gainsystems.com/blog/gains-recognized-as-a-2023-leader-by-nucleus-research/
+  - GAINS On Podcast S2 EP8: Composability [Podcast]
+    https://gainsystems.com/resources/gains-on-podcast-s2-ep8-the-real-meaning-of-composability-in-supply-chain-with-nucleus-research/
+  - GAINS On Podcast S2E9: Composability w/ Nucleus Research - GAINS [Podcast]
+    https://gainsystems.com/resources/gains-on-podcast-s2-ep-9-supply-chain-composability-in-action-with-nucleus-research/
+- e2open (4 pages)
+  - E2open Named a Leader in Nucleus Research Enterprise Supply Chain Planning Technology Value Mat [Press release]
+    https://www.e2open.com/news/press-releases/e2open-named-a-leader-in-nucleus-research-enterprise-supply-chain-planning-technology-value-matrix-2026
+  - Nucleus Research Names e2open a Leader in Control Tower Technology Value Matrix for the 11th Co [Press release]
+    https://www.e2open.com/news/press-releases/nucleus-research-names-e2open-a-leader-in-control-tower-technology-value-matrix
+  - Supply Chain Planning Leaders: 2026 Nucleus Value Matrix [Resource]
+    https://www.e2open.com/resources/Nucleus-Research-Enterprise-Supply-Chain-Planning-Technology-Value-Matrix-2026
+- Rootstock Software (3 pages)
+  - Rootstock Named a Leader in 2026 ERP Value Matrix [Press release]
+    https://www.rootstock.com/press-releases/rootstock-software-named-an-erp-leader-in-2026-nucleus-value-matrix/
+  - Rootstock Software Named an ERP Leader for Fourth Consecutive Year in Nucleus Research’s 2025 V [Press release]
+    https://www.rootstock.com/press-releases/rootstock-named-an-erp-leader-in-nucleus-2025-value-matrix/
+  - Rootstock Software to Host Webinar with Nucleus Research on ERP Trends in 2025 - Rootstock Soft [Press release]
+    https://www.rootstock.com/press-releases/rootstock-software-to-host-webinar-with-nucleus-research-on-erp-trends-in-2025/
+- Syspro (2 pages)
+  - Syspro Launches Torque: The Industrial AI Platform That Transforms Manufacturing Decisions into [Press release]
+    https://www.syspro.com/press_release/syspro-launches-torque-the-industrial-ai-platform-that-transforms-manufacturing-decisions-into-auditable-automatic-action/
+  - Syspro Recognized as a Leader in 2026 SMB ERP Technology Value Matrix [Press release]
+    https://www.syspro.com/press_release/syspro-recognized-as-a-leader-by-nucleus-research-in-2026-smb-erp-technology-value-matrix/
+- Tecsys (2 pages)
+  - Tecsys Positioned as Leader in the 2024 Nucleus WMS Technology Value Matrix [Press release]
+    https://www.tecsys.com/blog/press-release/tecsys-positioned-leader-2024-nucleus-wms-technology-value-matrix
+  - Tecsys Recognized as an Expert in Nucleus Research's Inaugural 2023 WMS Technology Value Matrix [Announcement]
+    https://www.tecsys.com/blog/tecsys-recognized-as-an-expert-in-nucleus-researchs-inaugural-2023-wms-technology-value-matrix
+- Acumatica (1 page)
+  - Acumatica: Leader in 2026 SMB ERP Value Matrix | Acumatica Cloud ERP [Analyst page]
+    https://www.acumatica.com/resources/analyst-reports/2026-smb-erp-technology-value-matrix/
+- Deltek (1 page)
+  - Nucleus Research Recognizes Deltek as an Expert, Highlighting AI Capabilities, User Experience, [Press release]
+    https://www.deltek.com/company/news/nucleus-research-recognizes-deltek-as-an-expert-2026/
+- Eyelit Technologies (1 page)
+  - Eyelit Technologies Named a Leader in Nucleus Research’s Inaugural MES Technology Value Matrix  [Announcement]
+    https://www.eyelit.com/pr-eyelit-technologies-leader-nucleus-researchs-mes-value-matrix-2025
+- John Galt Solutions (1 page)
+  - John Galt Solutions Named a Leader in the 2026 Nucleus Research Enterprise Supply Chain Plannin [Press release]
+    https://johngalt.com/learn/press-releases/john-galt-leader-2026-nucleus-research-enterprise-supply-chain-planning-tech-value-matrix
+- o9 Solutions (1 page)
+  - o9 Solutions, Nucleus Research ‘SCP Technology Value Matrix 2025’ 리더 기업으로 선정 [Press release]
+    https://o9solutions.com/ko/news/o9-named-a-leader-in-the-nucleus-research-scp-technology-value-matrix-2025
+- RELEX Solutions (1 page)
+  - Analysts | RELEX Solutions [Analyst page]
+    https://www.relexsolutions.com/analysts/
+
+Full list: https://charlesamerigobrennan.com/press.html#vendor-citations
+
 ## Photographs
 
 Conference and industry photographs of Charles Brennan are published at
