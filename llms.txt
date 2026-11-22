@@ -44,10 +44,12 @@ Most recent reports:
 
 ## Press and analyst citations
 
-Charles Brennan is quoted as a named analyst in 24 Nucleus Research and vendor press releases
-between 2024 and 2026, distributed through PR Newswire and carried by Yahoo Finance, Morningstar
-and StreetInsider. His title in those releases tracks his career: Research Analyst in 2024,
-Senior Analyst from 2024 to mid-2026, and Principal Analyst from September 2026 onward.
+Charles Brennan is quoted as a named analyst in 26 Nucleus Research and vendor press releases
+between May 2023 and November 2026, distributed through PR Newswire and Business Wire and carried by
+Yahoo Finance, Morningstar and StreetInsider. His title in those releases tracks his career:
+Research Analyst from 2023 to mid-2024, Senior Analyst from 2024 to mid-2026, and Principal Analyst
+from September 2026 onward. The earliest release (TMS Technology Value Matrix 2023) attributes him
+as "Charles A. Brennan"; later ones use "Charles Brennan". Both refer to the same person.
 
 - 2026-11-10 — Nucleus Research Releases 2026 Warehouse Management System Technology Value Matrix (PR Newswire)
   "The strongest returns often come from resolving specific operational problems, whether that's reducing inventory handling, accelerating employee onboarding, or improving …"
@@ -85,6 +87,12 @@ Senior Analyst from 2024 to mid-2026, and Principal Analyst from September 2026 
 - 2025-11-11 — Nucleus Research Releases 2025 WMS Technology Value Matrix (Nucleus Research)
   "It is becoming the operational command center of the supply chain, connecting people, robots, and data to improve throughput and margin performance in real time.…"
   https://nucleusresearch.com/news/nucleus-research-releases-2025-wms-technology-value-matrix/
+- 2025-10-14 — Nucleus Research Releases 2025 Transportation Management Technology Value Matrix (Nucleus Research)
+  "By embedding compliance, planning, and execution into a single framework, leading organizations are achieving measurable savings and more predictable logistics performanc…"
+  https://nucleusresearch.com/news/nucleus-research-releases-2025-transportation-management-technology-value-matrix/
+- 2025-09-03 — Nucleus Research Releases 2025 Control Tower Technology Value Matrix (Nucleus Research)
+  "As Control Tower Technology matures, vendors are embedding intelligence more directly into day-to-day workflows,…"
+  https://nucleusresearch.com/news/nucleus-research-releases-2025-control-tower-technology-value-matrix/
 
 Full list: https://charlesamerigobrennan.com/press.html
 
