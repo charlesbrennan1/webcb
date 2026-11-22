@@ -22,16 +22,31 @@ class WebsiteInteractions {
   // SCROLL REVEAL ANIMATIONS
   // ==========================================================================
   setupScrollReveal() {
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('revealed');
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.15, rootMargin: '0px 0px -100px 0px' });
+    const BASE_THRESHOLD = 0.15;
+    const BOTTOM_MARGIN = 100;
 
-    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    const reveal = (entry, observer) => {
+      entry.target.classList.add('revealed');
+      observer.unobserve(entry.target);
+    };
+
+    // An element taller than the viewport can never reach a fixed ratio: for a
+    // 3600px block in a 634px window the ratio tops out around 0.149, so a 0.15
+    // threshold never fires and the content stays at opacity 0 forever. Cap the
+    // threshold by what each element can actually achieve.
+    const thresholdFor = (el) => {
+      const usable = Math.max(1, window.innerHeight - BOTTOM_MARGIN);
+      const h = el.getBoundingClientRect().height;
+      if (!h) return BASE_THRESHOLD;
+      return Math.min(BASE_THRESHOLD, (usable * 0.4) / h);
+    };
+
+    document.querySelectorAll('.reveal').forEach(el => {
+      const observer = new IntersectionObserver((entries, obs) => {
+        entries.forEach(entry => { if (entry.isIntersecting) reveal(entry, obs); });
+      }, { threshold: thresholdFor(el), rootMargin: `0px 0px -${BOTTOM_MARGIN}px 0px` });
+      observer.observe(el);
+    });
   }
 
   // ==========================================================================

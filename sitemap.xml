@@ -1,10 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://charlesamerigobrennan.com/</loc>
     <lastmod>2026-11-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://charlesamerigobrennan.com/assets/img/charles-brennan-headshot.webp</image:loc>
+      <image:title>Charles Brennan, Principal Analyst at Nucleus Research</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://charlesamerigobrennan.com/about.html</loc>
@@ -17,6 +22,74 @@
     <lastmod>2026-11-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://charlesamerigobrennan.com/assets/img/charles-brennan-blue-yonder-icon-speaker.webp</image:loc>
+      <image:title>Charles Brennan wearing a speaker badge at a Blue Yonder conference</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://charlesamerigobrennan.com/assets/img/charles-brennan-jamis-summit-panel.webp</image:loc>
+      <image:title>Charles Brennan speaking on a panel at the JAMIS Summit</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://charlesamerigobrennan.com/assets/img/charles-brennan-samsara-nascar-xfinity.webp</image:loc>
+      <image:title>Charles Brennan with a Samsara-sponsored NASCAR Xfinity Series driver and car</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://charlesamerigobrennan.com/assets/img/charles-brennan-aim10x-reception.webp</image:loc>
+      <image:title>Charles Brennan with colleagues at an aim10x conference reception</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://charlesamerigobrennan.com/assets/img/charles-brennan-dhl-trade-show.webp</image:loc>
+      <image:title>Charles Brennan at the DHL stand at a supply chain trade show</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://charlesamerigobrennan.com/assets/img/charles-brennan-infor-velocity-summit.webp</image:loc>
+      <image:title>Charles Brennan at the Infor Velocity Summit</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://charlesamerigobrennan.com/assets/img/charles-brennan-deltek-projectcon.webp</image:loc>
+      <image:title>Charles Brennan at Deltek ProjectCon</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://charlesamerigobrennan.com/assets/img/charles-brennan-relex-live.webp</image:loc>
+      <image:title>Charles Brennan at RELEX Live</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://charlesamerigobrennan.com/assets/img/charles-brennan-analyst-team-new-york.webp</image:loc>
+      <image:title>Charles Brennan with analyst colleagues at a New York City industry event</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://charlesamerigobrennan.com/assets/img/charles-brennan-blue-yonder-icon-2025.webp</image:loc>
+      <image:title>Charles Brennan at Blue Yonder ICON 2025</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://charlesamerigobrennan.com/assets/img/charles-brennan-aim10x-interview.webp</image:loc>
+      <image:title>Charles Brennan interviewed on camera at the aim10x conference</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://charlesamerigobrennan.com/assets/img/charles-brennan-ifs-nexusblack.webp</image:loc>
+      <image:title>Charles Brennan on stage at an IFS NexusBlack session</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://charlesamerigobrennan.com/assets/img/charles-brennan-vendor-conference.webp</image:loc>
+      <image:title>Charles Brennan with event mascots at a vendor conference</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://charlesamerigobrennan.com/assets/img/charles-brennan-oracle-ai-world.webp</image:loc>
+      <image:title>Charles Brennan at Oracle AI World</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://charlesamerigobrennan.com/assets/img/charles-brennan-industry-dinner.webp</image:loc>
+      <image:title>Charles Brennan at a black-tie industry dinner</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://charlesamerigobrennan.com/assets/img/charles-brennan-analyst-panel.webp</image:loc>
+      <image:title>Charles Brennan with analysts and vendor executives at a panel session</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://charlesamerigobrennan.com/assets/img/charles-brennan-savant-software-booth.webp</image:loc>
+      <image:title>Charles Brennan at the Savant Software booth</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://charlesamerigobrennan.com/research.html</loc>
@@ -35,6 +108,10 @@
     <lastmod>2026-11-22</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://charlesamerigobrennan.com/assets/img/charles-brennan-portrait.webp</image:loc>
+      <image:title>Charles Brennan portrait</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://charlesamerigobrennan.com/tlf-impact.html</loc>
