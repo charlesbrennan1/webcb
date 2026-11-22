@@ -44,35 +44,47 @@ Most recent reports:
 
 ## Press and analyst citations
 
-Charles Brennan is quoted as a named analyst in Nucleus Research and vendor press releases
-distributed through PR Newswire and carried by Yahoo Finance, Morningstar and StreetInsider.
-He was promoted from Senior Analyst to Principal Analyst in 2026; releases from September 2026
-onward carry the Principal Analyst title.
+Charles Brennan is quoted as a named analyst in 24 Nucleus Research and vendor press releases
+between 2024 and 2026, distributed through PR Newswire and carried by Yahoo Finance, Morningstar
+and StreetInsider. His title in those releases tracks his career: Research Analyst in 2024,
+Senior Analyst from 2024 to mid-2026, and Principal Analyst from September 2026 onward.
 
-- 2026-11-10 — Nucleus Research Releases 2026 Warehouse Management System Technology Value Matrix
+- 2026-11-10 — Nucleus Research Releases 2026 Warehouse Management System Technology Value Matrix (PR Newswire)
   "The strongest returns often come from resolving specific operational problems, whether that's reducing inventory handling, accelerating employee onboarding, or improving …"
   https://www.prnewswire.com/news-releases/nucleus-research-releases-2026-warehouse-management-system-technology-value-matrix-302935055.html
-- 2026-10-13 — Nucleus Research Releases 2026 Transportation Management System Technology Value Matrix
+- 2026-10-13 — Nucleus Research Releases 2026 Transportation Management System Technology Value Matrix (PR Newswire)
   "Connecting procurement, planning, execution, and financial data allows organizations to identify avoidable costs earlier, improve capacity utilization, and translate oper…"
   https://www.prnewswire.com/news-releases/nucleus-research-releases-2026-transportation-management-system-technology-value-matrix-302907253.html
-- 2026-09-01 — Nucleus Research Releases 2026 Control Tower Technology Value Matrix
+- 2026-09-01 — Nucleus Research Releases 2026 Control Tower Technology Value Matrix (PR Newswire)
   "The value comes from identifying the disruptions that materially affect the business, understanding their operational and financial consequences, and acting while there i…"
   https://www.prnewswire.com/news-releases/nucleus-research-releases-2026-control-tower-technology-value-matrix-302866439.html
-- 2026-08-11 — Nucleus Research Releases 2026 Manufacturing Execution System Technology Value Matrix
+- 2026-08-11 — Nucleus Research Releases 2026 Manufacturing Execution System Technology Value Matrix (PR Newswire)
   "The platforms delivering the strongest returns are the ones translating plant floor data into measurable gains in throughput, labor utilization, and delivery performance,…"
   https://www.prnewswire.com/news-releases/nucleus-research-releases-2026-manufacturing-execution-system-technology-value-matrix-302848529.html
-- 2026-07-22 — Nucleus Research Releases 2026 SMB SCP Technology Value Matrix
+- 2026-07-22 — Nucleus Research Releases 2026 SMB SCP Technology Value Matrix (PR Newswire)
   "The strongest ROI comes from giving lean teams the ability to evaluate tradeoffs quickly, act on recommendations, and improve service and working capital without adding u…"
   https://www.prnewswire.com/news-releases/nucleus-research-releases-2026-smb-scp-technology-value-matrix-302832535.html
-- 2026-07-15 — RELEX Named a Leader in the 2026 Nucleus Research Enterprise Supply Chain Planning Value Matrix
+- 2026-07-15 — RELEX Named a Leader in the 2026 Nucleus Research Enterprise Supply Chain Planning Value Matrix (PR Newswire)
   "That connected approach is important because customers realize ROI when planning decisions translate into better forecast accuracy, lower inventory exposure, improved ava…"
   https://www.prnewswire.com/news-releases/relex-named-a-leader-in-the-2026-nucleus-research-enterprise-supply-chain-planning-value-matrix-302826327.html
-- 2026-07-14 — Nucleus Research Releases 2026 Enterprise SCP Technology Value Matrix
+- 2026-07-14 — Nucleus Research Releases 2026 Enterprise SCP Technology Value Matrix (PR Newswire)
   "Organizations realize ROI when planning platforms connect operational execution with financial impact and enable faster, more informed decisions across the enterprise.…"
   https://www.prnewswire.com/news-releases/nucleus-research-releases-2026-enterprise-scp-technology-value-matrix-302824985.html
-- 2026-07-07 — Nucleus Research Recognizes Deltek as an Expert, Highlighting AI Capabilities, User Experience, and Commitment to Security and Compliance
+- 2026-07-07 — Nucleus Research Recognizes Deltek as an Expert, Highlighting AI Capabilities, User Experience, and Commitment to Security and Compliance (PR Newswire)
   "Deltek has built its platform around that reality. The combination of deep industry-specific functionality and a growing AI layer that's grounded in governed, operational…"
   https://www.prnewswire.com/news-releases/nucleus-research-recognizes-deltek-as-an-expert-highlighting-ai-capabilities-user-experience-and-commitment-to-security-and-compliance-302818956.html
+- 2026-06-10 — Syspro Recognized as a Leader by Nucleus Research in 2026 SMB ERP Technology Value Matrix (PR Newswire)
+  "The manufacturing and distribution sectors continue to face increasing operational complexity and competitive pressure. Syspro's investments in embedded AI, workflow auto…"
+  https://www.prnewswire.com/news-releases/syspro-recognized-as-a-leader-by-nucleus-research-in-2026-smb-erp-technology-value-matrix-302796104.html
+- 2026-06-09 — Nucleus Research Releases 2026 SMB ERP Technology Value Matrix (PR Newswire)
+  "The strongest ROI comes from reducing manual effort, improving operational visibility, and enabling growth without adding equivalent administrative overhead.…"
+  https://www.prnewswire.com/news-releases/nucleus-research-releases-2026-smb-erp-technology-value-matrix-302795707.html
+- 2026-06-02 — Nucleus Research Releases 2026 Enterprise ERP Technology Value Matrix (PR Newswire)
+  "Organizations realize ROI when ERP can improve visibility, reduce manual coordination, and accelerate response times across complex operating environments.…"
+  https://www.prnewswire.com/news-releases/nucleus-research-releases-2026-enterprise-erp-technology-value-matrix-302788687.html
+- 2025-11-11 — Nucleus Research Releases 2025 WMS Technology Value Matrix (Nucleus Research)
+  "It is becoming the operational command center of the supply chain, connecting people, robots, and data to improve throughput and margin performance in real time.…"
+  https://nucleusresearch.com/news/nucleus-research-releases-2025-wms-technology-value-matrix/
 
 Full list: https://charlesamerigobrennan.com/press.html
 
