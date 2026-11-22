@@ -44,7 +44,7 @@ Most recent reports:
 
 ## Press and analyst citations
 
-Charles Brennan is quoted as a named analyst in 26 Nucleus Research and vendor press releases
+Charles Brennan is quoted as a named analyst in 27 Nucleus Research and vendor press releases
 between May 2023 and November 2026, distributed through PR Newswire and Business Wire and carried by
 Yahoo Finance, Morningstar and StreetInsider. His title in those releases tracks his career:
 Research Analyst from 2023 to mid-2024, Senior Analyst from 2024 to mid-2026, and Principal Analyst
@@ -93,6 +93,10 @@ as "Charles A. Brennan"; later ones use "Charles Brennan". Both refer to the sam
 - 2025-09-03 — Nucleus Research Releases 2025 Control Tower Technology Value Matrix (Nucleus Research)
   "As Control Tower Technology matures, vendors are embedding intelligence more directly into day-to-day workflows,…"
   https://nucleusresearch.com/news/nucleus-research-releases-2025-control-tower-technology-value-matrix/
+
+- 2026-10-14 — NetSuite Introduces Free AI-First Financial Platform That Helps Startups Go From Idea to IPO (PR Newswire)
+  "For technology startups, the value of this approach is less about adding more software and more about establishing financial discipline early, reducing manual work, and h…"
+  https://www.prnewswire.com/news-releases/netsuite-introduces-free-ai-first-financial-platform-that-helps-startups-go-from-idea-to-ipo-302907744.html
 
 Full list: https://charlesamerigobrennan.com/press.html
 
