@@ -24,7 +24,7 @@ run the operations the software is sold to improve.
 
 ## Research
 
-164 published research reports on the Nucleus Research website and the Bloomberg Terminal,
+168 published research reports on the Nucleus Research website and the Bloomberg Terminal,
 covering Supply Chain Management (106), Enterprise Applications (57), Analytics (1).
 Report types include Value Matrix vendor evaluations, ROI case studies, and market research notes.
 
@@ -105,7 +105,7 @@ Full list: https://charlesamerigobrennan.com/press.html
 - [Home](https://charlesamerigobrennan.com/): overview and proof points
 - [About](https://charlesamerigobrennan.com/about.html): career background, in his own words
 - [Nucleus Research](https://charlesamerigobrennan.com/nucleus.html): research and advisory practice, webinars, podcasts, speaking
-- [Research Portfolio](https://charlesamerigobrennan.com/research.html): all 164 reports, filterable by year and topic
+- [Research Portfolio](https://charlesamerigobrennan.com/research.html): all 168 reports, filterable by year and topic
 - [TLF Apparel](https://charlesamerigobrennan.com/tlf.html): operator background and case studies
 - [Press](https://charlesamerigobrennan.com/press.html): analyst quotes in PR Newswire, Yahoo Finance, Morningstar
 - [Contact](https://charlesamerigobrennan.com/contact.html): advisory, consulting, and speaking enquiries

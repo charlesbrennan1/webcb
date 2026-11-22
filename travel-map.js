@@ -80,6 +80,11 @@
     {year:2026, city:'Orlando, FL, USA', name:'SAP Sapphire 2026', lat:28.5383, lng:-81.3792},
     {year:2026, city:'Chicago, IL, USA', name:'Unit4 Analyst Summit 2026', lat:41.8781, lng:-87.6298},
     {year:2026, city:'San Francisco, CA, USA', name:'NetSuite Analyst Summit 2026', lat:37.7749, lng:-122.4194},
+    {year:2026, city:'Orlando, FL, USA', name:'IFS Unleashed 2026', lat:28.5383, lng:-81.3792},
+    {year:2026, city:'Atlanta, GA, USA', name:'DAT Shippers Summit 2026', lat:33.7490, lng:-84.3880},
+    {year:2026, city:'Dallas, TX, USA', name:'Epicor Insights Building Supply and Retail 2026', lat:32.7767, lng:-96.7970},
+    {year:2026, city:'Las Vegas, NV, USA', name:'Oracle AI World 2026', lat:36.1699, lng:-115.1398},
+    {year:2026, city:'Las Vegas, NV, USA', name:'Intuit Connect 2026', lat:36.1699, lng:-115.1398},
   ];
 
   // Year -> color
